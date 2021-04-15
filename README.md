@@ -10,12 +10,12 @@ El público al que apuntamos son hombres y mujeres, residentes en Argentina de e
 
 ### Listado de 5 referentes
 
-[PIET](https://piet.com.ar/) - Elegimos este sitio porque
-[GORRIÓN](https://www.soygorrion.com.ar/) - Elegimos este sitio porque
-[DREW HOUSE](https://thehouseofdrew.com/) - Elegimos este sitio porque
-[3D PARTS ARGENTINA](https://www.3dparts.com.ar/impresoras-3d/) - Elegimos este sitio porque
-[UNDER ARMOUR](https://underarmour.com.ar/) - Elegimos este sitio porque
-[FILA](https://tienda.fila.com.ar/) - Elegimos este sitio porque
+- [PIET](https://piet.com.ar/) - Elegimos este sitio porque
+- [GORRIÓN](https://www.soygorrion.com.ar/) - Elegimos este sitio porque
+- [DREW HOUSE](https://thehouseofdrew.com/) - Elegimos este sitio porque
+- [3D PARTS ARGENTINA](https://www.3dparts.com.ar/impresoras-3d/) - Elegimos este sitio porque
+- [UNDER ARMOUR](https://underarmour.com.ar/) - Elegimos este sitio porque
+- [FILA](https://tienda.fila.com.ar/) - Elegimos este sitio porque
 
 ### Breve descripción de los integrantes del equipo
 
