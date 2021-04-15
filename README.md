@@ -1,14 +1,14 @@
-# PROYECTO INTEGRADOR: JUMP
+# Proyecto Integrador | Grupo 4 | JUMP
 
 ### Temática del sitio
 
-**JUMP** es un e-commerce de **indumentaria y artículos deportivos**. En este sitio es posible encontrar las marcas que son tendencia. JUMP es una tienda online que integra la moda cotidiana y los artículos esenciales para mantenerse al día con el entrenamiento. En los últimos años, la ropa deportiva trascendió el uso profesional y JUMP apunta ser también una alternativa para todos aquellos que recién se inician en el deporte.
+**JUMP** es un e-commerce de **indumentaria y artículos deportivos**. En este sitio es posible encontrar las marcas que son tendencia. **JUMP** es una tienda online que integra la moda cotidiana y los artículos esenciales para mantenerse al día con el entrenamiento. En los últimos años, la ropa deportiva trascendió el uso profesional y **JUMP** apunta ser también una alternativa para todos aquellos que recién se inician en el deporte.
 
 ### Público objetivo
 
 El público al que apuntamos son hombres y mujeres, residentes en Argentina de entre 18 y 40 años que practiquen tanto deporte amateur como profesional.
 
-### Listado de 5 referentes
+### Listado de referentes
 
 - [PIET](https://piet.com.ar/) - Elegimos este sitio porque
 - [GORRIÓN](https://www.soygorrion.com.ar/) - Elegimos este sitio porque
