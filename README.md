@@ -10,12 +10,11 @@ El público al que apuntamos son hombres y mujeres, residentes en Argentina de e
 
 ### Listado de referentes
 
-- [PIET](https://piet.com.ar/) - Elegimos este sitio porque
-- [GORRIÓN](https://www.soygorrion.com.ar/) - Elegimos este sitio porque
-- [DREW HOUSE](https://thehouseofdrew.com/) - Elegimos este sitio porque
-- [3D PARTS ARGENTINA](https://www.3dparts.com.ar/impresoras-3d/) - Elegimos este sitio porque
-- [UNDER ARMOUR](https://underarmour.com.ar/) - Elegimos este sitio porque
-- [FILA](https://tienda.fila.com.ar/) - Elegimos este sitio porque
+- [PIET](https://piet.com.ar/) - Elegimos este sitio por la estética minimalista de la homepage.
+- [NIKE](https://www.nike.com/ar/) - Elegimos nike como referente, dado que es uno de los máximos exponentes en el mundo del deporte.
+- [SOLO DEPORTES](https://www.solodeportes.com.ar) - Elegimos este sitio por la estrategia de fomentar mas compras usando el envio gratis como incentivo en el sector "carrito".
+- [MERCADO LIBRE](https://www.mercadolibre.com.ar) - Elegimos este sitio como inspiración para la presentación de los prodctos y descripción de los mismos.
+- [UNDER ARMOUR](https://underarmour.com.ar/) - Elegimos este sitio por ser una referencia en el mercado deportivo.
 
 ### Breve descripción de los integrantes del equipo
 
