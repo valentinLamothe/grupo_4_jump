@@ -1,0 +1,10 @@
+.cuadro{
+    width: 150px;
+    font-size:12px;
+    line-height: 20px;
+    background-color: #5AE5EB;
+};
+i.cuadro{
+    width:25%;
+}
+
