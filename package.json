@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FabalexOchoa/grupo_4_jump/issues"
   },
-  "homepage": "https://github.com/FabalexOchoa/grupo_4_jump#readme"
+  "homepage": "https://github.com/FabalexOchoa/grupo_4_jump#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
