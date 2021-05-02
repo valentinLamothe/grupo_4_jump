@@ -1,6 +1,7 @@
 *{
     margin: 0;
-    font-size: 100px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* CSS DETALLE PRODUCTO */ 
@@ -66,3 +67,7 @@ h2{
 h3{
     margin-left: 40px;
 }
+
+/* CSS INDEX */
+
+
