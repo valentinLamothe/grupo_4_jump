@@ -68,7 +68,7 @@ h3{
     margin-left: 40px;
 }
 
-/* CSS INDEX */
+/* CSS INDEX  */ 
 
 
 
@@ -78,20 +78,164 @@ h3{
 
 
 
- /* CSS REGISTER */
 
 
 
 
+/*CSS REGISTER y CSS LOGIN  */
 
 
+.inicio-sesion{
+    text-align: center;
+    margin:20%;
+    margin-top:30%;
 
+}
+.formulario{
+    padding-top: 25px;
+}
+.botones{
+    width:100%;
+    padding-top:25px;
+    
+}
+section div.botones .boton-acceso {
+    padding-bottom:10px;
+}
 
+section div.botones .boton-contrasenia button{
+    background-color:#332d2d;
+    color:white;
+    width: 100%;
+    height: 45px;   
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
 
- /* CSS LOGIN  */
+section div.botones .boton-acceso button{
+ background-color:#332d2d;
+ color:white;
+ width: 100%;
+ height: 45px;
+ box-shadow: 0px 0px 10px rgb(100, 100, 100);
+ 
+}
+section div.boton .boton-registrar button{
+    background-color:#332d2d;
+    color:white;
+    width: 100%;
+    height: 45px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
 
+.barras div.mail input{
+    color:black;
+    width: 99%;
+    height: 45px;
+    margin-bottom:5%;
+    border:1px solid black;
+}
+.barras div.contrasenia input{
+    color:black;
+    width: 99%;
+    height: 45px;
+    border:1px solid black;
+    margin-bottom:5%;
+}
+.barras div.confirmar-contra input{
+    color:black;
+    width: 99%;
+    height: 45px;
+    border:1px solid black;
+    margin-bottom:5%;
+}
+.barras div.contra input{
+    color:black;
+    width: 99%;
+    height: 45px;
+    border:1px solid black;
+    margin-bottom:5%;
+}
 
+h1{
+    font-size:45px;
+}
+p{
+font-size:20px;
+}
+@media(min-width:720px){
+    .botones{
+        display: flex;
+        justify-content: space-between;
+    }
+    section div.botones .boton-acceso button{
+        height: 55px;
+        width:200px;
+    }
+    section div.botones .boton-contrasenia button{
+        height: 55px;
+        width:200px;
+    }
+    .boton{
+        display: flex;
+    }
+    section div.boton .boton-registrar button{
+            width:200px;
+            height: 50px;
+    }
+        .contra{
+            height: 65px;
+            width:200px;
+        }
+        .confirmar-contra{
+            height: 65px;
+            width:200px;
+        }
+        .contrasenias{
+            display:flex;
+            justify-content: space-between;}
+}
+@media(min-width:940px){
+    section div.botones .boton-acceso button{
+          
+            height: 65px;
+            width:250px;
+    }
+    section div.botones .boton-contrasenia button{
+                height: 65px;
+                width:250px;
+    }
+        section div.boton .boton-registrar button{
+        width:400px;
+        height: 50px;
+    }
+    .boton{
+        display: flex;
+    }
+    .contrasenias{
+        display:flex;
+        justify-content: space-between;
+    }
+    .contra{
+        height: 65px;
+        width:250px;
+    }
+    .confirmar-contra{
+        height: 65px;
+        width:250px;
+    }
+    
+}
 
+@media(min-width:1100px){
+    .contra{
+        height: 65px;
+        width:300px;
+    }
+    .confirmar-contra{
+        height: 65px;
+        width:300px;
+    }
+}
 
 
 
