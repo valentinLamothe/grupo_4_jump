@@ -1,0 +1,15 @@
+{
+	"name": "jump",
+	"version": "1.0.0",
+	"description": "JUMP es un e-commerce de indumentaria y artículos deportivos.",
+	"main": "app.js",
+	"scripts": {
+		"test": "nodemon app.js"
+	},
+	"author": "grupo_4",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.1",
+		"nodemon": "^2.0.7"
+	}
+}
