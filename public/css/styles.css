@@ -261,6 +261,9 @@ p {
   /*border: dotted 2px red; /*todo lo que se oculta*/
   display: none;
 }
+.largo-resumen {
+  width: 55vw;
+}
 
 @media (min-width: 720px) {
   .botones {
