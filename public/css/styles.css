@@ -1,247 +1,371 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* CSS DETALLE PRODUCTO */ 
 * {
-    font-family:'Dosis', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-.container{
-display: flex;
-padding: 10px;
-margin-bottom: 50px;
+/* CSS DETALLE PRODUCTO */
+* {
+  font-family: "Dosis", sans-serif;
 }
 
-body main section div .fotosdetalle{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-
+.container {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 50px;
 }
 
-
-
-body main section article img{
-    width: 90px;
-    height: 90px;
-    padding: 5px;
+body main section div .fotosdetalle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-
-
-body main section article .fotogrande{
-width: 620px;
-height: 620px;
-   
+body main section article img {
+  width: 90px;
+  height: 90px;
+  padding: 5px;
 }
 
-
-.productosrelacionados{
-    background-color:#D3D3D3;
-    padding: 5px;
+body main section article .fotogrande {
+  width: 620px;
+  height: 620px;
 }
 
-.otrosproductos{
-    display: flex;
-    justify-content: space-around;
+.productosrelacionados {
+  background-color: #d3d3d3;
+  padding: 5px;
 }
 
-.nomeproducto , .precio{
-    margin: 1px;
-    font-size: 11px;
+.otrosproductos {
+  display: flex;
+  justify-content: space-around;
 }
 
-.detalletexto{
-    margin: 10px;
+.nomeproducto,
+.precio {
+  margin: 1px;
+  font-size: 11px;
 }
 
-h2{
-    margin-left: 20px;
+.detalletexto {
+  margin: 10px;
 }
 
-h3{
-    margin-left: 40px;
+h2 {
+  margin-left: 20px;
 }
 
-/* CSS INDEX  */ 
+h3 {
+  margin-left: 40px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+/* CSS INDEX  */
 
 /*CSS REGISTER y CSS LOGIN  */
 
-
-.inicio-sesion{
-    text-align: center;
-    margin:20%;
-    margin-top:30%;
-
+.inicio-sesion {
+  text-align: center;
+  margin: 20%;
+  margin-top: 30%;
 }
-.formulario{
-    padding-top: 25px;
+.formulario {
+  padding-top: 25px;
 }
-.botones{
-    width:100%;
-    padding-top:25px;
-    
+.botones {
+  width: 100%;
+  padding-top: 25px;
 }
 section div.botones .boton-acceso {
-    padding-bottom:10px;
+  padding-bottom: 10px;
 }
 
-section div.botones .boton-contrasenia button{
-    background-color:#332d2d;
-    color:white;
-    width: 100%;
-    height: 45px;   
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+section div.botones .boton-contrasenia button {
+  background-color: #332d2d;
+  color: white;
+  width: 100%;
+  height: 45px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-section div.botones .boton-acceso button{
- background-color:#332d2d;
- color:white;
- width: 100%;
- height: 45px;
- box-shadow: 0px 0px 10px rgb(100, 100, 100);
- 
+section div.botones .boton-acceso button {
+  background-color: #332d2d;
+  color: white;
+  width: 100%;
+  height: 45px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-section div.boton .boton-registrar button{
-    background-color:#332d2d;
-    color:white;
-    width: 100%;
-    height: 45px;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-
-.barras div.mail input{
-    color:black;
-    width: 99%;
-    height: 45px;
-    margin-bottom:5%;
-    border:1px solid black;
-}
-.barras div.contrasenia input{
-    color:black;
-    width: 99%;
-    height: 45px;
-    border:1px solid black;
-    margin-bottom:5%;
-}
-.barras div.confirmar-contra input{
-    color:black;
-    width: 99%;
-    height: 45px;
-    border:1px solid black;
-    margin-bottom:5%;
-}
-.barras div.contra input{
-    color:black;
-    width: 99%;
-    height: 45px;
-    border:1px solid black;
-    margin-bottom:5%;
+section div.boton .boton-registrar button {
+  background-color: #332d2d;
+  color: white;
+  width: 100%;
+  height: 45px;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
-h1{
-    font-size:45px;
+.barras div.mail input {
+  color: black;
+  width: 99%;
+  height: 45px;
+  margin-bottom: 5%;
+  border: 1px solid black;
 }
-p{
-font-size:20px;
+.barras div.contrasenia input {
+  color: black;
+  width: 99%;
+  height: 45px;
+  border: 1px solid black;
+  margin-bottom: 5%;
 }
-@media(min-width:720px){
-    .botones{
-        display: flex;
-        justify-content: space-between;
-    }
-    section div.botones .boton-acceso button{
-        height: 55px;
-        width:200px;
-    }
-    section div.botones .boton-contrasenia button{
-        height: 55px;
-        width:200px;
-    }
-    .boton{
-        display: flex;
-    }
-    section div.boton .boton-registrar button{
-            width:200px;
-            height: 50px;
-    }
-        .contra{
-            height: 65px;
-            width:200px;
-        }
-        .confirmar-contra{
-            height: 65px;
-            width:200px;
-        }
-        .contrasenias{
-            display:flex;
-            justify-content: space-between;}
+.barras div.confirmar-contra input {
+  color: black;
+  width: 99%;
+  height: 45px;
+  border: 1px solid black;
+  margin-bottom: 5%;
 }
-@media(min-width:940px){
-    section div.botones .boton-acceso button{
-          
-            height: 65px;
-            width:250px;
-    }
-    section div.botones .boton-contrasenia button{
-                height: 65px;
-                width:250px;
-    }
-        section div.boton .boton-registrar button{
-        width:400px;
-        height: 50px;
-    }
-    .boton{
-        display: flex;
-    }
-    .contrasenias{
-        display:flex;
-        justify-content: space-between;
-    }
-    .contra{
-        height: 65px;
-        width:250px;
-    }
-    .confirmar-contra{
-        height: 65px;
-        width:250px;
-    }
-    
+.barras div.contra input {
+  color: black;
+  width: 99%;
+  height: 45px;
+  border: 1px solid black;
+  margin-bottom: 5%;
 }
 
-@media(min-width:1100px){
-    .contra{
-        height: 65px;
-        width:300px;
-    }
-    .confirmar-contra{
-        height: 65px;
-        width:300px;
-    }
+h1 {
+  font-size: 45px;
+}
+p {
+  font-size: 20px;
 }
 
+/* CSS PRODUCTCART */
 
+.main-carrito {
+  background-color: white;
+}
 
+.main-carrito section {
+  padding: 15px;
+}
 
+.titulocart {
+  display: block;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.detalle-carrito {
+  font-size: 15px;
+}
+.producto {
+  display: block;
+  width: 50vw;
+}
 
+.main-flex {
+  display: block;
 
+  margin: auto;
+}
+.main-flex h2 {
+  text-align: center;
+}
+.main-flex article {
+  width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.main-flex article button {
+  background-color: #ff2301;
+  font-weight: 700;
+}
+.main-flex article div {
+  margin: 5px;
+  width: 20vw;
+}
 
+.resumen-carrito {
+  background-color: darkgrey;
+  padding: 15px;
+  display: block;
+  margin: 10px;
+}
+.Fondo {
+  background-color: darkgrey;
+  padding: 15px;
+  margin: 10px;
+}
 
- /* CSS PRODUCTCART */
+.total-carrito {
+  font-weight: 900;
+  color: black;
+}
+.cup-carrito {
+  background-color: white;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  margin: 3px;
+}
+.seg-carrito button {
+  background-color: rgb(26, 32, 44);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  margin: 3px;
+}
+.fin-carrito button {
+  background-color: black;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 7px;
+  margin: 3px;
+}
+
+.distancia-carrito {
+  margin: 5px;
+}
+.linea-gruesa {
+  margin-top: 1px;
+  height: 2px;
+  background-color: black;
+}
+
+.linea {
+  height: 0.5px;
+  background-color: black;
+}
+
+.carru-flex ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+
+.carru-flex ul li {
+  margin: auto;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.carru-flex li img {
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+}
+
+.oculta-carrito {
+  /*border: dotted 2px red; /*todo lo que se oculta*/
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .botones {
+    display: flex;
+    justify-content: space-between;
+  }
+  section div.botones .boton-acceso button {
+    height: 55px;
+    width: 200px;
+  }
+  section div.botones .boton-contrasenia button {
+    height: 55px;
+    width: 200px;
+  }
+  .boton {
+    display: flex;
+  }
+  section div.boton .boton-registrar button {
+    width: 200px;
+    height: 50px;
+  }
+  .contra {
+    height: 65px;
+    width: 200px;
+  }
+  .confirmar-contra {
+    height: 65px;
+    width: 200px;
+  }
+  .contrasenias {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* CSS PRODUCTCART */
+
+  .oculta-carrito {
+    display: block;
+  }
+
+  .main-carrito {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
+  .child-carrito {
+    width: 60vw;
+  }
+  .main-flex {
+    margin: 10px;
+  }
+  .cup-carrito {
+    width: 20%;
+  }
+  .main-flex article {
+    width: auto;
+  }
+  .largo-resumen {
+    width: 25vw;
+  }
+  .Fondo {
+    background-color: darkgrey;
+    padding: 15px;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 940px) {
+  section div.botones .boton-acceso button {
+    height: 65px;
+    width: 250px;
+  }
+  section div.botones .boton-contrasenia button {
+    height: 65px;
+    width: 250px;
+  }
+  section div.boton .boton-registrar button {
+    width: 400px;
+    height: 50px;
+  }
+  .boton {
+    display: flex;
+  }
+  .contrasenias {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contra {
+    height: 65px;
+    width: 250px;
+  }
+  .confirmar-contra {
+    height: 65px;
+    width: 250px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .contra {
+    height: 65px;
+    width: 300px;
+  }
+  .confirmar-contra {
+    height: 65px;
+    width: 300px;
+  }
+}

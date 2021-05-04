@@ -24,6 +24,7 @@ app.get('/carrito', (req, res)=> {
    res.sendFile(path.resolve(__dirname,'views/productCart.html'))
 })
 
+
 app.get('/detalleproducto', (req, res)=> {
    res.sendFile(path.resolve(__dirname,'views/productDetail/'))
 })
@@ -31,3 +32,4 @@ app.get('/detalleproducto', (req, res)=> {
 app.get('/registro', (req, res)=> {
    res.sendFile(path.resolve(__dirname,'views/register.html'))
 })
+

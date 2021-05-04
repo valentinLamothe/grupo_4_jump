@@ -1,72 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
-    <link rel="stylesheet" href="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\css\normalize.css">
-    <link rel="stylesheet" href="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\css\styles.css">
+    <link rel="stylesheet"
+        href="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\css\normalize.css">
+    <link rel="stylesheet"
+        href="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\css\styles.css">
 </head>
+
 <body>
     <header>
-<!-- Generico todo el equipo -->
+        <!-- Generico todo el equipo -->
+        <h2>header</h2>
     </header>
-<nav><!--categorias genericas equipo--></nav>
-    
-<main> <!-- comienzo de edicion (Fabian)-->
-    <h2>Carrito de Compras</h2>
-    <section> <!-- cuadro detalles-->
-        <div class="cuadro"> <!-- agregar clase en css-->
-            
-            <i><!-- boton--></i>
-            <i>Producto</i>
-            <i><!-- detalle--></i>
-            <i>Precio</i>
-            <i>Cantidad</i>
-            <i>Subtotal</i>
+    <!--categorias genericas equipo-->
 
-        </div>
-        <article class="cuadro"> <!-- cuadro producto comprado-->
-            
-            <!-- version visual, ver como vincular con el producto comprado-->
-            
-            <div>
-                <i><!-- boton--></i>
-                <i><img src="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\img\rem.png" alt="remera"> </i>
-                <i> remera Independiente talle:L</i>
-                <i>$2000</i>
-                <i>2</i>
-                <i>$4000</i>
-            </div>
-        </article>
-        
-        
-        <article class:cuadro5> <!-- cuadro producto comprado-->
-            <!-- version visual, ver como vincular con el producto comprado-->
-            <div>
-                <i><!-- boton--></i>
-                <i> <img src="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\img\pant.png" alt="pantalon">    </i>
-                <i>pantalon racing talle: L </i>
-                <i>$1500</i>
-                <i> 1 </i>
-                <i>$1500</i>
-            </div>
-        </article>
-                       
 
-    </section>
-    
-    <aside>
-        contenido izquierdo carrito
-    </aside>
-    
-</main>
-    
+    <main>
+        <!-- ----------------------------- -->
+        <!--   comienzo de edicion (Fabian) -->
+        <!--    ---------------------------- -->
+        <nav class="main-carrito">
 
-    
+            <section class="main-flex child-carrito">
 
-<footer><!-- Generico todo el equipo --></footer>
+                <h2>Carrito de Compras</h2>
+                <div class="linea-gruesa oculta-carrito"></div>
+                <article>
+
+                    <div class="oculta-carrito"></div>
+                    <div class="oculta-carrito producto">Producto</div>
+                    <div class="oculta-carrito"></div>
+                    <div class="oculta-carrito">Precio</div>
+                    <div class="oculta-carrito">Cantidad</div>
+                    <div class="oculta-carrito">Subtotal</div>
+
+                </article>
+                <div class="linea oculta-carrito"></div>
+
+                <article>
+                    <div class="oculta-carrito"><button>x</button></div>
+                    <div><img
+                            src="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\img\carrito\zap.png"
+                            alt="zapatillas"></div>
+                    <div>zapatillas talle:XL</div>
+                    <div class="oculta-carrito">$$$</div>
+                    <div class="oculta-carrito">2</div>
+                    <div>$$$</div>
+
+                </article>
+
+
+
+
+                <article>
+
+                    <div class="oculta-carrito"><button>x</button></div>
+                    <div><img
+                            src="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\img\carrito\rem.png"
+                            alt="remera"></div>
+                    <div> remera Independiente talle:L</div>
+                    <div class="oculta-carrito">$$$</div>
+                    <div class="oculta-carrito">1</div>
+                    <div>$$$</div>
+
+
+                </article>
+
+
+                <article>
+                    <!-- cuadro producto comprado-->
+                    <!-- version visual, ver como vincular con el producto comprado-->
+                    <div class="oculta-carrito"><button>x</button></div>
+                    <div> <img
+                            src="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\img\carrito\pant.png"
+                            alt="pantalon"> </div>
+                    <div>pantalon racing talle: L </div>
+                    <div class="oculta-carrito">$$$</div>
+                    <div class="oculta-carrito">2</div>
+                    <div>$$$</div>
+
+                </article>
+
+
+            </section>
+
+            <section class="resumen-carrito">
+
+                <h2 class="titulocart">Resumen de compra</h2>
+                <div class="distancia-carrito">Subtotal $$$</div>
+                <div class="linea largo-resumen">
+                    <!-- line -->
+                </div>
+                <div class="total-carrito distancia-carrito">Total $$$</div>
+
+                <!-- button -->
+                <label>
+                    <input type="text" class="cup-carrito largo-resumen" name="cupon" placeholder="¿cupon de descuento?"
+                        maxlength="120">
+                </label>
+
+                <div class="seg-carrito"><button class="largo-resumen">Seguir Comprando</button></div>
+                <div class="fin-carrito"><button class="largo-resumen">Finalizar compra</button></div>
+
+            </section>
+
+        </nav>
+        <section class="Fondo">
+            <h2 class="titulocart">Agrandá tu pedido y el envio es GRATIS</h2>
+            <nav class="carru-flex">
+                <ul>
+                    <li><a href="#image1"><img
+                                src="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\img\carrito\pant.png"
+                                alt="pantalon"></a></li>
+                    <li><a href="#image2"><img
+                                src="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\img\carrito\zap.png"
+                                alt="zap"></a></li>
+                    <li><a href="#image3"><img
+                                src="E:\Users\Tatiana\Desktop\Fabian\DigitalHouse\ProyectoIntegrador\grupo_4_jump\public\img\carrito\rem.png"
+                                alt="remera"></a></li>
+
+                </ul>
+            </nav>
+
+
+
+        </section>
+
+
+    </main>
+
+
+
+
+    <footer>
+        <!-- Generico todo el equipo -->
+    </footer>
 
 </body>
+
 </html>
