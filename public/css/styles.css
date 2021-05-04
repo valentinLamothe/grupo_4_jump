@@ -541,6 +541,10 @@ h3 .produtosrelacionados1 {
 	background-position-y: 80%;
 }
 
+.banner a {
+	text-decoration: none;
+}
+
 .h2-banner {
 	padding-top: 15%;
 	line-height: 1.3;
@@ -708,6 +712,10 @@ input.caja-email {
 		width: 50%;
 	}
 
+	.caja-producto-home .product-img {
+		width: 100%;
+	}
+
 	.info-boletin {
 		margin-top: 10%;
 	}
@@ -738,6 +746,10 @@ input.caja-email {
 
 		.product-img {
 			height: 194.81px;
+		}
+
+		.caja-producto-home .product-img {
+			height: auto;
 		}
 
 		.caja-email {
