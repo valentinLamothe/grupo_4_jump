@@ -320,6 +320,10 @@ body main section article .fotogrande {
 	flex-direction: column;
 }
 
+.prod-relacionados-h3 {
+	padding-bottom: 2%;
+}
+
 .productosrelacionados article {
 	justify-content: center;
 	/* align-items: center; */
@@ -330,8 +334,12 @@ body main section article .fotogrande {
 	width: 90%;
 }
 
-.otrosproductos article i {
+.holis {
+	display: flex;
+	flex-direction: column;
 }
+
+
 
 .botomcompra {
 	background-color: black;
@@ -411,7 +419,6 @@ h3 .produtosrelacionados1 {
 
 	.otrosproductos {
 		display: flex;
-		box-sizing: border-box;
 		width: 90%;
 	}
 
