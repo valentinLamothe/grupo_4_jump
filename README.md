@@ -37,3 +37,7 @@ El público al que apuntamos son hombres y mujeres, residentes en Argentina de e
 **Nahuel Mina**
 
 > Me llamo Nahuel, tengo 34 años y soy de Buenos Aires. Estudié Diseño Gráfico y me dedico al Desarrollo Web. Me interesa todo lo relacionado al arte, la música y la tecnología.
+
+
+**Trello Grupo 4**
+> https://trello.com/b/Slh1lbh4/dh-proyecto-final
