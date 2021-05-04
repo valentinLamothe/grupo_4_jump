@@ -1,64 +1,303 @@
+/* GENERAL */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+p {
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+header {
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	padding: 15px;
+	width: 100%;
+}
+header .container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+header .logo {
+	width: 50%;
+	font-weight: 700;
+	font-size: 1.5rem;
+	text-align: left;
+}
+header .logo a {
+	display: block;
+}
+header .logo a img {
+	width: 100px;
+}
+header nav {
+	width: 50%;
+}
+header nav ul {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+	align-content: center;
+	align-items: center;
+}
+header nav ul li.burguer-menu {
+	text-align: right;
+}
+header nav i {
+	color: #000;
+}
+header .search-bar {
+	width: 100%;
+	margin: 15px 0 10px;
+}
+header a,
+footer a {
+	text-decoration: none;
+}
+header a {
+	color: #000;
+	font-size: 0.95rem;
+}
+header i {
+	font-size: 1.3rem;
+}
+header i::after {
+	display: none;
+}
+header ul,
+footer ul {
+	list-style: none;
+}
+header .desktop-menu-container {
+	display: none;
+}
+header .search-bar form {
+	display: flex;
+	justify-content: space-between;
+}
+header .search-bar form input {
+	width: 100%;
+	padding: 5px;
+	font-size: 1rem;
+	border: 1px solid #000;
+	box-shadow: none;
+}
+header .search-bar form button {
+	width: 50px;
+	height: 50px;
+	background: #000;
+	color: #fff;
+	border: 1px solid #000;
+	box-shadow: none;
+}
+main {
+	flex: 1 0 auto;
+	padding: 15px;
+}
+footer {
+	flex-shrink: 0;
+	background-color: #000;
+	color: #fff;
+	padding: 15px;
+	font-size: 1rem;
+}
+footer .container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+footer .logo img {
+	width: 75px;
+}
+footer a {
+	color: #fff;
+}
+footer nav {
+	display: flex;
+	margin: 15px 0;
+}
+footer nav ul {
+	width: 50%;
+	font-size: 0.95rem;
+}
+footer nav ul li {
+	margin: 5px 0;
+}
+footer ul li.redes a {
+	display: inline-block;
+	margin: 0 2px;
+}
+footer ul li.redes a i {
+	font-size: 1.3rem;
+}
+footer .newsletter .redes {
+	display: none;
+}
+footer .newsletter form {
+	display: flex;
+	justify-content: space-between;
+}
+footer .newsletter form input {
+	width: 100%;
+	padding: 5px;
+	font-size: 1rem;
+	border: 1px solid #fff;
+	box-shadow: none;
+}
+footer .newsletter form button {
+	width: 50px;
+	height: 50px;
+	background: #000;
+	color: #fff;
+	border: 1px solid #fff;
+	box-shadow: none;
+}
+footer .copy p {
+	font-size: 0.8rem;
+	text-align: center;
+	margin: 30px 0 0;
+}
+
+@media (min-width: 768px) {
+	header i::after {
+		display: inline-block;
+		content: '';
+		font-family: sans-serif;
+		font-weight: 500;
+		font-size: 0.95rem;
+		margin-left: 8px;
+	}
+	header i:hover::after {
+		font-weight: 700;
+	}
+	header .login i::after {
+		content: 'Ingresar';
+	}
+	header .registro i::after {
+		content: 'Creá tu cuenta';
+	}
+	header .carrito i::after {
+		content: 'Carrito';
+	}
+	footer .container {
+		flex-direction: row;
+	}
+	footer .logo {
+		border-bottom: none;
+		width: 25%;
+	}
+	footer .logo a {
+		font-size: 1.5rem;
+		margin-top: 20px;
+	}
+	footer nav {
+		width: 50%;
+	}
+	footer nav .redes {
+		display: none;
+	}
+	footer .newsletter {
+		width: 25%;
+	}
+	footer .newsletter .redes {
+		display: block;
+		margin: 20px 0 15px;
+	}
+	footer .copy {
+		width: 100%;
+	}
+}
+
+@media (min-width: 992px) {
+	header {
+		border-bottom: none;
+		width: 100%;
+	}
+	header .container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	header .logo {
+		width: 10%;
+		font-weight: 700;
+		font-size: 1.5rem;
+		text-align: left;
+		order: 1;
+	}
+	header .search-bar {
+		width: 45%;
+		margin: 15px 0 10px;
+		order: 2;
+	}
+	header nav {
+		width: 35%;
+		order: 3;
+	}
+	header nav ul li.burguer-menu {
+		display: none;
+	}
+	header .desktop-menu-container {
+		display: block;
+		padding: 20px 0;
+		margin-top: 10px;
+		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
+	}
+	header .desktop-menu {
+		display: flex;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	header .desktop-menu a {
+		font-weight: 300;
+	}
+	header .desktop-menu a:hover {
+		font-weight: 500;
+	}
+}
+
+@media (min-width: 1200px) {
+}
+
+/* GENERAL */
+
+
+
+
+
+
+
+
 
 /* CSS DETALLE PRODUCTO */
-* {
-  font-family: "Dosis", sans-serif;
-}
 
-.container {
-  display: flex;
-  padding: 10px;
-  margin-bottom: 50px;
-}
 
-body main section div .fotosdetalle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 
-body main section article img {
-  width: 90px;
-  height: 90px;
-  padding: 5px;
-}
 
-body main section article .fotogrande {
-  width: 620px;
-  height: 620px;
-}
 
-.productosrelacionados {
-  background-color: #d3d3d3;
-  padding: 5px;
-}
 
-.otrosproductos {
-  display: flex;
-  justify-content: space-around;
-}
 
-.nomeproducto,
-.precio {
-  margin: 1px;
-  font-size: 11px;
-}
-
-.detalletexto {
-  margin: 10px;
-}
-
-h2 {
-  margin-left: 20px;
-}
-
-h3 {
-  margin-left: 40px;
-}
 
 /* CSS INDEX  */
 
@@ -138,6 +377,13 @@ h1 {
 p {
   font-size: 20px;
 }
+
+
+
+
+
+
+
 
 /* CSS PRODUCTCART */
 
@@ -297,6 +543,9 @@ p {
     display: flex;
     justify-content: space-between;
   }
+
+
+
 
   /* CSS PRODUCTCART */
 
