@@ -537,12 +537,22 @@ section div.boton .boton-registrar button:hover {
 	border: 1px solid black;
 	padding-left: 1%;
 }
+
+section.formulario form div.usuario-regis input {
+	color: black;
+	width: 99%;
+	height: 45px;
+	border: 1px solid black;
+	margin-bottom: 3.5%;
+	padding-left: 1.5%;
+}
+
 .barras div.contrasenia input {
 	color: black;
 	width: 99%;
 	height: 45px;
 	border: 1px solid black;
-	margin-bottom: 5%;
+	margin-bottom: 3.5%;
 	padding-left: 1.5%;
 }
 .barras div.confirmar-contra input {
@@ -553,6 +563,19 @@ section div.boton .boton-registrar button:hover {
 	margin-bottom: 5%;
 	padding-left: 1.5%;
 }
+
+section form div.barras .recor-contrasenia {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 1%;
+}
+
+section form div.barras .recor-contrasenia input {
+	margin-left: 1%;
+	background-color: black;
+}
+
 .barras div.contra input {
 	color: black;
 	width: 99%;
@@ -852,6 +875,7 @@ section div.botones .boton-contrasenia button {
 	height: 55px;
 	width: 200px;
 }
+
 .boton {
 	display: flex;
 }
