@@ -25,13 +25,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
+                        <a href="/" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
                     </li>
                     <li>
-                        <a href="/registro" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
+                        <a href="/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
                     </li>
                     <li>
-                        <a href="/carrito" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
+                        <a href="/productDetail" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
                     </li>
                     <li class="burguer-menu">
                         <a href="#"><i class="fas fa-bars"></i></a>
@@ -57,12 +57,12 @@
     </header>
     <main>
         <div class="container">
-            <div class="inicio-sesion">
+            <section class="inicio-sesion">
                 <div class="titulo">
-                    <h1>Creá tu Cuenta</h1>
+                    <h1>Iniciar Sesión</h1>
                 </div>
                 <div class="subtitulo">
-                    <p>Complete los campos para poder creár su cuenta</p>
+                    <p>Complete los datos para poder iniciar iniciar sesion</p>
                 </div>
                 <section class="formulario">
                     <form action="/login" method="">
@@ -71,33 +71,30 @@
                                 <label for="Email"></label>
                                 <input type="email" name="email" id="Email" placeholder="Email">
                             </div>
-                            <div class="usuario-regis">
-                                <label for="usuario"></label>
-                                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                            <div class="contrasenia">
+                                <label for="contrasenia"></label>
+                                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
                             </div>
-                            <div class="contrasenias">
-                                <div class="contra">
-                                    <label for="contrasenia"></label>
-                                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
-                                </div>
-                                <div class="confirmar-contra">
-                                    <label for="contrasenia"></label>
-                                    <input type="password" name="confirmar-contra" id="confirmar-contra"
-                                        placeholder="Confirmar Contraseña">
-                                </div>
+                            <div class="recor-contrasenia">
+                                <label for="contrasenia">Recordar contraseña</label>
+                                <input type="checkbox" name="contrasenia" id="contrasenia">
                             </div>
                         </div>
-                        <div class="boton">
-                            <div class="boton-registrar">
-                                <button type="submit">REGISTRAR</button>
+                        <div class="botones">
+                            <div class="boton-acceso">
+                                <button type="submit">ACCEDER</button>
+                            </div>
+                            <div class="boton-contrasenia">
+                                <button type="button">¿OLVIDASTE TU CONTRASEÑA?</button>
                             </div>
                         </div>
                     </form>
                 </section>
-            </div>
+            </section>
         </div>
     </main>
     <footer>
+
         <div class="container">
             <div class="logo">
                 <img src="/img/logo-black.jpg" alt="JUMP" />

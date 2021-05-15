@@ -28,10 +28,10 @@
                         <a href="/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
                     </li>
                     <li>
-                        <a href="/registro" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
+                        <a href="/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
                     </li>
                     <li>
-                        <a href="/carrito" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
+                        <a href="/productDetail" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
                     </li>
                     <li class="burguer-menu">
                         <a href="#"><i class="fas fa-bars"></i></a>
@@ -55,115 +55,48 @@
             </ul>
         </div>
     </header>
-    <!--categorias genericas equipo-->
-
-
     <main>
         <div class="container">
-            <!-- ----------------------------- -->
-            <!--   comienzo de edicion (Fabian) -->
-            <!--    ---------------------------- -->
-            <div class="main-carrito">
-
-                <section class="main-flex child-carrito">
-
-                    <h2>Carrito de Compras</h2>
-                    <div class="linea-gruesa oculta-carrito"></div>
-                    <article>
-
-                        <div class="oculta-carrito"></div>
-                        <div class="oculta-carrito producto">Producto</div>
-                        <div class="oculta-carrito"></div>
-                        <div class="oculta-carrito">Precio</div>
-                        <div class="oculta-carrito">Cantidad</div>
-                        <div class="oculta-carrito">Subtotal</div>
-
-                    </article>
-                    <div class="linea oculta-carrito"></div>
-
-                    <article>
-                        <div><button>x</button></div>
-                        <div><img src="img\img-home\zapas.jpg" alt="zapatillas"></div>
-                        <div>zapatillas talle:XL</div>
-                        <div class="oculta-carrito">$$$</div>
-                        <div class="oculta-carrito">2</div>
-                        <div>$$$</div>
-
-                    </article>
-
-
-
-
-                    <article>
-
-                        <div><button>x</button></div>
-                        <div><img src="img\img-home\bolso.jpg" alt="remera"></div>
-                        <div> remera talle:L</div>
-                        <div class="oculta-carrito">$$$</div>
-                        <div class="oculta-carrito">1</div>
-                        <div>$$$</div>
-
-
-                    </article>
-
-
-                    <article>
-                        <!-- cuadro producto comprado-->
-                        <!-- version visual, ver como vincular con el producto comprado-->
-                        <div><button>x</button></div>
-                        <div> <img src="img\img-home\short.jpg" alt="pantalon"></div>
-                        <div>pantalon racing talle: L </div>
-                        <div class="oculta-carrito">$$$</div>
-                        <div class="oculta-carrito">2</div>
-                        <div>$$$</div>
-
-                    </article>
-
-
-                </section>
-
-                <section class="resumen-carrito">
-
-                    <h2 class="titulocart">Resumen de compra</h2>
-                    <div class="distancia-carrito">Subtotal $$$</div>
-                    <div class="linea largo-resumen">
-                        <!-- line -->
-                    </div>
-                    <div class="total-carrito distancia-carrito">Total $$$</div>
-
-                    <!-- button -->
-                    <label class="label-carrito">
-                        <input type="text" class="cup-carrito largo-resumen" name="cupon"
-                            placeholder="¿cupon de descuento?" maxlength="120">
-                    </label>
-
-                    <div class="seg-carrito"><button class="largo-resumen">Seguir Comprando</button></div>
-                    <div class="fin-carrito"><button class="largo-resumen">Finalizar compra</button></div>
-
-                </section>
-
-            </div>
-            <section class="Fondo">
-                <h2 class="titulocart">Agrandá tu pedido y el envio es GRATIS</h2>
-                <div class="carru-flex">
-                    <ul>
-                        <li><a href="#image1"><img src="img\img-home\zapas.jpg" alt="pantalon"></a></li>
-                        <li><a href="#image2"><img src="img\img-home\short.jpg" alt="zap"></a></li>
-                        <li><a href="#image3"><img src="img\img-home\bolso.jpg" alt="remera"></a></li>
-
-                    </ul>
+            <div class="inicio-sesion">
+                <div class="titulo">
+                    <h1>Creá tu Cuenta</h1>
                 </div>
-
-
-
-            </section>
-
+                <div class="subtitulo">
+                    <p>Complete los campos para poder creár su cuenta</p>
+                </div>
+                <section class="formulario">
+                    <form action="/login" method="">
+                        <div class="barras">
+                            <div class="mail">
+                                <label for="Email"></label>
+                                <input type="email" name="email" id="Email" placeholder="Email">
+                            </div>
+                            <div class="usuario-regis">
+                                <label for="usuario"></label>
+                                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                            </div>
+                            <div class="contrasenias">
+                                <div class="contra">
+                                    <label for="contrasenia"></label>
+                                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
+                                </div>
+                                <div class="confirmar-contra">
+                                    <label for="contrasenia"></label>
+                                    <input type="password" name="confirmar-contra" id="confirmar-contra"
+                                        placeholder="Confirmar Contraseña">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boton">
+                            <div class="boton-registrar">
+                                <button type="submit">REGISTRAR</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
         </div>
     </main>
-
-
-
-
     <footer>
         <div class="container">
             <div class="logo">
@@ -207,7 +140,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
