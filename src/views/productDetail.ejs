@@ -1,61 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JUMP</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/f41f4e866a.js" crossorigin="anonymous"></script>
-</head>
+<!-- Acá sumamos las vistas automatizadas head -->
+<%- include ('./partials/head')  %> 
 
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="/"><img src="/img/logo-white.jpg" alt="JUMP" /></a>
-            </div>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
-                    </li>
-                    <li>
-                        <a href="/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
-                    </li>
-                    <li>
-                        <a href="/productDetail" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
-                    </li>
-                    <li class="burguer-menu">
-                        <a href="#"><i class="fas fa-bars"></i></a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="search-bar">
-                <form action="/search">
-                    <input type="search" name="search" id="buscador" placeholder="¿Qué estás buscando?" />
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="desktop-menu-container">
-            <ul class="desktop-menu container">
-                <li><a href="#">Hombre</a></li>
-                <li><a href="#">Mujer</a></li>
-                <li><a href="#">Niños</a></li>
-                <li><a href="#">Marcas</a></li>
-                <li><a href="#">Colecciones</a></li>
-            </ul>
-        </div>
-    </header>
+    <!-- Acá sumamos la vista automatizada header -->
+		<%- include ('./partials/header')  %> 
 
 
 
@@ -208,49 +157,8 @@
 
 
 
-    <footer>
-        <div class="container">
-            <div class="logo">
-                <img src="/img/logo-black.jpg" alt="JUMP" />
-            </div>
-            <nav>
-                <ul class="left">
-                    <li><a href="#">Hombre</a></li>
-                    <li><a href="#">Mujer</a></li>
-                    <li><a href="#">Niños</a></li>
-                    <li><a href="#">Marcas</a></li>
-                    <li><a href="#">Colecciones</a></li>
-                </ul>
-                <ul class="right">
-                    <li><a href="/login">Ingresar</a></li>
-                    <li><a href="/registro">Creá tu cuenta</a></li>
-                    <li><a href="/carrito">Carrito</a></li>
-                    <li>&nbsp;</li>
-                    <li class="redes">
-                        Seguinos en <a href="#"><i class="fab fa-facebook-square"></i></a> <a href="#"><i
-                                class="fab fa-instagram-square"></i></a> <a href="#"><i
-                                class="fab fa-twitter-square"></i></a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="newsletter">
-                <ul>
-                    <li class="redes">
-                        Seguinos en <a href="#"><i class="fab fa-facebook-square"></i></a> <a href="#"><i
-                                class="fab fa-instagram-square"></i></a> <a href="#"><i
-                                class="fab fa-twitter-square"></i></a>
-                    </li>
-                </ul>
-                <form action="/newsletter">
-                    <input type="email" name="newsletter" id="newsletter" placeholder="Ingresá tu email" />
-                    <button type="submit"><i class="fas fa-envelope-open-text"></i></button>
-                </form>
-            </div>
-            <div class="copy">
-                <p>JUMP &copy; 2021 - Todos los derechos reservados</p>
-            </div>
-        </div>
-    </footer>
+        <!-- Acá sumamos la vista automatizada footer -->
+		<%- include ('./partials/footer')  %> 
 </body>
 
 </html>
