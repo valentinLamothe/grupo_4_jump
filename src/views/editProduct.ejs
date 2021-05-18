@@ -1,0 +1,51 @@
+<!-- Acá sumamos las vistas automatizadas head -->
+<%- include ('./partials/head')  %> 
+
+<body>
+        <!-- Acá sumamos la vista automatizada header -->
+		<%- include ('./partials/header')  %> 
+    <main class="container">
+        <section class="formContainer">
+            <h1>Editar producto</h1>
+            <form id="newProduct" action="/productCreation" method="">        
+                <div class="item">
+                    <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
+                    <input type="text" name="product-name" id="product-name" value="ZAPATILLAS X9000L2">
+                </div>
+                <div class="item">
+                    <label for="product-description"><i class="fas fa-edit"></i> Descripción del producto</label>
+                    <textarea name="product-description" id="product-description" cols="30" rows="10">Estas zapatillas inspiradas en el skate actualizan un estilo clásico para que las puedas usar para cualquier actividad. El exterior de gamuza les da un tacto suave, mientras que el forro interno textil y la plantilla con amortiguación ofrecen una comodidad duradera.</textarea>
+                </div>
+                <div class="item">
+                    <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto (JPG/PNG):</label>
+                    <input type="image" src="img/img-home/zapas.jpg" alt="ZAPATILLAS X9000L2">
+                    <input type="file" name="product-image" id="product-image" accept="image/png, image/jpeg" multiple>
+                </div>
+                <div class="item">
+                    <label for="product-category"><i class="fas fa-edit"></i> Categoría del producto</label>
+                    <select name="product-category" id="product-category">
+                        <option value="hombre" selected>Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="ninios">Niños</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="product-color"><i class="fas fa-edit"></i> Color del producto</label>
+                    <input type="color" name="product-color" id="product-color">
+                </div>
+                <div class="item">
+                    <label for="product-price"><i class="fas fa-edit"></i> Precio del producto ($)</label>
+                    <input type="number" name="product-price" id="product-price" value="10.000">
+                </div>
+                <div class="item"></div>
+                    <button type="submit">GUARDAR PRODUCTO</button>
+                </div>
+            </form>
+
+        </section>
+    </main>
+      <!-- Acá sumamos la vista automatizada footer -->
+      <%- include ('./partials/footer')  %> 
+</body>
+
+</html>

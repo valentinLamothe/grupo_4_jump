@@ -1,0 +1,50 @@
+<!-- Acá sumamos las vistas automatizadas head -->
+<%- include ('./partials/head')  %> 
+
+<body>
+        <!-- Acá sumamos la vista automatizada header -->
+		<%- include ('./partials/header')  %> 
+    <main class="container">
+        <section class="formContainer">
+            <h1>Nuevo producto</h1>
+            <form id="newProduct" action="/productCreation" method="">        
+                <div class="item">
+                    <label for="product-name">Nombre del producto</label>
+                    <input type="text" name="product-name" id="product-name" required>
+                </div>
+                <div class="item">
+                    <label for="product-description">Descripción del producto</label>
+                    <textarea name="product-description" id="product-description" cols="30" rows="10"></textarea>
+                </div>
+                <div class="item">
+                    <label for="product-image">Imagen del producto (JPG/PNG):</label>
+                    <input type="file" name="product-image" id="product-image" accept="image/png, image/jpeg" multiple>
+                </div>
+                <div class="item">
+                    <label for="product-category">Categoría del producto</label>
+                    <select name="product-category" id="product-category">
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="ninios">Niños</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="product-color">Color del producto</label>
+                    <input type="color" name="product-color" id="product-color">
+                </div>
+                <div class="item">
+                    <label for="product-price">Precio del producto ($)</label>
+                    <input type="number" name="product-price" id="product-price">
+                </div>
+                <div class="item"></div>
+                    <button type="submit">CREAR PRODUCTO</button>
+                </div>
+            </form>
+
+        </section>
+    </main>
+      <!-- Acá sumamos la vista automatizada footer -->
+      <%- include ('./partials/footer')  %> 
+</body>
+
+</html>
