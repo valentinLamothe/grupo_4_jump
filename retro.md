@@ -2,20 +2,22 @@
 
 **1.Comenzar a hacer**
 
-> Hacer minutas de cada reunión así podemos ver de manera concreta en qué se avanzó.
+> - Hacer minutas de cada reunión así podemos ver de manera concreta en qué se avanzó.
 
 **2.Hacer más**
 
-> Detallar previamente de cada encuentro lo que vamos a revisar juntos en las reuniones. Usar Trello más seguido.
+> - Detallar previamente de cada encuentro lo que vamos a revisar juntos en las reuniones.
+> - uso de trello,lo utilizando poco, desperdiciando una herramienta muy practica para las reuniones y division de tareas claras.
 
 **3.Continuar haciendo**
 
-> Seguir con la buena comunicación y seguir ayudándonos entre todos.
+> - Seguir con la buena comunicación y seguir ayudándonos entre todos.
+> - Instrospeccion y status de cada uno. Para saber las fortalezas y debilidades del equipo, que permiten saber como proceder desde las fortaleza a la resolucion del sprint.
 
 **4.Hacer menos**
 
-> Reuniones los fines de semana.
+> - controles de ultimo momento, en el sprint anterior el tiempo nos jugo en contra.
 
 **5.Dejar de hacer**
 
-
+> - Reuniones inecesarias, tuvimos algunas reuniones extra que no aportaron mucho al objetivo del sprint.
