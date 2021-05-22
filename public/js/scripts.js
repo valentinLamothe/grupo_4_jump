@@ -49,21 +49,14 @@ const cardInfoContainer6 = document.getElementById('cardInfoContainer6')
 var elementosEstanVisibles = true
 iconoInfo.addEventListener('click', () => {
     if(elementosEstanVisibles){
-        cardInfoContainer.style.transition = 'all 0ms ease'
-        cardInfoContainer.style.transform = 'rotateY(360deg)'
         productImg.className = 'display-none'
-        // productDescrip.className = 'display-none'
-        // precio.className = 'display-none'
         description.className = 'descripcion'
-
+        
         elementosEstanVisibles = false
     } else {
-        cardInfoContainer.style.transition = 'all 0.9s ease'
-        cardInfoContainer.style.transform = 'rotateY(180deg)'
         productImg.className = 'product-img'
-        // productDescrip.className = 'product-descrip'
-        // precio.className = 'hola'
         description.className = 'display-none'
+        
         elementosEstanVisibles = true
     }
 })
@@ -71,21 +64,14 @@ iconoInfo.addEventListener('click', () => {
 var elementosEstanVisibles2 = true
 iconoInfo2.addEventListener('click', () => {
     if(elementosEstanVisibles2){
-        cardInfoContainer2.style.transition = 'all 0ms ease'
-        cardInfoContainer2.style.transform = 'rotateY(360deg)'
         productImg2.className = 'display-none'
-        // productDescrip.className = 'display-none'
-        // precio.className = 'display-none'
         description2.className = 'descripcion'
 
         elementosEstanVisibles2 = false
     } else {
-        cardInfoContainer2.style.transition = 'all 0.9s ease'
-        cardInfoContainer2.style.transform = 'rotateY(180deg)'
         productImg2.className = 'product-img'
-        // productDescrip.className = 'product-descrip'
-        // precio.className = 'hola'
         description2.className = 'display-none'
+        
         elementosEstanVisibles2 = true
     }
 })
@@ -93,21 +79,14 @@ iconoInfo2.addEventListener('click', () => {
 var elementosEstanVisibles3 = true
 iconoInfo3.addEventListener('click', () => {
     if(elementosEstanVisibles3){
-        cardInfoContainer3.style.transition = 'all 0ms ease'
-        cardInfoContainer3.style.transform = 'rotateY(360deg)'
         productImg3.className = 'display-none'
-        // productDescrip.className = 'display-none'
-        // precio.className = 'display-none'
         description3.className = 'descripcion'
 
         elementosEstanVisibles3 = false
     } else {
-        cardInfoContainer3.style.transition = 'all 0.9s ease'
-        cardInfoContainer3.style.transform = 'rotateY(180deg)'
         productImg3.className = 'product-img'
-        // productDescrip.className = 'product-descrip'
-        // precio.className = 'hola'
         description3.className = 'display-none'
+
         elementosEstanVisibles3 = true
     }
 })
@@ -115,21 +94,14 @@ iconoInfo3.addEventListener('click', () => {
 var elementosEstanVisibles4 = true
 iconoInfo4.addEventListener('click', () => {
     if(elementosEstanVisibles4){
-        cardInfoContainer4.style.transition = 'all 0ms ease'
-        cardInfoContainer4.style.transform = 'rotateY(360deg)'
         productImg4.className = 'display-none'
-        // productDescrip.className = 'display-none'
-        // precio.className = 'display-none'
         description4.className = 'descripcion'
 
         elementosEstanVisibles4 = false
     } else {
-        cardInfoContainer4.style.transition = 'all 0.9s ease'
-        cardInfoContainer4.style.transform = 'rotateY(180deg)'
         productImg4.className = 'product-img'
-        // productDescrip.className = 'product-descrip'
-        // precio.className = 'hola'
         description4.className = 'display-none'
+        
         elementosEstanVisibles4 = true
     }
 })
@@ -137,21 +109,14 @@ var elementosEstanVisibles5 = true
 iconoInfo5.addEventListener('click', () => {
 
     if(elementosEstanVisibles5){
-        cardInfoContainer5.style.transition = 'all 0ms ease'
-        cardInfoContainer5.style.transform = 'rotateY(360deg)'
         productImg5.className = 'display-none'
-        // productDescrip.className = 'display-none'
-        // precio.className = 'display-none'
         description5.className = 'descripcion'
 
         elementosEstanVisibles5 = false
     } else {
-        cardInfoContainer5.style.transition = 'all 0.9s ease'
-        cardInfoContainer5.style.transform = 'rotateY(180deg)'
         productImg5.className = 'product-img'
-        // productDescrip.className = 'product-descrip'
-        // precio.className = 'hola'
         description5.className = 'display-none'
+        
         elementosEstanVisibles5 = true
     }
 })
@@ -160,21 +125,14 @@ var elementosEstanVisibles6 = true
 iconoInfo6.addEventListener('click', () => {
 
     if(elementosEstanVisibles6){
-        cardInfoContainer6.style.transition = 'all 0ms ease'
-        cardInfoContainer6.style.transform = 'rotateY(360deg)'
         productImg6.className = 'display-none'
-        // productDescrip.className = 'display-none'
-        // precio.className = 'display-none'
         description6.className = 'descripcion'
 
         elementosEstanVisibles6 = false
     } else {
-        cardInfoContainer6.style.transition = 'all 0.9s ease'
-        cardInfoContainer6.style.transform = 'rotateY(180deg)'
         productImg6.className = 'product-img'
-        // productDescrip.className = 'product-descrip'
-        // precio.className = 'hola'
         description6.className = 'display-none'
+
         elementosEstanVisibles6 = true
     }
 })
