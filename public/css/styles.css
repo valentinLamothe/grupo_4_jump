@@ -306,6 +306,11 @@ h3 .produtosrelacionados1 {
 
 /* BANNER */
 
+section.banner div.container {
+	margin: 0;
+	margin-left: 4%;
+}
+
 .banner {
 	background-color: #c4c4c4;
 	background-image: url(/img/slider.jpg);
@@ -313,6 +318,9 @@ h3 .produtosrelacionados1 {
 	background-size: cover;
 	min-height: 500px;
 	background-position-y: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .banner a {
@@ -329,7 +337,7 @@ h3 .produtosrelacionados1 {
 
 .banner-descrip {
 	padding-top: 10px;
-	padding-bottom: 20px;
+	padding-bottom: 35px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -348,14 +356,14 @@ h3 .produtosrelacionados1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: black;
+	color: orange;
 	text-decoration: none;
-	padding-bottom: 5%;
-	font-size: 10px;
+	font-size: 13px;
+	padding-bottom: 3%;
 }
 
 .fa-circle:before {
-	margin-left: 5px;
+	margin-left: 7px;
 }
 
 /* MAIN */
@@ -363,9 +371,59 @@ h3 .produtosrelacionados1 {
 .caja-producto-home {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	/*justify-content: center;*/
 	align-items: center;
 	margin-bottom: 10%;
+	/* transition: all .5s ease; */
+}
+
+.card-info-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 461.5px;
+	/* transition: all 1s ease; */
+	/* transform: rotateY(180deg) */
+}
+
+article.caja-producto-home div img {
+	height: 461.5px;
+}
+
+.descripcion {
+	transition: all .5s ease;
+	margin-top: 60px;
+	width: 60%;
+	text-align: justify;
+}
+
+/* .caja-producto-home:hover {
+	transform: rotateY(180deg)
+} */
+
+.icono-info-container {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 2%;
+}
+
+.icono-info {
+	border: 1px solid black;
+	padding: 5px 12px;
+	border-radius: 100%;
+	transition: all .3s ease;
+}
+
+.icono-info:hover {
+	cursor: pointer;
+	background-color: black;
+	color: white;
+	font-weight: bold;
+}
+
+.display-none {
+	display: none;
 }
 
 /* Productos */
@@ -392,8 +450,8 @@ h3 .produtosrelacionados1 {
 /* Categorias */
 
 .category {
-	background-color: #eaeaea;
-	margin-top: 5%;
+	/* background-color: #eaeaea; */
+	margin-top: 7%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -401,6 +459,8 @@ h3 .produtosrelacionados1 {
 	margin-right: 5%;
 	padding-bottom: 20px;
 	margin-bottom: 50px;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
 }
 
 .h3-category {
@@ -416,6 +476,12 @@ h3 .produtosrelacionados1 {
 	padding: 8px 7px;
 }
 
+.fil-butt:hover {
+	/* width: 8vw; */
+	transition: 500ms;
+	transform: rotate(360deg)
+}
+
 .fill-butt:hover {
 	opacity: 0.5;
 }
@@ -423,7 +489,11 @@ h3 .produtosrelacionados1 {
 select {
 	padding: 6px;
 	font-size: 16px;
-	border-style: dashed;
+}
+
+select:hover {
+	height: 6vh;
+	transition: 1s;
 }
 
 /* Boletin-email */
