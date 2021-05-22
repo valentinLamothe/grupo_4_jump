@@ -394,7 +394,7 @@ article.caja-producto-home div img {
 	transition: all .5s ease;
 	margin-top: 60px;
 	width: 60%;
-	text-align: justify;
+	/* text-align: justify; */
 }
 
 /* .caja-producto-home:hover {
@@ -1241,6 +1241,10 @@ section .label-carrito input {
 
 	.vision-balls {
 		padding-bottom: 1%;
+	}
+
+	.product-descrip {
+		margin-top: 0;
 	}
 
 	/* CARRITO */
