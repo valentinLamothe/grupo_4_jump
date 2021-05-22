@@ -170,7 +170,7 @@ iconoInfo6.addEventListener('click', () => {
         elementosEstanVisibles = false
     } else {
         cardInfoContainer6.style.transition = 'all 0.9s ease'
-        cardInfoContainer6.style.transform = 'rotateY(720deg)'
+        cardInfoContainer6.style.transform = 'rotateY(180deg)'
         productImg6.className = 'product-img'
         // productDescrip.className = 'product-descrip'
         // precio.className = 'hola'
