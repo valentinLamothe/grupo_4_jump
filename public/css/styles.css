@@ -48,7 +48,13 @@ header .logo a {
 }
 header .logo a img {
 	width: 100px;
+	transition: transform 1s;
 }
+
+header .logo a img:hover {
+	transform: rotate(1080deg);
+}
+
 header nav {
 	width: 50%;
 }
@@ -388,13 +394,13 @@ section.banner div.container {
 
 article.caja-producto-home div img {
 	height: 461.5px;
+	width: 100%;
 }
 
 .descripcion {
-	transition: all .5s ease;
-	margin-top: 60px;
+	transition: all 2s ease;
+	margin-top: 77px;
 	width: 60%;
-	/* text-align: justify; */
 }
 
 /* .caja-producto-home:hover {
@@ -476,14 +482,13 @@ article.caja-producto-home div img {
 	padding: 8px 7px;
 }
 
-.fil-butt:hover {
-	/* width: 8vw; */
-	transition: 500ms;
-	transform: rotate(360deg)
-}
+ .fil-butt:hover {
+	cursor: pointer;
+	opacity: 0.6;
+} 
 
 .fill-butt:hover {
-	opacity: 0.5;
+	opacity: 0;
 }
 
 select {
