@@ -1,0 +1,38 @@
+<!-- Acá sumamos las vistas automatizadas head -->
+<%- include ('./partials/head') %>
+
+
+    <body>
+        <!-- Acá sumamos la vista automatizada header -->
+        <%- include ('./partials/header') %>
+            <main class="container">
+                <h3 class="h3-products">Productos</h3>
+                <div class="prod-box">
+                    <% products.forEach(producto => { %> 
+                    <article class="caja-producto-home" id="cajaProductoHome2">
+                        <div class="icono-info-container">
+                            <div class="icono-info" id="iconoInfo2">i</div>
+                        </div>
+                        <div class="card-info-container" id="cardInfoContainer2">
+                            <a href="/productDetail"><img src="img/img-home/<%=producto.image  %> " alt="<%=producto.name %>"
+                                    class="product-img" id="productImg2" /></a>
+                            <p class="display-none" id="description2">STOCK</p>
+                        </div>
+                        <p class="product-descrip" id="productDescrip2"><%=producto.name %> </p>
+                        <p id="precio2">$<%=producto.price %> </p>
+                    </article>
+              <%  }) %>
+                </div>
+            </main>
+
+
+
+
+
+
+
+
+
+            <!-- Acá sumamos la vista automatizada footer -->
+            <%- include ('./partials/footer') %>
+    </body>
