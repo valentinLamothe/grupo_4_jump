@@ -1,19 +1,21 @@
 <!-- Acá sumamos las vistas automatizadas head -->
-<%- include ('./partials/head')  %> 
+<%- include ('./partials/head') %>
 
-<body>
+    <body>
 
-    <!-- Acá sumamos la vista automatizada header -->
-		<%- include ('./partials/header')  %> 
+        <!-- Acá sumamos la vista automatizada header -->
+        <%- include ('./partials/header') %>
 
 
 
-    <main>
-        <div class="container">
-            <h2 class="producto"><%= productDetail.name %></h2>
+            <main>
+                <div class="container">
+                    <h2 class="producto">
+                        <%= productDetail.name %>
+                    </h2>
 
-            <section class="containerdetalle">
-                <!--
+                    <section class="containerdetalle">
+                        <!--
                 <article class="fotosdetalles">
                     <img class="fotopequena" src="/img/imgDetalleProducto/foto1.jpg" alt="">
                     <img class="fotopequena" src="/img/imgDetalleProducto/foto2.jpg" alt="">
@@ -24,20 +26,22 @@
                 </article>
                 -->
 
-                <section class="contenedorfotogrande">
-                    <article class="fotoprincipal">
-                        <img class="fotogrande" src="/img/img-home/<%= productDetail.image %>"
-                            alt="<%= productDetail.name %>">
-                    </article>
+                        <section class="contenedorfotogrande">
+                            <article class="fotoprincipal">
+                                <img class="fotogrande" src="/img/img-home/<%= productDetail.image %>"
+                                    alt="<%= productDetail.name %>">
+                            </article>
 
-                </section>
-                
-                <section class="detalletexto">
-                    <article class="opcionestalles">
-                        <p class="talle">Descripción</p>
-                        <p><%= productDetail.description %></p>
-                    </article>
-                    <!--
+                        </section>
+
+                        <section class="detalletexto">
+                            <article class="opcionestalles">
+                                <p class="talle">Descripción</p>
+                                <p>
+                                    <%= productDetail.description %>
+                                </p>
+                            </article>
+                            <!--
                     <article class="opcionestalles">
                         <p class="talle">Eleigí tu Talle</p>
                         <label>
@@ -75,33 +79,38 @@
                             </form>
                         </div>
                     -->
-                        <div>
-                           <a href="/products/<%= productDetail.id %> /edit"><i class="fas fa-edit"></i> Editar Producto</a>
-                        </div>
-                    </article>
-                    
-                    <form action="/products/?/edit" ></form>
+                            <div>
+                                <a href="/products/<%= productDetail.id %> /edit"><i class="fas fa-edit"></i> Editar
+                                    Producto</a>
+                            </div>
+                            </article>
 
 
-                    <article class="condicionesproductos">
-                        <div class="condicionesproductos2">
-                            <nav><i class="far fa-credit-card"></i></nav>
-                            </nav>Aprovechá hasta 6 cuotas sin interés!</nav>
-                        </div>
-                        <div class="condicionesproductos2">
-                            <i class="fas fa-check"></i>
-                            <nav>Devoluciones Gratis</nav>
-                        </div>
-                        <div class="condicionesproductos2">
-                            <i class="fas fa-truck"></i>
-                            <nav>Envio Gratis a partir de 7.999</nav>
-                        </div>
-                    </article>
-                </section>
+                            <form action="/products/?/edit?_method=DELETE" method="POST">
+                                <button type="submit">Eliminar</button>
 
-            </section>
+                            </form>
 
-            <!--
+
+                            <article class="condicionesproductos">
+                                <div class="condicionesproductos2">
+                                    <nav><i class="far fa-credit-card"></i></nav>
+                                    </nav>Aprovechá hasta 6 cuotas sin interés!</nav>
+                                </div>
+                                <div class="condicionesproductos2">
+                                    <i class="fas fa-check"></i>
+                                    <nav>Devoluciones Gratis</nav>
+                                </div>
+                                <div class="condicionesproductos2">
+                                    <i class="fas fa-truck"></i>
+                                    <nav>Envio Gratis a partir de 7.999</nav>
+                                </div>
+                            </article>
+                        </section>
+
+                    </section>
+
+                    <!--
             <section class="productosrelacionados">
                 <h3 class="prod-relacionados-h3">Productos relacionados</h3>
                 <article class="otrosproductos">
@@ -159,19 +168,19 @@
             </section>
             -->
 
-        </div>
+                </div>
 
-    </main>
-
-
+            </main>
 
 
 
-        <!-- Acá sumamos la vista automatizada footer -->
-		<%- include ('./partials/footer')  %> 
-</body>
 
-</html>
-</body>
 
-</html>
+            <!-- Acá sumamos la vista automatizada footer -->
+            <%- include ('./partials/footer') %>
+    </body>
+
+    </html>
+    </body>
+
+    </html>

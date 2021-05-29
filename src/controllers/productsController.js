@@ -24,7 +24,9 @@ const productsController = {
 
 	update: (req, res) => {},
 
-	destroy: (req, res) => {}
+	destroy: (req, res) => {
+		
+	}
 };
 
 module.exports = productsController;
