@@ -25,6 +25,14 @@ const productsController = {
 	update: (req, res) => {},
 
 	destroy: (req, res) => {
+
+		let nueva = products.filter(products => products.id != req.params.id)
+
+		let nuevo = JSON.stringify(nueva, null, 4);
+
+		fs.writeFileSync(fileProductsPath, nuevo)
+		
+        res.redirect('/products');
 		
 	}
 };
