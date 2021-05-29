@@ -10,9 +10,10 @@
 
     <main>
         <div class="container">
-            <h2 class="producto">ZAPATILLAS X9000L2</h2>
+            <h2 class="producto"><%= productDetail.name %></h2>
 
             <section class="containerdetalle">
+                <!--
                 <article class="fotosdetalles">
                     <img class="fotopequena" src="/img/imgDetalleProducto/foto1.jpg" alt="">
                     <img class="fotopequena" src="/img/imgDetalleProducto/foto2.jpg" alt="">
@@ -20,17 +21,23 @@
                     <img class="fotopequena" src="/img/imgDetalleProducto/foto4.jpg" alt="">
                     <img class="fotopequena" src="/img/imgDetalleProducto/foto5.jpg" alt="">
                     <img class="fotopequena" src="/img/imgDetalleProducto/foto6.jpg" alt="">
-
                 </article>
+                -->
 
                 <section class="contenedorfotogrande">
                     <article class="fotoprincipal">
-                        <img class="fotogrande" src="/img/imgDetalleProducto/FotoPrincipal.jpg"
-                            alt="Zapatilla Negras Nike con rayas blancas">
+                        <img class="fotogrande" src="/img/img-home/<%= productDetail.image %>"
+                            alt="<%= productDetail.name %>">
                     </article>
 
                 </section>
+                
                 <section class="detalletexto">
+                    <article class="opcionestalles">
+                        <p class="talle">Descripción</p>
+                        <p><%= productDetail.description %></p>
+                    </article>
+                    <!--
                     <article class="opcionestalles">
                         <p class="talle">Eleigí tu Talle</p>
                         <label>
@@ -59,6 +66,7 @@
                         </label>
 
                     </article>
+                    -->
                     <article>
                         <div>
                             <form action="" method="POST">
@@ -93,6 +101,7 @@
 
             </section>
 
+            <!--
             <section class="productosrelacionados">
                 <h3 class="prod-relacionados-h3">Productos relacionados</h3>
                 <article class="otrosproductos">
@@ -148,6 +157,7 @@
 
                 </article>
             </section>
+            -->
 
         </div>
 

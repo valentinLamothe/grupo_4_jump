@@ -418,7 +418,7 @@ article.caja-producto-home div img {
 	border: 1px solid black;
 	padding: 5px 12px;
 	border-radius: 100%;
-	transition: all .3s ease;
+	transition: all 0.3s ease;
 }
 
 .icono-info:hover {
@@ -482,10 +482,10 @@ article.caja-producto-home div img {
 	padding: 8px 7px;
 }
 
- .fil-butt:hover {
+.fil-butt:hover {
 	cursor: pointer;
 	opacity: 0.6;
-} 
+}
 
 .fill-butt:hover {
 	opacity: 0;
@@ -1188,6 +1188,7 @@ section .label-carrito input {
 		margin: 10px;
 		display: flex;
 		flex-direction: column;
+		max-width: 25%;
 	}
 	.containerdetalle {
 		display: flex;
