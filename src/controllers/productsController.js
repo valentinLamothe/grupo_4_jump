@@ -18,7 +18,9 @@ const productsController = {
 
 	store: (req, res) => {},
 
-	edit: (req, res) => {},
+	edit: (req, res) => {
+        res.render('editProduct',{ productEdit: products.find((producto) => producto.id == req.params.id)} )
+    },
 
 	update: (req, res) => {},
 

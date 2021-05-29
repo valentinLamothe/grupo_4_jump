@@ -10,15 +10,15 @@
             <form id="newProduct" action="/productCreation" method="">        
                 <div class="item">
                     <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
-                    <input type="text" name="product-name" id="product-name" value="ZAPATILLAS X9000L2">
+                    <input type="text" name="product-name" id="product-name" value="<%= productEdit.name %> ">
                 </div>
                 <div class="item">
                     <label for="product-description"><i class="fas fa-edit"></i> Descripción del producto</label>
-                    <textarea name="product-description" id="product-description" cols="30" rows="10">Estas zapatillas inspiradas en el skate actualizan un estilo clásico para que las puedas usar para cualquier actividad. El exterior de gamuza les da un tacto suave, mientras que el forro interno textil y la plantilla con amortiguación ofrecen una comodidad duradera.</textarea>
+                    <textarea name="product-description" id="product-description" cols="30" rows="10"><%= productEdit.description %> </textarea>
                 </div>
                 <div class="item">
                     <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto (JPG/PNG):</label>
-                    <input type="image" src="img/img-home/zapas.jpg" alt="ZAPATILLAS X9000L2">
+                    <input type="image" src="/img/img-home/<%= productEdit.image %> " alt="ZAPATILLAS X9000L2">
                     <input type="file" name="product-image" id="product-image" accept="image/png, image/jpeg" multiple>
                 </div>
                 <div class="item">
@@ -35,7 +35,7 @@
                 </div>
                 <div class="item">
                     <label for="product-price"><i class="fas fa-edit"></i> Precio del producto ($)</label>
-                    <input type="number" name="product-price" id="product-price" value="10.000">
+                    <input type="text" name="product-price" id="product-price" value="<%= productEdit.price %> ">
                 </div>
                 <div class="item"></div>
                     <button type="submit">GUARDAR PRODUCTO</button>

@@ -3,6 +3,7 @@ const express = require('express');
 const process = require('process');
 const path = require('path');
 const app = express();
+const methodOverride = require('method-override');
 
  
 // Rutas
@@ -12,6 +13,7 @@ const products = require('./routers/products');//sin ruta creada, rompe el sitio
 
 // Configuramos la carpeta publica
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(methodOverride('_method')); //Para usar http put y delete
 
 
 // Configuramos el motor de vistas
