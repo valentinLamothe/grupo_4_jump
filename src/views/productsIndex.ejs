@@ -8,21 +8,30 @@
             <main class="container">
                 <h3 class="h3-products">Productos</h3>
                 <div class="prod-box">
-                    <% products.forEach(producto => { %> 
-                    <article class="caja-producto-home" id="cajaProductoHome2">
-                        <div class="icono-info-container">
-                            <div class="icono-info" id="iconoInfo2">i</div>
-                        </div>
-                        <div class="card-info-container" id="cardInfoContainer2">
-                            <a href="/products/<%= producto.id %>"><img src="img/img-home/<%=producto.image  %> " alt="<%=producto.name %>"
-                                    class="product-img" id="productImg2" /></a>
-                            <p class="display-none" id="description2">STOCK</p>
-                        </div>
-                        <p class="product-descrip" id="productDescrip2"><%=producto.name %> </p>
-                        <p id="precio2">$<%=producto.price %> </p>
-                    </article>
-              <%  }) %>
+                    <% products.forEach(producto=> { %>
+                        <article class="caja-producto-home" id="cajaProductoHome2">
+                            <div class="icono-info-container">
+                                <div class="icono-info" id="iconoInfo2">i</div>
+                            </div>
+                            <div class="card-info-container" id="cardInfoContainer2">
+                                <a href="/products/<%= producto.id %>"><img src="img/img-home/<%=producto.image  %> "
+                                        alt="<%=producto.name %>" class="product-img" id="productImg2" /></a>
+                                <p class="display-none" id="description2">STOCK</p>
+                            </div>
+                            <p class="product-descrip" id="productDescrip2">
+                                <%=producto.name %>
+                            </p>
+                            <p id="precio2">$<%=producto.price %>
+                            </p>
+                        </article>
+                        <% }) %>
                 </div>
+                <!-- boton de crear producto-->
+                <a href="/products/create" class="registro" title="Crea tu producto"><i
+                        class="fab fa-accessible-icon"></i></a>
+                <!-- fin de crear producto-->
+
+
             </main>
 
 

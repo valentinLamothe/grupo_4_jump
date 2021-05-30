@@ -14,7 +14,11 @@ const productsController = {
 		res.render('productDetail', { productDetail: products.find((producto) => producto.id == req.params.id) });
 	},
 
-	create: (req, res) => {},
+	create: (req, res) => {
+
+		res.render('createProduct');
+		
+	},
 
 	store: (req, res) => {},
 
