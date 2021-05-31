@@ -24,24 +24,21 @@ const productsController = {
 		
 	},
 
-	store: (req, res) => {
-		
-		
-		let lalala = req.body //el formulario cargado por user, se agrega a la variable "nueva"
-		let nuevo = JSON.stringify(lalala);//traduce para que append pueda cargar info
-	
-		fs.appendFileSync(fileProductsPath,nuevo); //push en idioma json hacia products.json
+	store: (req, res) => 
+	{
 				
-		/*		
-		let superlala= json.parse(fileProductsPath)
-		superlala.push(lalala);
-
-		console.log(superlala);
-		*/
+		let poderosa = req.body //El formulario cargado por user, se agrega a la variable "lalala"
 		
+		let identidad = fs.readFileSync(fileProductsPath,{encoding:"utf-8"});//products.json se agrega a la variable "identidad"
 		
+		let lalala = JSON.parse(identidad);//descomprime el JSON y se convierte en objeto
+		lalala.push(poderosa); //agregamos la info "poderosa" del formulario en el nuevo objeto
+		
+		let superlala = JSON.stringify(lalala, null, 4); //convertimos el objeto en formato json
+		fs.writeFileSync(fileProductsPath, superlala) // pisamos el viejo products.json por "superlala" que tiene la nueva info del formulario
+		
+		res.redirect('/products');
 	},
-
 
 
 
