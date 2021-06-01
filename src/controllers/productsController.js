@@ -49,22 +49,29 @@ const productsController = {
 	update: (req, res) => {
 		
 		
+		
 		let poderosa = req.body //El formulario cargado por user, se agrega a la variable "lalala"
 		
-		let nueva = products.filter(products => products.id != req.params.id)
+		//id.push(poderosa);
+		let nueva = products.filter(products => products.id != req.params.id)//json sin el archivo actual donde estamos parados.
+
+		nueva.push(poderosa);
+	
+		res.send(nueva);
+		
 
 		let nuevo = JSON.stringify(nueva, null, 4);
 
 		fs.writeFileSync(fileProductsPath, nuevo)
 
 		
-		let identidad = fs.readFileSync(fileProductsPath,{encoding:"utf-8"});//products.json se agrega a la variable "identidad"
+		/*let identidad = fs.readFileSync(fileProductsPath,{encoding:"utf-8"});//products.json se agrega a la variable "identidad"
 		
 		let lalala = JSON.parse(identidad);//descomprime el JSON y se convierte en objeto
 		
 		let superlala = JSON.stringify(lalala, null, 4); //convertimos el objeto en formato json
 		fs.writeFileSync(fileProductsPath, superlala) // pisamos el viejo products.json por "superlala" que tiene la nueva info del formulario
-
+*/
 	},
 
 	destroy: (req, res) => {

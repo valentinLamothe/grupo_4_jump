@@ -1,14 +1,5 @@
 [
     {
-        "id": 3,
-        "name": "Adidas T-shirt",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "ropa.jpg",
-        "category": "Remeras",
-        "colors": "#000000",
-        "price": "7500"
-    },
-    {
         "id": 4,
         "name": "Reebok Top",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
@@ -34,5 +25,13 @@
         "category": "Buzos",
         "colors": "#303842",
         "price": "11300"
+    },
+    {
+        "product-name": "editando remera",
+        "product-description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt. ",
+        "product-image": "",
+        "product-category": "hombre",
+        "product-color": "#000000",
+        "product-price": "7500 "
     }
 ]
