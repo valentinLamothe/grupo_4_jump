@@ -1,23 +1,5 @@
 [
     {
-        "id": 1,
-        "name": "Under Armour Bag",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "bolso.jpg",
-        "category": "Accesorios",
-        "colors": "#000000",
-        "price": "8000"
-    },
-    {
-        "id": 2,
-        "name": "Nike Shoes",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "zapas.jpg",
-        "category": "Zapatillas",
-        "colors": "#ffa500",
-        "price": "10000"
-    },
-    {
         "id": 3,
         "name": "Adidas T-shirt",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",

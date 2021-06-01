@@ -7,7 +7,7 @@
     <main class="container">
         <section class="formContainer">
             <h1>Editar producto</h1>
-            <form id="newProduct" action="/productCreation" method="">        
+            <form id="newProduct" action="/products/<%= productEdit.id %>?_method=put" method="POST">        
                 <div class="item">
                     <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
                     <input type="text" name="product-name" id="product-name" value="<%= productEdit.name %> ">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="item">
                     <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto (JPG/PNG):</label>
-                    <input type="image" src="/img/img-home/<%= productEdit.image %> " alt="ZAPATILLAS X9000L2">
+                    <input type="image" src="/img/productos/<%= productEdit.image %> " alt="ZAPATILLAS X9000L2">
                     <input type="file" name="product-image" id="product-image" accept="image/png, image/jpeg" multiple>
                 </div>
                 <div class="item">
