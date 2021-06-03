@@ -30,6 +30,7 @@ header {
 	top: 0;
 	padding: 15px 15px 0 15px;
 	width: 100%;
+	z-index: 9999;
 }
 header .container {
 	display: flex;
@@ -214,6 +215,59 @@ body main section article .fotogrande {
 	margin: auto;
 	padding: 30px;
 	box-sizing: border-box;
+}
+
+h2.producto {
+	font-weight: 700;
+	font-size: 2.5rem;
+	margin: 30px 0;
+}
+
+#carouselProductos.carousel-dark .carousel-indicators button {
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100px;
+	height: 100px;
+}
+
+.detalletexto h3 {
+	font-size: 1.5rem;
+}
+
+.detalletexto p {
+	font-size: 1rem;
+	line-height: 1.5;
+	margin: 20px 0 30px;
+}
+
+.button {
+	background-color: #332d2d;
+	color: white;
+	padding: 15px;
+	display: inline-block;
+	border: 0;
+	text-decoration: none;
+	min-width: 180px;
+	text-align: left;
+	margin: 5px auto;
+}
+
+.button:hover {
+	background-color: #3a3a3a;
+	color: white;
+}
+
+.button i {
+	margin-right: 5px;
+}
+
+.condicionesproductos2 {
+	margin: 0 !important;
+	border-bottom: dotted black;
+	text-align: left;
+	font-size: 1rem;
+	line-height: 1.5;
+	font-weight: 400;
 }
 
 .productosrelacionados {
@@ -1204,7 +1258,7 @@ section .label-carrito input {
 	.fotosdetalles {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
+		justify-content: flex-start;
 	}
 	.megusta {
 		margin-top: 10px;

@@ -6,106 +6,110 @@
         <!-- Acá sumamos la vista automatizada header -->
         <%- include ('./partials/header') %>
 
-
-
             <main>
                 <div class="container">
+
                     <h2 class="producto">
                         <%= productDetail.name %>
                     </h2>
 
                     <section class="containerdetalle">
-                        <!--
-                <article class="fotosdetalles">
-                    <img class="fotopequena" src="/img/imgDetalleProducto/foto1.jpg" alt="">
-                    <img class="fotopequena" src="/img/imgDetalleProducto/foto2.jpg" alt="">
-                    <img class="fotopequena" src="/img/imgDetalleProducto/foto3.jpg" alt="">
-                    <img class="fotopequena" src="/img/imgDetalleProducto/foto4.jpg" alt="">
-                    <img class="fotopequena" src="/img/imgDetalleProducto/foto5.jpg" alt="">
-                    <img class="fotopequena" src="/img/imgDetalleProducto/foto6.jpg" alt="">
-                </article>
-                -->
 
-                        <section class="contenedorfotogrande">
-                            <article class="fotoprincipal">
-                                <img class="fotogrande" src="/img/productos/<%= productDetail.image %>"
-                                    alt="<%= productDetail.name %>">
-                            </article>
+                        <% if ( productDetail.gallery.length > 0 ) { %>
+                
+                        <!-- Carrusel de productos -->
+                        <div id="carouselProductos" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <% for (let i=0; i<productDetail.gallery.length; i++) { %>
+                                <button type="button" data-bs-slide-to="<%= [i] %>" aria-label="Slide <%= [i + 1] %>" data-bs-target="#carouselProductos" 
+                                    <% if ( [i] == 0 ) { %> 
+                                        class="active" aria-current="true" 
+                                    <% } %> style="background-image: url(/img/productos/<%= productDetail.gallery[i] %>);"></button>
+                                <% } %>
+                            </div>
+                            <div class="carousel-inner">
+                                <% for (let i=0; i<productDetail.gallery.length; i++) { %>
+                                <div class="carousel-item <% if ( [i] == 0 ) { %>active<% } %>" data-bs-interval="10000">
+                                    <img src="/img/productos/<%= productDetail.gallery[i] %>" class="d-block w-100" alt="<%= productDetail.name %>">
+                                </div>
+                                <% } %>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                        <!-- Carrusel de productos -->
 
-                        </section>
+                        <% } else { %>
+                            <img src="/img/productos/<%= productDetail.image %>" class="d-block w-100" alt="<%= productDetail.name %>">
+                        <% } %>
 
                         <section class="detalletexto">
                             <article class="opcionestalles">
-                                <p class="talle">Descripción</p>
-                                <p>
-                                    <%= productDetail.description %>
-                                </p>
+                                <h3>Descripción</h3>
+                                <p><%= productDetail.description %></p>
                             </article>
+                            
                             <!--
-                    <article class="opcionestalles">
-                        <p class="talle">Eleigí tu Talle</p>
-                        <label>
-                            <input type="radio" name="medio" value="35">
-                            35
-                        </label>
-                        <label>
-                            <input type="radio" name="medio" value="35">
-                            36
-                        </label>
-                        <label>
-                            <input type="radio" name="medio" value="35">
-                            37
-                        </label>
-                        <label>
-                            <input type="radio" name="medio" value="35">
-                            38
-                        </label>
-                        <label>
-                            <input type="radio" name="medio" value="35">
-                            39
-                        </label>
-                        <label>
-                            <input type="radio" name="medio" value="35">
-                            39
-                        </label>
-
-                    </article>
-                    
-                    <article>
-                        <div>
-                            <form action="" method="POST">
-                                <button class="botomcompra" type="submit">Añadir al Carrito <i
-                                        class="fas fa-arrow-right"></i></button>
-                            </form>
-                        </div>
-                    -->
-                            <div>
-                                <a href="/products/<%= productDetail.id %>/edit"><i class="fas fa-edit"></i> Editar
-                                    Producto</a>
-                            </div>
+                            <article class="opcionestalles">
+                                <p class="talle">Eleigí tu Talle</p>
+                                <label>
+                                    <input type="radio" name="medio" value="35">
+                                    35
+                                </label>
+                                <label>
+                                    <input type="radio" name="medio" value="35">
+                                    36
+                                </label>
+                                <label>
+                                    <input type="radio" name="medio" value="35">
+                                    37
+                                </label>
+                                <label>
+                                    <input type="radio" name="medio" value="35">
+                                    38
+                                </label>
+                                <label>
+                                    <input type="radio" name="medio" value="35">
+                                    39
+                                </label>
+                                <label>
+                                    <input type="radio" name="medio" value="35">
+                                    39
+                                </label>
                             </article>
-
-
+                            <article>
+                                <div>
+                                    <form action="" method="POST">
+                                        <button class="botomcompra" type="submit">Añadir al Carrito <i
+                                                class="fas fa-arrow-right"></i></button>
+                                    </form>
+                                </div>
+                            </article>
+                            -->
+                            
                             <form action="/products/<%= productDetail.id %>?_method=delete" method="POST">
-                                <button type="submit">Eliminar</button>
-
+                                <a class="button" href="/products/<%= productDetail.id %>/edit"><i class="fas fa-pencil-alt"></i> Editar Producto</a>
+                                <button class="button" type="submit"><i class="far fa-trash-alt"></i> Eliminar</button>
                             </form>
 
+                            <div class="condicionesproductos">
+                                <div class="condicionesproductos2">
+                                    <i class="far fa-credit-card"></i> 6 cuotas sin interés
+                                </div>
+                                <div class="condicionesproductos2">
+                                    <i class="fas fa-check"></i> Devoluciones Gratis
+                                </div>
+                                <div class="condicionesproductos2">
+                                    <i class="fas fa-truck"></i> Envio Gratis a partir de $7.999
+                                </div>
+                            </div>
 
-                            <article class="condicionesproductos">
-                                <div class="condicionesproductos2">
-                                    <nav><i class="far fa-credit-card"></i></nav>
-                                    </nav>Aprovechá hasta 6 cuotas sin interés!</nav>
-                                </div>
-                                <div class="condicionesproductos2">
-                                    <i class="fas fa-check"></i>
-                                    <nav>Devoluciones Gratis</nav>
-                                </div>
-                                <div class="condicionesproductos2">
-                                    <i class="fas fa-truck"></i>
-                                    <nav>Envio Gratis a partir de 7.999</nav>
-                                </div>
-                            </article>
                         </section>
 
                     </section>
