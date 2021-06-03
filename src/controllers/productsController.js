@@ -27,7 +27,10 @@ const productsController = {
 	store: (req, res) => 
 	{
 				
-		let poderosa = req.body //El formulario cargado por user, se agrega a la variable "lalala"
+		let poderosa = {
+			...req.body,
+			image: req.file.filename
+		} //El formulario cargado por user, se agrega a la variable "lalala"
 		
 		let identidad = fs.readFileSync(fileProductsPath,{encoding:"utf-8"});//products.json se agrega a la variable "identidad"
 		
@@ -38,6 +41,7 @@ const productsController = {
 		fs.writeFileSync(fileProductsPath, superlala) // pisamos el viejo products.json por "superlala" que tiene la nueva info del formulario
 
 		res.redirect('/products');
+
 	},
 
 
