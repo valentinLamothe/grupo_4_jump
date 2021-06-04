@@ -10,6 +10,19 @@ const fileProductsPath = path.join(__dirname, '../../data/products.json'); /* Tr
 const products = JSON.parse(fs.readFileSync(fileProductsPath, 'utf-8'));
 
 const productsController = {
+
+	generateId: function(id) {
+        
+        let lastProducts = products.pop();
+        if (lastProducts) {
+            return lastProducts.id + 1;
+        }
+        return 1;
+		
+		
+    },
+	
+
 	index: (req, res) => {
 		res.render('productsIndex', { products: products });
 	},
@@ -27,24 +40,22 @@ const productsController = {
 	store: (req, res) => 
 	{
 				
-		let poderosa = {
+		let newProduct = {
+			id:productsController.generateId(),
 			...req.body,
 			image: req.file.filename
-		} //El formulario cargado por user, se agrega a la variable "lalala"
+			
+		} //El formulario cargado por user, 
 		
-		let identidad = fs.readFileSync(fileProductsPath,{encoding:"utf-8"});//products.json se agrega a la variable "identidad"
-		
-		let lalala = JSON.parse(identidad);//descomprime el JSON y se convierte en objeto
-		lalala.push(poderosa); //agregamos la info "poderosa" del formulario en el nuevo objeto
-		
-		let superlala = JSON.stringify(lalala, null, 4); //convertimos el objeto en formato json
-		fs.writeFileSync(fileProductsPath, superlala) // pisamos el viejo products.json por "superlala" que tiene la nueva info del formulario
+			
+		let newJson = JSON.parse(fs.readFileSync(fileProductsPath,{encoding:"utf-8"}));//descomprime el JSON y se convierte en objeto
+		newJson.push(newProduct); //agregamos la info "poderosa" del formulario en el nuevo objeto
+						
+		fs.writeFileSync(fileProductsPath, JSON.stringify(newJson, null, 4)) // pisamos el viejo products.json por "superlala" que tiene la nueva info del formulario
 
 		res.redirect('/products');
 
 	},
-
-
 
 	edit: (req, res) => {
         res.render('editProduct',{ productEdit: products.find((producto) => producto.id == req.params.id)} )
@@ -52,30 +63,22 @@ const productsController = {
 
 	update: (req, res) => {
 		
+		//let bkpProduct= products.filter(products => products.id === req.params.id);//
 		
+		/*products.find(products => products.id == req.params.id)//borramos el producto editado
 		
-		let poderosa = req.body //El formulario cargado por user, se agrega a la variable "lalala"
+			let editProduct={
+			
+				id:products.id,
+			...req.body
+		}//El formulario cargado por user
 		
-		//id.push(poderosa);
-		let nueva = products.filter(products => products.id != req.params.id)//json sin el archivo actual donde estamos parados.
+		//nueva.push(newProduct);
 
-		nueva.push(poderosa);
-	
-		res.send(nueva);
-		
-
-		let nuevo = JSON.stringify(nueva, null, 4);
-
-		fs.writeFileSync(fileProductsPath, nuevo)
+		fs.writeFileSync(fileProductsPath, JSON.stringify(nueva, null, 4));
 
 		
-		/*let identidad = fs.readFileSync(fileProductsPath,{encoding:"utf-8"});//products.json se agrega a la variable "identidad"
-		
-		let lalala = JSON.parse(identidad);//descomprime el JSON y se convierte en objeto
-		
-		let superlala = JSON.stringify(lalala, null, 4); //convertimos el objeto en formato json
-		fs.writeFileSync(fileProductsPath, superlala) // pisamos el viejo products.json por "superlala" que tiene la nueva info del formulario
-*/
+		*/
 	},
 
 	destroy: (req, res) => {
@@ -90,5 +93,6 @@ const productsController = {
 		
 	}
 };
-
+//console.log('newproduct'+ newProduct.id);
+//console.log('generator'+ generateId);
 module.exports = productsController;

@@ -1,70 +1,12 @@
-[
-    {
-        "id": 1,
-        "name": "Under Armour Bag",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "bolso.jpg",
-        "gallery": [
-            "bolso.jpg"
-        ],
-        "category": "Accesorios",
-        "colors": "#000000",
-        "price": "8000"
-    },
-    {
-        "id": 2,
-        "name": "Nike Shoes",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "zapas.jpg",
-        "gallery": [
-            "zapas1.jpg",
-            "zapas2.jpg",
-            "zapas3.jpg",
-            "zapas4.jpg",
-            "zapas5.jpg"
-        ],
-        "category": "Zapatillas",
-        "colors": "#ffa500",
-        "price": "10000"
-    },
-    {
-        "id": 3,
-        "name": "Adidas T-shirt",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "ropa.jpg",
-        "gallery": [],
-        "category": "Remeras",
-        "colors": "#000000",
-        "price": "7500"
-    },
-    {
-        "id": 4,
-        "name": "Reebok Top",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "top.jpg",
-        "gallery": [],
-        "category": "Tops",
-        "colors": "#000000",
-        "price": "4000"
-    },
-    {
-        "id": 5,
-        "name": "Puma Short",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "short.jpg",
-        "gallery": [],
-        "category": "Pantalones",
-        "colors": "#000000",
-        "price": "6800"
-    },
-    {
-        "id": 6,
-        "name": "Adidas Combo",
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "combo.jpg",
-        "gallery": [],
-        "category": "Buzos",
-        "colors": "#303842",
-        "price": "11300"
-    }
-]
+{
+    "id": 1,
+    "name": "Under Armour Bag",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
+    "image": "bolso.jpg",
+    "gallery": [
+        "bolso.jpg"
+    ],
+    "category": "Accesorios",
+    "colors": "#000000",
+    "price": "8000"
+}
