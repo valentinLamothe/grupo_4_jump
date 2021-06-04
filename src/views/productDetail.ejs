@@ -15,47 +15,57 @@
 
                     <section class="containerdetalle">
 
-                        <% if ( productDetail.gallery.length > 0 ) { %>
-                
-                        <!-- Carrusel de productos -->
-                        <div id="carouselProductos" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <% for (let i=0; i<productDetail.gallery.length; i++) { %>
-                                <button type="button" data-bs-slide-to="<%= [i] %>" aria-label="Slide <%= [i + 1] %>" data-bs-target="#carouselProductos" 
-                                    <% if ( [i] == 0 ) { %> 
-                                        class="active" aria-current="true" 
-                                    <% } %> style="background-image: url(/img/productos/<%= productDetail.gallery[i] %>);"></button>
-                                <% } %>
-                            </div>
-                            <div class="carousel-inner">
-                                <% for (let i=0; i<productDetail.gallery.length; i++) { %>
-                                <div class="carousel-item <% if ( [i] == 0 ) { %>active<% } %>" data-bs-interval="10000">
-                                    <img src="/img/productos/<%= productDetail.gallery[i] %>" class="d-block w-100" alt="<%= productDetail.name %>">
+                        <% if (productDetail.gallery && productDetail.gallery.length>0 ) { %>
+
+                            <!-- Carrusel de productos -->
+                            <div id="carouselProductos" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <% for (let i=0; i<productDetail.gallery.length; i++) { %>
+                                        <button type="button" data-bs-slide-to="<%= [i] %>"
+                                            aria-label="Slide <%= [i + 1] %>" data-bs-target="#carouselProductos" <% if
+                                            ( [i]==0 ) { %>
+                                            class="active" aria-current="true"
+                                            <% } %> style="background-image: url(/img/productos/<%=
+                                                    productDetail.gallery[i] %>);">
+                                        </button>
+                                        <% } %>
                                 </div>
-                                <% } %>
+                                <div class="carousel-inner">
+                                    <% for (let i=0; i<productDetail.gallery.length; i++) { %>
+                                        <div class="carousel-item <% if ( [i] == 0 ) { %>active<% } %>"
+                                            data-bs-interval="10000">
+                                            <img src="/img/productos/<%= productDetail.gallery[i] %>"
+                                                class="d-block w-100" alt="<%= productDetail.name %>">
+                                        </div>
+                                        <% } %>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Anterior</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Siguiente</span>
+                                </button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Anterior</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Siguiente</span>
-                            </button>
-                        </div>
-                        <!-- Carrusel de productos -->
+                            <!-- Carrusel de productos -->
 
-                        <% } else { %>
-                            <img src="/img/productos/<%= productDetail.image %>" class="d-block w-100" alt="<%= productDetail.name %>">
-                        <% } %>
+                            <% } else { %>
+                                <img src="/img/productos/<%= productDetail.image %>" class="d-block w-100"
+                                    alt="<%= productDetail.name %>">
+                                <% } %>
 
-                        <section class="detalletexto">
-                            <article class="opcionestalles">
-                                <h3>Descripción</h3>
-                                <p><%= productDetail.description %></p>
-                            </article>
-                            
-                            <!--
+                                    <section class="detalletexto">
+                                        <article class="opcionestalles">
+                                            <h3>Descripción</h3>
+                                            <p>
+                                                <%= productDetail.description %>
+                                            </p>
+                                        </article>
+
+                                        <!--
                             <article class="opcionestalles">
                                 <p class="talle">Eleigí tu Talle</p>
                                 <label>
@@ -92,25 +102,27 @@
                                 </div>
                             </article>
                             -->
-                            
-                            <form action="/products/<%= productDetail.id %>?_method=delete" method="POST">
-                                <a class="button" href="/products/<%= productDetail.id %>/edit"><i class="fas fa-pencil-alt"></i> Editar Producto</a>
-                                <button class="button" type="submit"><i class="far fa-trash-alt"></i> Eliminar</button>
-                            </form>
 
-                            <div class="condicionesproductos">
-                                <div class="condicionesproductos2">
-                                    <i class="far fa-credit-card"></i> 6 cuotas sin interés
-                                </div>
-                                <div class="condicionesproductos2">
-                                    <i class="fas fa-check"></i> Devoluciones Gratis
-                                </div>
-                                <div class="condicionesproductos2">
-                                    <i class="fas fa-truck"></i> Envio Gratis a partir de $7.999
-                                </div>
-                            </div>
+                                        <form action="/products/<%= productDetail.id %>?_method=delete" method="POST">
+                                            <a class="button" href="/products/<%= productDetail.id %>/edit"><i
+                                                    class="fas fa-pencil-alt"></i> Editar Producto</a>
+                                            <button class="button" type="submit"><i class="far fa-trash-alt"></i>
+                                                Eliminar</button>
+                                        </form>
 
-                        </section>
+                                        <div class="condicionesproductos">
+                                            <div class="condicionesproductos2">
+                                                <i class="far fa-credit-card"></i> 6 cuotas sin interés
+                                            </div>
+                                            <div class="condicionesproductos2">
+                                                <i class="fas fa-check"></i> Devoluciones Gratis
+                                            </div>
+                                            <div class="condicionesproductos2">
+                                                <i class="fas fa-truck"></i> Envio Gratis a partir de $7.999
+                                            </div>
+                                        </div>
+
+                                    </section>
 
                     </section>
 
