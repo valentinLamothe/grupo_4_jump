@@ -63,22 +63,20 @@ const productsController = {
 
 	update: (req, res) => {
 		
-		//let bkpProduct= products.filter(products => products.id === req.params.id);//
-		
-		/*products.find(products => products.id == req.params.id)//borramos el producto editado
-		
-			let editProduct={
+		let editProduct={
 			
-				id:products.id,
+			id:Number(req.params.id), //necesario para que id se mantenga como un numero
 			...req.body
-		}//El formulario cargado por user
+		}//El formulario cargado por user con el id original
 		
-		//nueva.push(newProduct);
-
-		fs.writeFileSync(fileProductsPath, JSON.stringify(nueva, null, 4));
-
+		let nueva = products.filter(products => products.id != req.params.id)//elimina prducto original
 		
-		*/
+		nueva.push(editProduct);//agregamos el producto editado al json (linea72)
+		
+		nueva.sort(function(a, b) {return a.id - b.id; }); //ordena array de objetos, necesario para futuro no romper el generateID
+	
+
+		fs.writeFileSync(fileProductsPath, JSON.stringify(nueva, null, 4));//remplaza "nueva" en nuestra base "products.json"
 	},
 
 	destroy: (req, res) => {

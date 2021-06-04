@@ -10,32 +10,28 @@
             <form id="newProduct" action="/products/<%= productEdit.id %>?_method=put" method="POST">        
                 <div class="item">
                     <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
-                    <input type="text" name="product-name" id="product-name" value="<%= productEdit.name %> ">
+                    <input type="text" name="name" id="name" value="">
                 </div>
                 <div class="item">
                     <label for="product-description"><i class="fas fa-edit"></i> Descripción del producto</label>
-                    <textarea name="product-description" id="product-description" cols="30" rows="10"><%= productEdit.description %> </textarea>
+                    <input name="description" id="description" cols="30" rows="10"><%= productEdit.description %>>
                 </div>
                 <div class="item">
                     <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto (JPG/PNG):</label>
-                    <input type="image" src="/img/productos/<%= productEdit.image %> " alt="ZAPATILLAS X9000L2">
-                    <input type="file" name="product-image" id="product-image" accept="image/png, image/jpeg" multiple>
+                    <input type="image" src="/img/productos/<%= productEdit.image %> " value="" alt="ZAPATILLAS X9000L2">
+                    <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple>
                 </div>
                 <div class="item">
-                    <label for="product-category"><i class="fas fa-edit"></i> Categoría del producto</label>
-                    <select name="product-category" id="product-category">
-                        <option value="hombre" selected>Hombre</option>
-                        <option value="mujer">Mujer</option>
-                        <option value="ninios">Niños</option>
-                    </select>
+                    <label for="product-category">Categoría del producto</label>
+                    <input type="text" name="category" value="" id="category">
                 </div>
-                <div class="item">
+                <!-- <div class="item">
                     <label for="product-color"><i class="fas fa-edit"></i> Color del producto</label>
                     <input type="color" name="product-color" id="product-color">
-                </div>
+                </div> -->
                 <div class="item">
                     <label for="product-price"><i class="fas fa-edit"></i> Precio del producto ($)</label>
-                    <input type="text" name="product-price" id="product-price" value="<%= productEdit.price %> ">
+                    <input type="text" name="price" id="price" value="">
                 </div>
                 <div class="item"></div>
                     <button type="submit">GUARDAR PRODUCTO</button>
