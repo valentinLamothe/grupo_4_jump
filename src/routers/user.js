@@ -4,12 +4,15 @@ const router = express.Router();
 //controller
 const usersController = require('../controllers/usersController')
 
+//middlewares
+const uploadFile = require('../../middlewares/multerMiddleware')
+
 
 //Formulario de registro
 router.get('/register',usersController.register)
 
 //Procesar el registro 
-router.post('/register')
+router.post('/register', uploadFile.single('avatar') ,usersController.processRegister)
 
 //Formulario login 
 router.get('/login',usersController.login)

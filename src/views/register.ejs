@@ -14,11 +14,11 @@
                     <p>Complete los campos para poder creár su cuenta</p>
                 </div>
                 <section class="formulario">
-                    <form action="/user/register" method="GET">
+                    <form action="/user/register" method="POST" enctype="multipart/form-data">
                         <div class="barras">
                             <div class="mail">
                                 <label for="Email"></label>
-                                <input type="email" name="email" id="Email" placeholder="Email">
+                                <input type="email" name="email" id="Email" value="" placeholder="Email">
                             </div>
                             <div class="usuario-regis">
                                 <label for="usuario"></label>
@@ -26,14 +26,18 @@
                             </div>
                             <div class="contrasenias">
                                 <div class="contra">
-                                    <label for="contrasenia"></label>
-                                    <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
+                                    <label for="password"></label>
+                                    <input type="password" name="password" id="password" value="" placeholder="Contraseña">
                                 </div>
-                                <div class="confirmar-contra">
+                                <div class="imagen">
+                                    <label for="avatar"></label>
+                                    <input type="file" name="avatar" id="avatar">
+                                </div>
+                                <!-- <div class="confirmar-contra">
                                     <label for="contrasenia"></label>
                                     <input type="password" name="confirmar-contra" id="confirmar-contra"
                                         placeholder="Confirmar Contraseña">
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="boton">

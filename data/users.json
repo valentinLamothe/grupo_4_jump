@@ -1,29 +1,30 @@
 [
-	{
-		"id": 1,
-		"firstName": "Juan",
-		"lastName": "Pérez",
-		"email": "jperez@gmail.com",
-		"password": "12345",
-		"category": "cliente",
-		"image": ""
-	},
-	{
-		"id": 2,
-		"firstName": "Laura",
-		"lastName": "Gómez",
-		"email": "lgomez@gmail.com",
-		"password": "12345",
-		"category": "cliente",
-		"image": ""
-	},
-	{
-		"id": 3,
-		"firstName": "Nahuel",
-		"lastName": "Hernandez",
-		"email": "nhernandez@gmail.com",
-		"password": "12345",
-		"category": "cliente",
-		"image": ""
-	}
+ {
+  "id": 1,
+  "usuario": "Juan",
+  "email": "jperez@gmail.com",
+  "password": "12345",
+  "avatar": ""
+ },
+ {
+  "id": 2,
+  "usuario": "Laura",
+  "email": "lgomez@gmail.com",
+  "password": "12345",
+  "avatar": ""
+ },
+ {
+  "id": 3,
+  "usuario": "Nahuel",
+  "email": "nhernandez@gmail.com",
+  "password": "12345",
+  "avatar": ""
+ },
+ {
+  "id": 5,
+  "email": "valentinlamothecoulomme@hotmail.com",
+  "usuario": "valentin",
+  "password": "$2b$10$laKX5l7hZ40pbY2slWqE9erKZ9m9UD5UZljEH8EeDn0SxH0oGzRrK",
+  "image": "product-1623374733311.jpeg"
+ }
 ]
