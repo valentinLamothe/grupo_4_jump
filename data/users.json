@@ -26,5 +26,12 @@
   "usuario": "valentin",
   "password": "$2b$10$laKX5l7hZ40pbY2slWqE9erKZ9m9UD5UZljEH8EeDn0SxH0oGzRrK",
   "image": "product-1623374733311.jpeg"
+ },
+ {
+  "id": 6,
+  "email": "matu@hotmail.com",
+  "usuario": "mateo",
+  "password": "$2b$10$kFiOFD2zLvl0dSnlbebo1OTfJoof6.bhafTwpnvC7n4zZvPD9epAa",
+  "image": "avatar-1623591819101.jpeg"
  }
 ]

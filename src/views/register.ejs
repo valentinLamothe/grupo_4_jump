@@ -18,20 +18,40 @@
                         <div class="barras">
                             <div class="mail">
                                 <label for="Email"></label>
-                                <input type="email" name="email" id="Email" value="" placeholder="Email">
+                                <input type="text" name="email" id="Email" placeholder="Email" value="<%= locals.oldData ? oldData.email : null %>" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> input-modified">
+                                <% if (locals.errors && errors.email) { %>
+                                    <div class="text-danger validations-msg">
+                                        <%= errors.email.msg %> 
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="usuario-regis">
                                 <label for="usuario"></label>
-                                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" value="<%= locals.oldData ? oldData.usuario : null %>" class="form-control <%= locals.errors && errors.usuario ? 'is-invalid' : null %> input-modified">
+                            <% if (locals.errors && errors.usuario) { %>
+                                <div class="text-danger validations-msg">
+                                    <%= errors.usuario.msg %> 
+                                </div>
+                            <% } %>
+                            </div>
+                            <div>
+                                <label for="avatar"></label>
+                                <input type="file" name="avatar" id="avatar" style="display: flex;padding-top: 1%;">
+                                <% if (locals.errors && errors.avatar) { %>
+                                    <div class="text-danger validations-msg">
+                                        <%= errors.avatar.msg %> 
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="contrasenias">
                                 <div class="contra">
                                     <label for="password"></label>
-                                    <input type="password" name="password" id="password" value="" placeholder="Contraseña">
-                                </div>
-                                <div class="imagen">
-                                    <label for="avatar"></label>
-                                    <input type="file" name="avatar" id="avatar">
+                                    <input type="password" name="password" id="password" placeholder="Contraseña" value="" class="form-control <%=  locals.errors && errors.password ? 'is-invalid' : null %> input-modified">
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class="text-danger validations-msg">
+                                            <%= errors.password.msg %> 
+                                        </div>
+                                    <% } %>
                                 </div>
                                 <!-- <div class="confirmar-contra">
                                     <label for="contrasenia"></label>
