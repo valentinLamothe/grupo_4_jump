@@ -41,43 +41,30 @@ const controller = {
     },
 
     loginProcess:(req, res) => {
-        /* ************** prueba Valen ***************
-        let userLogin = User.findByField('email', req.body.email)
-        if (userLogin) {
-            //usuario real --> corroborar clave
-            let passwordValidator = bcryptjs.compareSync(req.body.password,userLogin.password); //te da la clave real que puso uno
-            if(passwordValidator){
-                req.session.userLogged=userLogin;
-                res.redirect('/user/profile');
+        let userToLogin = User.findByField('email', req.body.email);
 
-            }//else{res.send("ahora le pifiaste a la clave kpo")}
-            //clave real --> accion
-            
-
-        }//else{res.send("le pifiaste kpo")}
-        **************** fin prueba Valen ******************* */
-       /*  ***prueba Juli **
-       
-       let errors = validationResult(req);
-        if(errors.isEmpty()){
+        if (userToLogin) {
+            let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(isOkPassword) {
+                return res.redirect('/user/profile')
             }
-        else{return res.render('profile',{errors:errors.errors});
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'las credenciales son invalidas'
+                    }
+                }
+             })
         }
-    
-    },
-    store:(req,res) =>{
-       let errors = validationResult(req);
-        if(errors.isEmpty()){
-            let usersJSON
-        }
-
-    }
- ***fin de prueba juli *** */
-            
+        return res.render('login', {
+           errors: {
+               email: {
+                   msg: 'No se encuentra este mail en nuestra base de datos'
+               }
+           }
+        })
+}
         
-            
-    }
-    
 }
 
 

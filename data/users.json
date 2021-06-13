@@ -33,5 +33,12 @@
   "usuario": "mateo",
   "password": "$2b$10$kFiOFD2zLvl0dSnlbebo1OTfJoof6.bhafTwpnvC7n4zZvPD9epAa",
   "image": "avatar-1623591819101.jpeg"
+ },
+ {
+  "id": 7,
+  "email": "fabian@gmail.com",
+  "usuario": "FabianOchoa",
+  "password": "$2b$10$CZrCGvs04xUz8Y.YUeeVO.jbZz3t4gkNUemVYT0cospvPUVPYm4zG",
+  "image": "avatar-1623623666332.jpg"
  }
 ]
