@@ -4,6 +4,8 @@ const process = require('process');
 const path = require('path');
 const app = express();
 const methodOverride = require('method-override');
+const cookies = require('cookie-parser');
+const session = require('express-session');
 
  
 // Rutas
@@ -17,6 +19,13 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({extended:false}));
 app.use(methodOverride('_method')); //Para usar http put y delete
 app.use(express.json());
+app.use(cookies()); // guardar información del navegador desde lado del usuario
+app.use(session( {
+   secret: 'Shhhh', //guardar datos del usuario del lado del servidor
+   resave: false, // sessión loggeada sigue activa
+   saveUninitialized: false //para loguear un visitante que tiene la información guardada en la base de datos
+
+}))
 
 
 // Configuramos el motor de vistas

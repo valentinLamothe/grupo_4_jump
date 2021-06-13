@@ -30,7 +30,21 @@ const controller = {
     },
     login:(req, res) => {
         res.render('login')
+    },
+
+
+    profile:(req, res) => {
+        res.render('profile')
+
+    },
+
+    loginProcess:(req, res) => {
+        let userLogin = User.findByField('email', req.body.email)
+        if (userLogin) {
+            
+        } 
     }
+    
 }
 
 

@@ -21,10 +21,10 @@ router.post('/register', uploadFile.single('avatar'), validations ,usersControll
 router.get('/login',usersController.login)
 
 //Procesar el login 
-router.post('/login')
+router.post('/login', usersController.loginProcess)
 
 //Perfil de usuario 
-router.get('/profile')
+router.get('/profile', usersController.profile)
 
 // Log Out 
 router.get('/logOut')
