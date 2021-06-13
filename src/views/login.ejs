@@ -1,51 +1,51 @@
 <!-- Acá sumamos las vistas automatizadas head -->
-<%- include ('./partials/head')  %> 
+<%- include ('./partials/head') %>
 
-<body>
+    <body>
 
-		<!-- Acá sumamos la vista automatizada header -->
-		<%- include ('./partials/header')  %> 
+        <!-- Acá sumamos la vista automatizada header -->
+        <%- include ('./partials/header') %>
 
-    <main>
-        <div class="container">
-            <section class="inicio-sesion">
-                <div class="titulo">
-                    <h1>Iniciar Sesión</h1>
-                </div>
-                <div class="subtitulo">
-                    <p>Complete los datos para poder iniciar iniciar sesion</p>
-                </div>
-                <section class="formulario">
-                    <form action="/user/login" method="GET">
-                        <div class="barras">
-                            <div class="mail">
-                                <label for="Email"></label>
-                                <input type="email" name="email" id="Email" placeholder="Email">
-                            </div>
-                            <div class="contrasenia">
-                                <label for="contrasenia"></label>
-                                <input type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña">
-                            </div>
-                            <div class="recor-contrasenia">
-                                <label for="contrasenia">Recordar contraseña</label>
-                                <input type="checkbox" name="contrasenia" id="contrasenia">
-                            </div>
+            <main>
+                <div class="container">
+                    <section class="inicio-sesion">
+                        <div class="titulo">
+                            <h1>Iniciar Sesión</h1>
                         </div>
-                        <div class="botones">
-                            <div class="boton-acceso">
-                                <button type="submit">ACCEDER</button>
-                            </div>
-                            <div class="boton-contrasenia">
-                                <button type="button">¿OLVIDASTE TU CONTRASEÑA?</button>
-                            </div>
+                        <div class="subtitulo">
+                            <p>Complete los datos para poder iniciar iniciar sesion</p>
                         </div>
-                    </form>
-                </section>
-            </section>
-        </div>
-    </main>
-   <!-- Acá sumamos la vista automatizada footer -->
-		<%- include ('./partials/footer')  %> 
-</body>
+                        <section class="formulario">
+                            <form action="/user/login" method="POST">
+                                <div class="barras">
+                                    <div class="mail">
+                                        <label for="Email"></label>
+                                        <input type="email" name="email" id="email" placeholder="email">
+                                    </div>
+                                    <div class="contrasenia">
+                                        <label for="contrasenia"></label>
+                                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                                    </div>
+                                    <!-- <div class="recor-contrasenia">
+                                        <label for="contrasenia">Recordar contraseña</label>
+                                        <input type="checkbox" name="contrasenia" id="contrasenia">
+                                    </div> -->
+                                </div>
+                                <div class="botones">
+                                    <div class="boton-acceso">
+                                        <button type="submit">ACCEDER</button>
+                                    </div>
+                                    <!-- <div class="boton-contrasenia">
+                                        <button type="button">¿OLVIDASTE TU CONTRASEÑA?</button>
+                                    </div> -->
+                                </div>
+                            </form>
+                        </section>
+                    </section>
+                </div>
+            </main>
+            <!-- Acá sumamos la vista automatizada footer -->
+            <%- include ('./partials/footer') %>
+    </body>
 
-</html>
+    </html>

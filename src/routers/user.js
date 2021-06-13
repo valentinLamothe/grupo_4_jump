@@ -9,6 +9,7 @@ const { body } = require('express-validator');
 //middlewares
 const uploadFile = require('../../middlewares/multerMiddleware')
 const validations = require('../../middlewares/validateRegisterMiddleware')
+const guestMiddleware = require('../../middlewares/guestMiddleware')
 
 
 //Formulario de registro
@@ -18,7 +19,7 @@ router.get('/register',usersController.register)
 router.post('/register', uploadFile.single('avatar'), validations ,usersController.processRegister)
 
 //Formulario login 
-router.get('/login',usersController.login)
+router.get('/login', guestMiddleware ,usersController.login)
 
 //Procesar el login 
 router.post('/login', usersController.loginProcess)

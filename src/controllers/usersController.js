@@ -5,6 +5,8 @@ const { validationResult } = require('express-validator');
 const User = require(path.join(__dirname, '../../models/User'));
 
 
+
+
 const controller = {
     register: (req, res) => {
         res.render('register')
@@ -39,10 +41,41 @@ const controller = {
     },
 
     loginProcess:(req, res) => {
+        /* ************** prueba Valen ***************
         let userLogin = User.findByField('email', req.body.email)
         if (userLogin) {
+            //usuario real --> corroborar clave
+            let passwordValidator = bcryptjs.compareSync(req.body.password,userLogin.password); //te da la clave real que puso uno
+            if(passwordValidator){
+                req.session.userLogged=userLogin;
+                res.redirect('/user/profile');
+
+            }//else{res.send("ahora le pifiaste a la clave kpo")}
+            //clave real --> accion
             
-        } 
+
+        }//else{res.send("le pifiaste kpo")}
+        **************** fin prueba Valen ******************* */
+       /*  ***prueba Juli **
+       
+       let errors = validationResult(req);
+        if(errors.isEmpty()){
+            }
+        else{return res.render('profile',{errors:errors.errors});
+        }
+    
+    },
+    store:(req,res) =>{
+       let errors = validationResult(req);
+        if(errors.isEmpty()){
+            let usersJSON
+        }
+
+    }
+ ***fin de prueba juli *** */
+            
+        
+            
     }
     
 }
