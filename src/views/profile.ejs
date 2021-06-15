@@ -5,14 +5,13 @@
     <!-- Acá sumamos la vista automatizada header -->
     <%- include ('./partials/header') %>
 
-      <h1 style="margin-left: 10%;">Hi
-      </h1>
+      <h1 style="margin-left: 10%;">Hi <%= user.email %>  </h1>
 
-      <img src="/images/?  " alt="perfil" height="200px" style="margin-left: 10%;">
+      <img src="/img/usersAvatars/<%= user.image %>" alt="perfil" width="100" height="auto" style="margin-left: 10%; border-radius: 50%;">
 
-      <div style="margin-left: 10%;margin-top: 1%;background-color: grey;margin-right: 74%;"> ? </div>
+      
 
-
+<%- include ('./partials/footer') %>
   </body>
 
   </html>
