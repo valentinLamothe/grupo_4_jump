@@ -6,7 +6,14 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
+                    <% //if(req.session.userLogged){ %>
+                        <a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
+                        <% //}else{ %>
+
+
+                            <a href="/user/logout" class="logout" title="Salir"><i class="fas fa-sign-in-alt"></i></a>
+                            <% //} %>
+
                 </li>
                 <li>
                     <a href="/user/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>

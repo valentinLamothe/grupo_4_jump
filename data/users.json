@@ -89,5 +89,12 @@
   "usuario": "juanchi",
   "password": "$2b$10$pzuduOjwmmo8rQHXD92j3.1B5DFaKmM/sYMKt.58.2ElhG9POkjky",
   "image": "avatar-1623852523679.jpeg"
+ },
+ {
+  "id": 15,
+  "email": "lalala2@gmail.com",
+  "usuario": "superlala",
+  "password": "$2b$10$zz3bDaoSi.sXjZxRR7BXEODvK10X2hSDhm4XwiEJdkKWko/9Okha.",
+  "image": "avatar-1623884799440.png"
  }
 ]
