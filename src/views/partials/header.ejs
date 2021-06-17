@@ -5,15 +5,13 @@
         </div>
         <nav>
             <ul>
+                <% if (locals.isLogged) { %>
+                    <li>
+                        <a href="/user/logout" class="logout" title="Salir"><i class="fas fa-sign-in-alt"></i></a>
+                    </li>
+                    <% } else { %>
                 <li>
-                    <% //if(req.session.userLogged){ %>
-                        <a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
-                        <% //}else{ %>
-
-
-                            <a href="/user/logout" class="logout" title="Salir"><i class="fas fa-sign-in-alt"></i></a>
-                            <% //} %>
-
+                    <a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>    
                 </li>
                 <li>
                     <a href="/user/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
@@ -22,10 +20,12 @@
                 <li>
                     <a href="/productCart" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
                 </li>
+                  
                 <li class="burguer-menu">
                     <a href="#"><i class="fas fa-bars"></i></a>
                 </li>
             </ul>
+            <% } %>  
         </nav>
         <div class="search-bar">
             <form action="/search">

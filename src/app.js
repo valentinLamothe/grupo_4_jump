@@ -5,6 +5,7 @@ const path = require('path');
 const app = express();
 const methodOverride = require('method-override');
 const cookies = require('cookie-parser');
+const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware')
 const session = require('express-session');
 
  
@@ -26,6 +27,8 @@ app.use(session( {
    saveUninitialized: false //para loguear un visitante que tiene la información guardada en la base de datos
 
 }))
+
+app.use(userLoggedMiddleware);
 
 
 // Configuramos el motor de vistas
