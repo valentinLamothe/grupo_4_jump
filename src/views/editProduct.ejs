@@ -7,14 +7,15 @@
     <main class="container">
         <section class="formContainer">
             <h1>Editar producto</h1>
-            <form id="newProduct" action="/products/<%= productEdit.id %>?_method=put" method="POST">        
+            <form enctype="multipart/form-data" id="newProduct" action="/products/<%= productEdit.id %>?_method=put" method="POST">        
                 <div class="item">
                     <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
-                    <input type="text" name="name" id="name" value="">
+                    <input type="text" name="name" id="name" value="<%= productEdit.name %>">
                 </div>
                 <div class="item">
                     <label for="product-description"><i class="fas fa-edit"></i> Descripción del producto</label>
-                    <input name="description" id="description" cols="30" rows="10"><%= productEdit.description %>>
+                  
+                <textarea name="description" id="description" cols="30" rows="10"><%= productEdit.description %></textarea>
                 </div>
                 <div class="item">
                     <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto (JPG/PNG):</label>
@@ -23,7 +24,7 @@
                 </div>
                 <div class="item">
                     <label for="product-category">Categoría del producto</label>
-                    <input type="text" name="category" value="" id="category">
+                    <input type="text" name="category" value="<%= productEdit.category %>" id="category">
                 </div>
                 <!-- <div class="item">
                     <label for="product-color"><i class="fas fa-edit"></i> Color del producto</label>
@@ -31,7 +32,7 @@
                 </div> -->
                 <div class="item">
                     <label for="product-price"><i class="fas fa-edit"></i> Precio del producto ($)</label>
-                    <input type="text" name="price" id="price" value="">
+                    <input type="text" name="price" id="price" value="<%= productEdit.price %>">
                 </div>
                 <div class="item"></div>
                     <button type="submit">GUARDAR PRODUCTO</button>

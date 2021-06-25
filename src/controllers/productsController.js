@@ -6,7 +6,7 @@ const { json } = require('express');
 
 
 
-const fileProductsPath = path.join(__dirname, '../../data/products.json'); /* Traemos el JSON de productos */
+const fileProductsPath = path.join(__dirname, '../../src/data/products.json'); /* Traemos el JSON de productos */
 const products = JSON.parse(fs.readFileSync(fileProductsPath, 'utf-8'));
 
 const productsController = {
@@ -59,6 +59,7 @@ const productsController = {
 
 	edit: (req, res) => {
         res.render('editProduct',{ productEdit: products.find((producto) => producto.id == req.params.id)} )
+		
     },
 
 	update: (req, res) => {
@@ -77,6 +78,7 @@ const productsController = {
 	
 
 		fs.writeFileSync(fileProductsPath, JSON.stringify(nueva, null, 4));//remplaza "nueva" en nuestra base "products.json"
+		res.redirect('/products');
 	},
 
 	destroy: (req, res) => {

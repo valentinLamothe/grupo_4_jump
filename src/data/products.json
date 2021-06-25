@@ -10,6 +10,7 @@
         "category": "Accesorios",
         "colors": "#000000",
         "price": "8000"
+
     },
     {
         "id": 2,
@@ -36,6 +37,7 @@
         "category": "Remeras",
         "colors": "#000000",
         "price": "7500"
+
     },
     {
         "id": 4,
