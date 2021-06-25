@@ -21,3 +21,24 @@
 **5.Dejar de hacer**
 
 > - Reuniones inecesarias, tuvimos algunas reuniones extra que no aportaron mucho al objetivo del sprint.
+
+**Sprint_5**
+**1.Comenzar a hacer**
+
+> - Usar trello mas en detalle para llevar un mejor control de las tareas .
+
+**2.Hacer más**
+
+> -Revisiones de contenido en grupo previas a hacer el proyecto .
+
+**3.Continuar haciendo**
+
+> - Seguir con la buena comunicación y seguir ayudándonos entre todos.
+> - Trabajar en el codigo de forma grupal .
+
+**4.Hacer menos**
+
+> - Somos muy buenos 
+
+**5.Dejar de hacer**
+> - Atrasarse con los contenidos de PLAYGROUND 
