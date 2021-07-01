@@ -10,7 +10,6 @@
         "category": "Accesorios",
         "colors": "#000000",
         "price": "8000"
-
     },
     {
         "id": 2,
@@ -30,24 +29,19 @@
     },
     {
         "id": 3,
-        "name": "Adidas T-shirt",
+        "name": "Adidas T-shirt 2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "ropa.jpg",
-        "gallery": [],
         "category": "Remeras",
-        "colors": "#000000",
-        "price": "7500"
-
+        "price": "7500",
+        "image": "product-1625100937544.jpg"
     },
     {
         "id": 4,
-        "name": "Reebok Top",
+        "name": "Reebok Top 2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "top.jpg",
-        "gallery": [],
+        "image": "",
         "category": "Tops",
-        "colors": "#000000",
-        "price": "4000"
+        "price": "5000"
     },
     {
         "id": 5,
@@ -63,9 +57,7 @@
         "id": 6,
         "name": "Adidas Combo",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt.",
-        "image": "combo.jpg",
         "category": "Buzos",
-        "colors": "#303842",
         "price": "11300"
     }
 ]
