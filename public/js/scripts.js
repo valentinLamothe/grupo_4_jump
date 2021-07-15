@@ -136,3 +136,23 @@ iconoInfo6.addEventListener('click', () => {
         elementosEstanVisibles6 = true
     }
 })
+
+
+// Carrusel Index
+
+let firstBall = document.querySelector('#ball-1');
+let banner = document.querySelector('.banner');
+
+var vistaDeImagen = true;
+firstBall.addEventListener('click', () => {
+    console.log('primera bola');
+    
+    if(vistaDeImagen) {
+        banner.className = 'visibility: hidden'
+        vistaDeImagen = false;
+    } else {
+        vistaDeImagen = true;
+        banner.className = 'banner'
+    }
+    
+})

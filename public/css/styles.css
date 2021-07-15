@@ -378,6 +378,7 @@ section.banner div.container {
   background-size: cover;
   min-height: 500px;
   background-position-y: 80%;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -560,6 +561,7 @@ select:hover {
   background-image: url(/img/cta.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   max-height: 400px;
   background-position-y: 43%;
 }
@@ -662,6 +664,7 @@ section div.boton .boton-registrar button:hover {
   /* margin-bottom: 5%; */
   border: 1px solid black;
   padding-left: 1%;
+  margin-bottom: 1rem;
 }
 
 section.formulario form div.usuario-regis input {
