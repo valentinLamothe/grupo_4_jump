@@ -366,6 +366,26 @@ h3 .produtosrelacionados1 {
 
 /* BANNER */
 
+.mini-banner-top {
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+  min-width: 40px;
+  flex-wrap: wrap;
+}
+
+.mini-banner-top p {
+  margin-bottom: 0;
+  font-size: 0.8em;
+  font-family: 'Anton', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+  
+}
+
 section.banner div.container {
   margin: 0;
   margin-left: 4%;
@@ -373,7 +393,7 @@ section.banner div.container {
 
 .banner {
   background-color: #c4c4c4;
-  background-image: url(/img/slider.jpg);
+  background-image: url(/img/jump-index-5.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 500px;
@@ -417,11 +437,12 @@ section.banner div.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: orange;
+  color: rgb(224, 214, 206);
   text-decoration: none;
   font-size: 13px;
   padding-bottom: 3%;
 }
+
 
 .fa-circle:before {
   margin-left: 7px;
