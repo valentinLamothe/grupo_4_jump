@@ -28,7 +28,8 @@ module.exports =(sequelize,dataTypes)=>{
      
           // detallamos que columna de esa tabla toma de referencia
           key: 'id',
-        }};
+        }}
+      };
     
     
     
@@ -43,4 +44,5 @@ module.exports =(sequelize,dataTypes)=>{
     const product_color = sequelize.define(alias,cols,config);
     
     
-    }
+    
+  }
