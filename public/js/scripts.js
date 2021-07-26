@@ -156,3 +156,18 @@ firstBall.addEventListener('click', () => {
     }
     
 })
+
+
+// Mini banner
+
+var myVar = setInterval(setColor, 1200);
+
+function setColor() {
+    var fontColor = document.querySelector('.mini-banner-top');
+    fontColor.style.backgroundColor = fontColor.style.backgroundColor == 'black' ? 'rgb(96, 48, 9)' : 'black  ';
+}
+
+function stopColor() {
+    clearInterval(myBar);
+}
+
