@@ -32,5 +32,5 @@ module.exports = (sequelize, dataTypes) => {
 			timestamps: false
 		});
 	};
-return Product_image
+return Product_image;
 };
