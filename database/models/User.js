@@ -5,18 +5,18 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		name: {
-			type: DataTypes.STRING(100),
+			type: dataTypes.STRING(100),
 			allowNull: false
 		},
 		email: {
-			type: DataTypes.STRING(100),
+			type: dataTypes.STRING(100),
 			unique: true
 		},
 		password: {
-			type: DataTypes.STRING(50),
+			type: dataTypes.STRING(50),
 			allowNull: false
 		},
 		avatar_image: {
@@ -29,10 +29,10 @@ module.exports = (sequelize, dataTypes) => {
 				key: 'id'
 			},
 			country: {
-				type: DataTypes.STRING(100)
+				type: dataTypes.STRING(100)
 			},
 			location: {
-				type: DataTypes.STRING(100)
+				type: dataTypes.STRING(100)
 			}
 		}
 	};
@@ -55,4 +55,5 @@ module.exports = (sequelize, dataTypes) => {
 			as: 'user_order'
 		});
 	};
+	return User
 };

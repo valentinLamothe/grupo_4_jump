@@ -5,10 +5,10 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		name: {
-			type: DataTypes.STRING(100)
+			type: dataTypes.STRING(100)
 		}
 	};
 
@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
 		timestamps: false
 	};
 
-	const Rols = sequelize.define(alias, cols, config);
+	const Rol = sequelize.define(alias, cols, config);
 
 	Rol.associate = (models) => {
 		Rol.hasMany(models.User, {
@@ -27,4 +27,5 @@ module.exports = (sequelize, dataTypes) => {
 			timestamps: false
 		});
 	};
+	return Rol
 };

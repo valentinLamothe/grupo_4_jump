@@ -8,23 +8,23 @@
             <main class="container">
                 <h3 class="h3-products">Productos</h3>
                 <div class="prod-box">
-                    <% products.forEach(producto=> { %>
+                    <% for(let i = 0 ;i<products.length ; i++ ){ %>
                         <article class="caja-producto-home" id="cajaProductoHome2">
                             <div class="icono-info-container">
                                 <div class="icono-info" id="iconoInfo2">i</div>
                             </div>
                             <div class="card-info-container" id="cardInfoContainer2">
-                                <a href="/products/<%= producto.id %>"><img src="img/productos/<%=producto.image  %> "
-                                        alt="<%=producto.name %>" class="product-img" id="productImg2" /></a>
+                                <a href="/products/<%= products[i].id %>"><img src="img/productos/? "
+                                        alt="<%=products[i].name %>" class="product-img" id="productImg2" /></a>
                                 <p class="display-none" id="description2">STOCK</p>
                             </div>
                             <p class="product-descrip" id="productDescrip2">
-                                <%=producto.name %>
+                                <%=products[i].name%>
                             </p>
-                            <p id="precio2">$<%=producto.price %>
+                            <p id="precio2">$<%=products[i].price  %>
                             </p>
                         </article>
-                        <% }) %>
+                        <% } %>
                 </div>
 
 

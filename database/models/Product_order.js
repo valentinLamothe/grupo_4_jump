@@ -5,24 +5,16 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		id_product: {
-			type: Sequelize.INTEGER,
-			references: {
-				model: products,
-				key: 'id'
-			}
+			type: dataTypes.INTEGER
 		},
 		id_order: {
-			type: Sequelize.INTEGER,
-			references: {
-				model: orders,
-				key: 'id'
-			}
+			type: dataTypes.INTEGER
 		},
 		quantity: {
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		}
 	};
 

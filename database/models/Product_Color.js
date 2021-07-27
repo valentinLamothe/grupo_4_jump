@@ -5,30 +5,14 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		id_product_fk: {
-			type: Sequelize.INTEGER,
-
-			references: {
-				// aca ponemos la tabla a la cual se vincula
-				model: Products,
-
-				// detallamos que columna de esa tabla toma de referencia
-				key: 'id'
-			}
+			type: dataTypes.INTEGER
 		},
 
 		id_color: {
-			type: Sequelize.INTEGER,
-
-			references: {
-				// aca ponemos la tabla a la cual se vincula
-				model: Color,
-
-				// detallamos que columna de esa tabla toma de referencia
-				key: 'id'
-			}
+			type: dataTypes.INTEGER
 		}
 	};
 
@@ -39,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
 		timestamps: false
 	};
 
-	const product_color = sequelize.define(alias, cols, config);
+	const Product_color = sequelize.define(alias, cols, config);
 
 	Product_color.associate = (models) => {
 		Product_color.belongsToMany(models.Product, {
@@ -50,4 +34,5 @@ module.exports = (sequelize, dataTypes) => {
 			timestamps: false
 		});
 	};
+	return Product_color
 };

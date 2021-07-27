@@ -5,22 +5,14 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		name: {
-			type: DataTypes.STRING(100),
+			type: dataTypes.STRING(100),
 			allowNull: false
 		},
 		id_product: {
-			type: Sequelize.INTEGER,
-
-			references: {
-				// aca ponemos la tabla a la cual se vincula
-				model: Product,
-
-				// detallamos que columna de esa tabla toma de referencia
-				key: 'id'
-			}
+			type: dataTypes.INTEGER
 		}
 	};
 
@@ -40,4 +32,5 @@ module.exports = (sequelize, dataTypes) => {
 			timestamps: false
 		});
 	};
+return Product_image
 };

@@ -5,51 +5,28 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		name: {
-			type: DataTypes.STRING(100),
+			type: dataTypes.STRING(100),
 			allowNull: false
 		},
 		description: {
-			type: DataTypes.STRING
+			type: dataTypes.STRING
 		},
 		id_category: {
-			type: Sequelize.INTEGER,
+			type: dataTypes.INTEGER
 
-			references: {
-				// aca ponemos la tabla a la cual se vincula
-				model: Category,
-
-				// detallamos que columna de esa tabla toma de referencia
-				key: 'id'
-			}
 		},
 
 		price: {
-			type: DataTypes.FLOAT
+			type: dataTypes.FLOAT
 		},
 		id_size: {
-			type: Sequelize.INTEGER,
-
-			references: {
-				// aca ponemos la tabla a la cual se vincula
-				model: Size,
-
-				// detallamos que columna de esa tabla toma de referencia
-				key: 'id'
-			}
+			type: dataTypes.INTEGER
 		},
 		id_brands: {
-			type: Sequelize.INTEGER,
-
-			references: {
-				// aca ponemos la tabla a la cual se vincula
-				model: Brand,
-
-				// detallamos que columna de esa tabla toma de referencia
-				key: 'id'
-			}
+			type: dataTypes.INTEGER
 		}
 	};
 
@@ -60,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
 		timestamps: false
 	};
 
-	const Products = sequelize.define(alias, cols, config);
+	const Product = sequelize.define(alias, cols, config);
 
 	Product.associate = (models) => {
 		Product.belongsTo(models.Category, {
@@ -95,4 +72,5 @@ module.exports = (sequelize, dataTypes) => {
 			timestamps: false
 		});
 	};
+	return Product
 };

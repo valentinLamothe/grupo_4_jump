@@ -5,10 +5,10 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		name: {
-			type: DataTypes.STRING(100),
+			type: dataTypes.STRING(100),
 			allowNull: false
 		}
 	};
@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
 		timestamps: false
 	};
 
-	const categories = sequelize.define(alias, cols, config);
+	const Category = sequelize.define(alias, cols, config);
 
 	Category.associate = (models) => {
 		Category.hasMany(models.Product, {
@@ -28,4 +28,5 @@ module.exports = (sequelize, dataTypes) => {
 			timestamps: false
 		});
 	};
+	return Category
 };

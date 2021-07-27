@@ -5,10 +5,10 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		name: {
-			type: DataTypes.STRING(100),
+			type: dataTypes.STRING(100),
 			allowNull: false
 		}
 	};
@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
 		timestamps: false
 	};
 
-	const color = sequelize.define(alias, cols, config);
+	const Color = sequelize.define(alias, cols, config);
 
 	Color.associate = (models) => {
 		Color.belongsToMany(models.Product, {
@@ -31,4 +31,5 @@ module.exports = (sequelize, dataTypes) => {
 			timestamps: false
 		});
 	};
+	return Color
 };

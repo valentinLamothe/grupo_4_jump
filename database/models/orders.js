@@ -1,3 +1,5 @@
+const User = require("./User");
+
 module.exports = (sequelize, dataTypes) => {
 	let alias = 'Order'; //nombre de indentificacion
 	let cols = {
@@ -5,14 +7,11 @@ module.exports = (sequelize, dataTypes) => {
 		id: {
 			autoIncrement: true,
 			primaryKey: true,
-			type: DataTypes.INTEGER
+			type: dataTypes.INTEGER
 		},
 		id_user: {
-			type: Sequelize.INTEGER,
-			references: {
-				model: users,
-				key: 'id'
-			}
+			type: dataTypes.INTEGER
+			
 		}
 	};
 
@@ -39,4 +38,5 @@ module.exports = (sequelize, dataTypes) => {
 			timestamps: false
 		});
 	};
+	return Order
 };
