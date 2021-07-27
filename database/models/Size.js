@@ -21,4 +21,11 @@ module.exports = (sequelize, dataTypes) => {
 	};
 
 	const Sizes = sequelize.define(alias, cols, config);
+
+	Sizes.associate = (models) => {
+		Sizes.hasMany(models.Product, {
+			as: 'size_product',
+			timestamps: false
+		});
+	};
 };
