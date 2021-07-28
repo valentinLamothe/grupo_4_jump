@@ -1,4 +1,3 @@
-const User = require("./User");
 
 module.exports = (sequelize, dataTypes) => {
 	let alias = 'Order'; //nombre de indentificacion

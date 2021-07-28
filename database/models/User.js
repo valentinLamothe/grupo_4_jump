@@ -20,21 +20,21 @@ module.exports = (sequelize, dataTypes) => {
 			allowNull: false
 		},
 		avatar_image: {
-			type: DataTypes.STRING(100)
+			type: dataTypes.STRING(100)
 		},
 		id_rol: {
-			type: Sequelize.INTEGER,
-			references: {
+			type: sequelize.INTEGER
+			/*references: {
 				model: rols,
 				key: 'id'
-			},
+			}*/},
 			country: {
 				type: dataTypes.STRING(100)
 			},
 			location: {
 				type: dataTypes.STRING(100)
 			}
-		}
+		
 	};
 
 	let config = {
@@ -51,7 +51,8 @@ module.exports = (sequelize, dataTypes) => {
 			as: 'user_rol',
 			foreignKey: 'id_rol'
 		});
-		User.belongsToMany(models.Order, {
+		User.hasMany(models.Order, {
+			foreignKey: 'id_user',
 			as: 'user_order'
 		});
 	};

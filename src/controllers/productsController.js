@@ -10,7 +10,7 @@ const sequelize = db.sequelize
 
 
 const productsController = {
-index:(req, res)=> {
+index:(req , res)=> {
 	db.Product.findAll()
 	.then(function(products){
 		return res.render('productsIndex',{products})

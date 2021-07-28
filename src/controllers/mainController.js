@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs'); /* Requerimos el módulo FS para leer distintos tipos de archivo */
-const db = require('../../database/models')
-const sequelize = db.sequelize
+/*const db = require('../../database/models');
+const sequelize = db.sequelize*/
 
 const mainController = {
 	index: (req, res) => {

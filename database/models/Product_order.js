@@ -26,4 +26,5 @@ module.exports = (sequelize, dataTypes) => {
 	};
 
 	const Product_order = sequelize.define(alias, cols, config);
+	return Product_order
 };
