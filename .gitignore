@@ -1,5 +1,5 @@
 node_modules
 */.DS_STORE
 ./database/config/config.js.example
-config/config.js
+config.js
 
