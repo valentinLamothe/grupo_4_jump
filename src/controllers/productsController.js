@@ -14,7 +14,7 @@ index:(req , res)=> {
 	db.Product.findAll()
 	.then(function(products){
 		return res.render('productsIndex',{products})
-		console.log("hoal")
+	
 	})
 	
 },

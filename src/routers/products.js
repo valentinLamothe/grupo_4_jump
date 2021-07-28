@@ -3,6 +3,8 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 
+
+
 // Controlador
 const productsController = require('../controllers/productsController');
 
