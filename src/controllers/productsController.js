@@ -14,13 +14,15 @@ index:(req , res)=> {
 	db.Product.findAll()
 	.then(function(products){
 		return res.render('productsIndex',{products})
+		console.log("hoal")
 	})
 	
 },
 detail: (req, res)=>{
 	db.Product.findByPk(req.params.id)
 		.then(productDetail => {
-			res.render('moviesDetail.ejs', {productDetail});
+			return  res.render('productDetail', {productDetail});
+		
 		});
 
 }

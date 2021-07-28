@@ -22,12 +22,12 @@ module.exports = (sequelize, dataTypes) => {
 		avatar_image: {
 			type: dataTypes.STRING(100)
 		},
-		id_rol: {
+		/*id_rol: {
 			type: sequelize.INTEGER
-			/*references: {
+			references: {
 				model: rols,
 				key: 'id'
-			}*/},
+			}},*/
 			country: {
 				type: dataTypes.STRING(100)
 			},
