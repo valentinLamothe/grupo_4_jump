@@ -8,17 +8,17 @@
             <main class="container">
                 <section class="formContainer">
                     <h1>Nuevo producto</h1>
-                    <form id="newProduct" action="/products" method="POST" enctype="multipart/form-data">
+                    <form id="newProduct" action="/products/create/" method="POST" enctype="multipart/form-data">
 
 
 
                         <div class="item">
                             <label for="product-name">Nombre del producto</label>
-                            <input type="text" name="name" id="name" value="" required>
+                            <input type="text" name="name" id="" required>
                         </div>
                         <div class="item">
                             <label for="product-description">Descripción del producto</label>
-                            <textarea name="description" value="" id="description" cols="30" rows="10"> </textarea>
+                            <textarea name="description"  cols="30" rows="10"> </textarea>
                         </div>
                        <!-- <div class="item">
                             <label for="product-image">Imagen del producto (JPG/PNG):</label>
@@ -26,12 +26,16 @@
                         </div>-->
                         <div class="item">
                             <label for="product-category">Categoría del producto</label>
-                            <input type="text" name="category" value="" id="category">
+                            <input type="text" name="category" id="" >
                         </div>
 
                         <div class="item">
                             <label for="product-size">Talle del producto </label>
-                            <input name="size" value="" id="talle" cols="30" rows="10"> 
+                            <input name="size"  cols="30" rows="10" id="" > 
+                        </div>
+                        <div class="item">  
+                            <label for="product-brand">marca</label>
+                            <input name="brand" cols="30" rows="10" id="" > 
                         </div>
                         <!-- <div class="item">
                             <label for="product-category">Categoría del producto</label>
@@ -48,7 +52,7 @@
                     -->
                         <div class="item">
                             <label for="product-price">Precio del producto ($)</label>
-                            <input type="number" name="price" value="" id="price">
+                            <input type="number" name="price" id="">
                         </div>
                         <div class="item"></div>
                         <button type="submit">Crear producto</button>

@@ -30,15 +30,19 @@ create:(req,res)=>{
 res.render('createProduct')
 },
 store: (req, res) =>{ 
-db.Product.create({
-	name:req.body.name,
+	db.Product.create({
+	
+	 name:req.body.name,
 	description: req.body.description,
 	id_category: req.body.category,
+	price: req.body.price,
 	id_size: req.body.size,
-	price: req.body.price
-	
+	id_brands: req.body.brand
 })
-res.redirect('/products')
+.then(()=> {
+	return res.redirect('/products')})            
+.catch(error => res.send(error))
+
 
 
 },

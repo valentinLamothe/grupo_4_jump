@@ -8,16 +8,16 @@ const path = require('path');
 // Controlador
 const productsController = require('../controllers/productsController');
 
-const storage = multer.diskStorage({
+/*const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, path.join(__dirname, '../../public/img/productos'))
     },
     filename: (req, file, cb) => {
         cb(null, 'product-' + Date.now() + path.extname(file.originalname))
     }
-})
+})*/
 
-const uploadFile = multer({storage})
+//const uploadFile = multer({storage})
 
 router.get('/', productsController.index); //listado productos
 router.get('/create/', productsController.create); //creacion de productos
@@ -27,7 +27,7 @@ router.get('/:id/', productsController.detail);// detalle individual producto
 //router.delete('/:id', productsController.destroy); borra producto especifico
 
 
-router.post('/',/*uploadFile.single('image')*/ productsController.store);// direccion de creacion(donde apunta el formulario)
+router.post('/create/',/*uploadFile.single('image')*/ productsController.store);// direccion de creacion(donde apunta el formulario)
 
 //router.put('/:id', productsController.update);  accion de edicion (donde apunta el formulario)
 
