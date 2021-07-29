@@ -1,4 +1,4 @@
-<!-- Acá sumamos las vistas automatizadas head -->
+<!-- Acá sumamos las vistas automatizadas head--> 
 <%- include ('./partials/head') %>
 
     <body>
@@ -20,16 +20,19 @@
                             <label for="product-description">Descripción del producto</label>
                             <textarea name="description" value="" id="description" cols="30" rows="10"> </textarea>
                         </div>
-                        <div class="item">
+                       <!-- <div class="item">
                             <label for="product-image">Imagen del producto (JPG/PNG):</label>
                             <input type="file" name="image" value="" id="image" accept="image/png, image/jpeg" multiple>
-                        </div>
+                        </div>-->
                         <div class="item">
                             <label for="product-category">Categoría del producto</label>
                             <input type="text" name="category" value="" id="category">
                         </div>
 
-
+                        <div class="item">
+                            <label for="product-size">Talle del producto </label>
+                            <input name="size" value="" id="talle" cols="30" rows="10"> 
+                        </div>
                         <!-- <div class="item">
                             <label for="product-category">Categoría del producto</label>
                             <select name="product-category" id="product-category">

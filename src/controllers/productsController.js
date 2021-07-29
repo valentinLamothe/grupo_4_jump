@@ -25,7 +25,25 @@ detail: (req, res)=>{
 		
 		});
 
-}
+},
+create:(req,res)=>{
+res.render('createProduct')
+},
+store: (req, res) =>{ 
+db.Product.create({
+	name:req.body.name,
+	description: req.body.description,
+	id_category: req.body.category,
+	id_size: req.body.size,
+	price: req.body.price
+	
+})
+res.redirect('/products')
+
+
+},
+//delete:(req, res)=>{},
+//update:(req,res)=>{}
 	
 };
 //console.log('newproduct'+ newProduct.id);
