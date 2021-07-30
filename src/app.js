@@ -18,8 +18,8 @@ const user = require('./routers/user')
 // Configuramos la carpeta publica
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({extended:false}));
-app.use(methodOverride('_method')); //Para usar http put y delete
 app.use(express.json());
+app.use(methodOverride('_method')); //Para usar http put y delete
 app.use(cookies()); // guardar información del navegador desde lado del usuario
 app.use(session( {
    secret: 'Shhhh', //guardar datos del usuario del lado del servidor

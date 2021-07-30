@@ -39,9 +39,11 @@ store: (req, res) =>{
 	id_size: req.body.size,
 	id_brands: req.body.brand
 })
-.then(()=> {
+res.redirect('/products')
+/*.then(()=> {
+	console.log(req.body)
 	return res.redirect('/products')})            
-.catch(error => res.send(error))
+.catch(error => res.send(error))*/
 
 
 
