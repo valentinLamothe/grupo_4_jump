@@ -7,7 +7,7 @@
     <main class="container">
         <section class="formContainer">
             <h1>Editar producto</h1>
-            <form enctype="multipart/form-data" id="newProduct" action="/products/<%= productEdit.id %>?_method=put" method="POST">        
+            <form  id="newProduct" action="/products/<%= productEdit.id %>?_method=PUT" method="POST">        
                 <div class="item">
                     <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
                     <input type="text" name="name" id="name" value="<%= productEdit.name %>">
@@ -17,14 +17,22 @@
                   
                 <textarea name="description" id="description" cols="30" rows="10"><%= productEdit.description %></textarea>
                 </div>
-                <div class="item">
+               <!-- <div class="item">
                     <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto (JPG/PNG):</label>
                     <input type="image" src="/img/productos/<%= productEdit.image %> " value="" alt="ZAPATILLAS X9000L2">
                     <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple>
-                </div>
+                </div>--> 
                 <div class="item">
                     <label for="product-category">Categoría del producto</label>
-                    <input type="text" name="category" value="<%= productEdit.category %>" id="category">
+                    <select name="category" id="">
+
+                        <option value="1">Accesorios</option>
+                        <option value="2">Zapatillas</option>
+                        <option value="3">Remeras</option>
+                        <option value="4">Tops</option>
+                        <option value="5">Pantalones</option>
+                        <option value="6">Buzos</option>
+                    </select>
                 </div>
                 <!-- <div class="item">
                     <label for="product-color"><i class="fas fa-edit"></i> Color del producto</label>
