@@ -31,14 +31,14 @@ res.render('createProduct')
 },
 store: (req, res) =>{ 
 	db.Product.create({
-	
-	 name:req.body.name,
+	name:req.body.name,
 	description: req.body.description,
 	id_category: req.body.category,
 	price: req.body.price,
 	id_size: req.body.size,
 	id_brands: req.body.brand
 })
+
 res.redirect('/products')
 /*.then(()=> {
 	console.log(req.body)

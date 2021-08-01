@@ -27,7 +27,7 @@ router.get('/:id/', productsController.detail);// detalle individual producto
 //router.delete('/:id', productsController.destroy); borra producto especifico
 
 
-router.post('/create/',/*uploadFile.single('image')*/ productsController.store);// direccion de creacion(donde apunta el formulario)
+router.post('/',/*uploadFile.single('image')*/ productsController.store);// direccion de creacion(donde apunta el formulario)
 
 //router.put('/:id', productsController.update);  accion de edicion (donde apunta el formulario)
 
