@@ -15,9 +15,12 @@ index:(req , res)=> {
 	db.Product.findAll()
 	.then(function(products){
 		return res.render('productsIndex',{products})
-	
+
 	})
-	
+		db.Product_image.findAll()
+		.then(function(productImage){
+			return res.render('productsIndex',{productImage})
+		})
 },
 detail: (req, res)=>{
 	db.Product.findByPk(req.params.id)
@@ -58,14 +61,14 @@ delete:(req, res)=>{
 	return res.redirect('/products')
 },
 edit:(req,res)=>{
- db.Product.findAll()
+ //db.Product.findAll()
  db.Product.findByPk(req.params.id)
  .then(function(productEdit){
 	return res.render('editProduct',{productEdit})
  })
- .then(function(productEdit){
-	return res.render('editProduct',{productEdit})
- })
+ //.then(function(productEdit){
+//	return res.render('editProduct',{productEdit})
+ //})
 	
 },
 update:(req,res)=>{
@@ -83,7 +86,9 @@ update:(req,res)=>{
 		}
 	})
 	res.redirect('/products')
-}
+},
+
+
 };
 //console.log('newproduct'+ newProduct.id);
 //console.log('generator'+ generateId);

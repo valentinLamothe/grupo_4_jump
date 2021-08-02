@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
 			type: dataTypes.STRING(100),
 			allowNull: false
 		},
-		id_product: {
+		id_product_fk2: {
 			type: dataTypes.INTEGER
 		}
 	};
@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
 	let config = {
 		//config base de datos para evitar errores
 
-		tableName: 'product_images',
+		tableName: 'product_image',
 		timestamps: false
 	};
 
