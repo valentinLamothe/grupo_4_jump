@@ -15,12 +15,7 @@ index:(req , res)=> {
 	db.Product.findAll()
 	.then(function(products){
 		return res.render('productsIndex',{products})
-
 	})
-		db.Product_image.findAll()
-		.then(function(productImage){
-			return res.render('productsIndex',{productImage})
-		})
 },
 detail: (req, res)=>{
 	db.Product.findByPk(req.params.id)
