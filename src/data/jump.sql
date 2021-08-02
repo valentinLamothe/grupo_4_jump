@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `jump` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `jump`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: jump
@@ -317,4 +319,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-02 11:20:38
+-- Dump completed on 2021-08-02 12:13:26
