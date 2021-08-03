@@ -21,12 +21,9 @@ module.exports = (sequelize, dataTypes) => {
     avatar_image: {
       type: dataTypes.STRING(100),
     },
-    /*id_rol: {
-			type: sequelize.INTEGER
-			references: {
-				model: rols,
-				key: 'id'
-			}},*/
+    id_rol_fk: {
+			type: dataTypes.INTEGER
+		},
     country: {
       type: dataTypes.STRING(100),
     },

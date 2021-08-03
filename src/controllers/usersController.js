@@ -14,6 +14,7 @@ const controller = {
   }, // se mantiene
 
   processRegister: (req, res) => {
+
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {
@@ -22,15 +23,16 @@ const controller = {
         oldData: req.body,
       });
     }
-
+    
     db.User.create({
       name: req.body.name,
       email: req.body.email,
       password: bcryptjs.hashSync(req.body.password, 10),
-      avatar_image: req.body.avatar_image,
+      avatar_image: req.body.avatar_image + __filename,
       country: req.body.country,
       location: req.body.location,
     });
+   
 
     res.redirect("/user/login");
   },

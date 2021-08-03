@@ -18,7 +18,7 @@ router.get("/register", guestMiddleware, usersController.register);
 //Procesar el registro
 router.post(
   "/register",
-  uploadFile.single("avatar"),
+  uploadFile.single("avatar_image"),
   validations,
   usersController.processRegister
 );

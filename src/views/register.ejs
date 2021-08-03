@@ -14,7 +14,7 @@
                             <p>Complete los campos para poder creár su cuenta</p>
                         </div>
                         <section class="formulario">
-                            <form action="/user/register" method="POST">
+                            <form action="/user/register" method="POST" enctype="multipart/form-data">
                                 <div class="barras">
                                     <div class="mail">
                                         <label for="Email"></label>
@@ -29,22 +29,22 @@
                                     </div>
                                     <div class="usuario-regis">
                                         <label for="usuario"></label>
-                                        <input type="text" name="name" id="usuario" placeholder="Nombre de usuario"
-                                            value="<%= locals.oldData ? oldData.usuario : null %>"
-                                            class="form-control <%= locals.errors && errors.usuario ? 'is-invalid' : null %> input-modified">
-                                        <% if (locals.errors && errors.usuario) { %>
+                                        <input type="text" name="name" id="name" placeholder="Nombre de usuario"
+                                            value="<%= locals.oldData ? oldData.name : null %>"
+                                            class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
+                                        <% if (locals.name && errors.name) { %>
                                             <div class="text-danger validations-msg">
-                                                <%= errors.usuario.msg %>
+                                                <%= errors.name.msg %>
                                             </div>
                                             <% } %>
                                     </div>
                                     <div>
                                         <label for="avatar"></label>
-                                        <input type="file" name="avatar" id="avatar"
+                                        <input type="file" name="avatar_image" id="avatar"
                                             style="display: flex;padding-top: 1%;">
-                                        <% if (locals.errors && errors.avatar) { %>
+                                        <% if (locals.errors && errors.avatar_image) { %>
                                             <div class="text-danger validations-msg">
-                                                <%= errors.avatar.msg %>
+                                                <%= errors.avatar_image.msg %>
                                             </div>
                                             <% } %>
                                     </div>
