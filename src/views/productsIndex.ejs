@@ -8,14 +8,15 @@
             <main class="container">
                 <h3 class="h3-products">Productos</h3>
                 <div class="prod-box">
-                    <% for(let i = 0 ;i<products.length ; i++ ){ %>
+                    <% for(let i=0 ;i<products.length ; i++ ){ %>
                         <article class="caja-producto-home" id="cajaProductoHome2">
                             <div class="icono-info-container">
                                 <div class="icono-info" id="iconoInfo2">i</div>
                             </div>
                             <div class="card-info-container" id="cardInfoContainer2">
-                                <a href="/products/<%= products[i].id %>"><img src="img/productos/<%=products[i].image %> "
-                                        alt="<%=products[i].name %>" class="product-img" id="productImg2" /></a>
+                                <a href="/products/<%= products[i].id %>"><img
+                                        src="img/productos/<%=products[i].image %> " alt="<%=products[i].name %>"
+                                        class="product-img" id="productImg2" /></a>
                                 <p class="display-none" id="description2">STOCK</p>
                             </div>
                             <p class="product-descrip" id="productDescrip2">

@@ -1,16 +1,13 @@
-const User = require('../models/User');
+const User = require("../database/helper/User");
 
 function userLoggedMiddleware(req, res, next) {
+  res.locals.isLogged = false;
 
-	res.locals.isLogged = false;
+  if (req.session.userLogged) {
+    res.locals.isLogged = true;
+  }
 
-	if (req.session.userLogged) {
-		res.locals.isLogged = true;
-	}
-
-	next();
+  next();
 }
-
-
 
 module.exports = userLoggedMiddleware;
