@@ -29,6 +29,7 @@ const productsController = {
       price: req.body.price,
       id_size: req.body.size,
       id_brands: req.body.brand,
+      image: req.file.filename
     });
     res.redirect("/products");
     /*.then(()=> {

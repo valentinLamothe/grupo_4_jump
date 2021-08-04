@@ -8,7 +8,7 @@
             <main class="container">
                 <section class="formContainer">
                     <h1>Nuevo producto</h1>
-                    <form id="newProduct" action="/products" method="POST">
+                    <form id="newProduct" action="/products" method="POST" enctype="multipart/form-data">
                         <div class="item">
                             <label for="product-name">Nombre del producto</label>
                             <input type="text" name="name" id="" required>
@@ -17,10 +17,10 @@
                             <label for="product-description">Descripción del producto</label>
                             <textarea name="description"  cols="30" rows="10"> </textarea>
                         </div>
-                       <!-- <div class="item">
+                       <div class="item">
                             <label for="product-image">Imagen del producto (JPG/PNG):</label>
-                            <input type="file" name="image" value="" id="image" accept="image/png, image/jpeg" multiple>
-                        </div>-->
+                            <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple>
+                        </div>
                         <div class="item">
                             <label for="product-category">Categoría del producto</label>
                             <select name="category" id="">

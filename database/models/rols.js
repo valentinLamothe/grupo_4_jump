@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
 	let config = {
 		//config base de datos para evitar errores
 
-		tableName: 'orders',
+		tableName: 'rols',
 		timestamps: false
 	};
 

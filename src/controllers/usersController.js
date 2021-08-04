@@ -28,9 +28,10 @@ const controller = {
       name: req.body.name,
       email: req.body.email,
       password: bcryptjs.hashSync(req.body.password, 10),
-      avatar_image: req.body.avatar_image + __filename,
+      avatar_image: req.file.filename,
       country: req.body.country,
       location: req.body.location,
+      id_rol_fk: req.body.id_rol_fk
     });
    
 
@@ -48,7 +49,12 @@ const controller = {
   },
 
   loginProcess: (req, res) => {
-    let userToLogin = User.findByField("email", req.body.email);
+    // let userToLogin = User.findByField("email", req.body.email);
+    let userToLogin = db.User.findOne({
+      where: {
+        email: req.body.email
+      }
+    })
 
     if (userToLogin) {
       let isOkPassword = bcryptjs.compareSync(
