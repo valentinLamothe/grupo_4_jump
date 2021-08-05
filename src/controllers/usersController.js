@@ -30,8 +30,8 @@ const controller = {
       password: bcryptjs.hashSync(req.body.password, 10),
       avatar_image: req.file.filename,
       country: req.body.country,
-      location: req.body.location,
-      id_rol_fk: req.body.id_rol_fk
+      location: req.body.location
+      // id_rol_fk: req.body.id_rol_fk
     });
    
 
@@ -55,6 +55,8 @@ const controller = {
         email: req.body.email
       }
     })
+.then(function () {
+
 
     if (userToLogin) {
       let isOkPassword = bcryptjs.compareSync(
@@ -81,6 +83,7 @@ const controller = {
         },
       },
     });
+  })
   },
   logout: (req, res) => {
     req.session.destroy();

@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
     },
     location: {
       type: dataTypes.STRING(100),
-    },
+    }
   };
 
   let config = {

@@ -244,7 +244,7 @@ CREATE TABLE `rols` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -253,6 +253,7 @@ CREATE TABLE `rols` (
 
 LOCK TABLES `rols` WRITE;
 /*!40000 ALTER TABLE `rols` DISABLE KEYS */;
+INSERT INTO `rols` VALUES (1,'cliente'),(2,'admin');
 /*!40000 ALTER TABLE `rols` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -298,8 +299,9 @@ CREATE TABLE `users` (
   `location` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`),
-  KEY `id_rol_idx` (`id_rol_fk`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
+  KEY `id_rol_idx` (`id_rol_fk`),
+  CONSTRAINT `id_rol_fk` FOREIGN KEY (`id_rol_fk`) REFERENCES `rols` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -308,7 +310,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'valentin','sdf@sdf','$2b$10$Wp5gjfd4eN8lOYbr4fwTsOG4IOl9DGWLPvVn8.I3t1micKoZh5QY6',NULL,NULL,NULL,NULL),(2,'joel','vaasdf@hdsof.com','$2b$10$RWf7dBezhE9ihAO6Wo6fh.BVcCo687Js8kn4QxPTmEGSroQicMAnC','',NULL,NULL,NULL),(3,'valentin','sdf','$2b$10$pJZC6HX7VX2aHBQWnkhXG.hYfr5TRhV25.jNeLxCOKsO5W1Fza8bC','',NULL,NULL,NULL),(6,'valentin','sdf@sdf.com','$2b$10$1oXaa84heHZ6pTjdInjSLeZIWbYWU5IH8t0DuZ4Gg4d2Lp1y0t7hm','',NULL,NULL,NULL),(11,'sdfsdf','sfdsfsdfsdfsfd@sdfsdf.com','$2b$10$TzTQ.9/WV3C/.s62fYXikOB/il8HQFEfHQ2jjCkUL6P64NuanK5Ke','Captura de Pantalla 2021-08-01 a la(s) 20.02.49 (2).png',NULL,NULL,NULL),(12,'','juan@hotmail.com','$2b$10$ppdH3w8NIO5aoQCQW2IGxuSF7qWJajWmZIdwVLcNq9COmxPEjvTva','',NULL,NULL,NULL),(15,'joeel','jsalf@dfsf.com','$2b$10$kOMMPdK62aSv3oCM38hTROK6BGD0Hto.BS9gRjF39n32ybBPS/uKe',NULL,NULL,NULL,NULL),(16,'hur','hoe@hfaf.com','$2b$10$RlompTbfXOjqU/vkxwyLqOHj34oHOnvxJVg0kfuiy5vzLuqMBU.b.',NULL,NULL,NULL,NULL),(17,'valentin coulome','jjsdf@sdfsdhf.com','$2b$10$DBkNokTr2/9Q3tfGS1BmWe6qzLoSUrFgzDbzVcrOth0B22zUBjOjS',NULL,NULL,NULL,NULL),(18,'val','valentinlamothecoulomme@hotmail.com','$2b$10$GQjvsxMBCBHmWMgGvRE35exo.zAfoX82hFMzv9ih8ZpUARm9p7dQO',NULL,NULL,NULL,NULL),(19,'na','sdfdfsdfsz@hotmail.com','$2b$10$l4vlrAUBHLUYBWn0bC2BQuoxky53VeFkqlkoeSHSEfM3XOLfU6ha6','undefined/Users/valentinlamothecoulomme/Desktop/grupo_4_jump/src/controllers/usersController.js',NULL,NULL,NULL),(20,'v','sdfzvbvvf@gmail.com','$2b$10$3ZJFf70cFC.vaJmEomhXXebOD7xNcAjktPlwssAcS8NAmA/cDMEaG','undefined/Users/valentinlamothecoulomme/Desktop/grupo_4_jump/src/controllers/usersController.js',NULL,NULL,NULL),(21,'asdf','sdf@gmail.com','$2b$10$VaIN4BxNa8BvOUo6CWw4VebVvEQpZo6Qr5jSdZ6Z0t8C3aeP5l8J2','undefined/Users/valentinlamothecoulomme/Desktop/grupo_4_jump/src/controllers/usersController.js',NULL,NULL,NULL),(22,'nulo','nul@gmail.com','$2b$10$cVqqVXWeJ4JYGvMqp0I3j.7p6KZXsJ5BrgHk7bcSjGaT16GWtr..C','avatar-1628084573648.png',NULL,NULL,NULL);
+INSERT INTO `users` VALUES (1,'valentin','sdf@sdf','$2b$10$Wp5gjfd4eN8lOYbr4fwTsOG4IOl9DGWLPvVn8.I3t1micKoZh5QY6',NULL,NULL,NULL,NULL),(2,'joel','vaasdf@hdsof.com','$2b$10$RWf7dBezhE9ihAO6Wo6fh.BVcCo687Js8kn4QxPTmEGSroQicMAnC','',NULL,NULL,NULL),(3,'valentin','sdf','$2b$10$pJZC6HX7VX2aHBQWnkhXG.hYfr5TRhV25.jNeLxCOKsO5W1Fza8bC','',NULL,NULL,NULL),(6,'valentin','sdf@sdf.com','$2b$10$1oXaa84heHZ6pTjdInjSLeZIWbYWU5IH8t0DuZ4Gg4d2Lp1y0t7hm','',NULL,NULL,NULL),(11,'sdfsdf','sfdsfsdfsdfsfd@sdfsdf.com','$2b$10$TzTQ.9/WV3C/.s62fYXikOB/il8HQFEfHQ2jjCkUL6P64NuanK5Ke','Captura de Pantalla 2021-08-01 a la(s) 20.02.49 (2).png',NULL,NULL,NULL),(12,'','juan@hotmail.com','$2b$10$ppdH3w8NIO5aoQCQW2IGxuSF7qWJajWmZIdwVLcNq9COmxPEjvTva','',NULL,NULL,NULL),(15,'joeel','jsalf@dfsf.com','$2b$10$kOMMPdK62aSv3oCM38hTROK6BGD0Hto.BS9gRjF39n32ybBPS/uKe',NULL,NULL,NULL,NULL),(16,'hur','hoe@hfaf.com','$2b$10$RlompTbfXOjqU/vkxwyLqOHj34oHOnvxJVg0kfuiy5vzLuqMBU.b.',NULL,NULL,NULL,NULL),(17,'valentin coulome','jjsdf@sdfsdhf.com','$2b$10$DBkNokTr2/9Q3tfGS1BmWe6qzLoSUrFgzDbzVcrOth0B22zUBjOjS',NULL,NULL,NULL,NULL),(18,'val','valentinlamothecoulomme@hotmail.com','$2b$10$GQjvsxMBCBHmWMgGvRE35exo.zAfoX82hFMzv9ih8ZpUARm9p7dQO',NULL,NULL,NULL,NULL),(19,'na','sdfdfsdfsz@hotmail.com','$2b$10$l4vlrAUBHLUYBWn0bC2BQuoxky53VeFkqlkoeSHSEfM3XOLfU6ha6','undefined/Users/valentinlamothecoulomme/Desktop/grupo_4_jump/src/controllers/usersController.js',NULL,NULL,NULL),(20,'v','sdfzvbvvf@gmail.com','$2b$10$3ZJFf70cFC.vaJmEomhXXebOD7xNcAjktPlwssAcS8NAmA/cDMEaG','undefined/Users/valentinlamothecoulomme/Desktop/grupo_4_jump/src/controllers/usersController.js',NULL,NULL,NULL),(21,'asdf','sdf@gmail.com','$2b$10$VaIN4BxNa8BvOUo6CWw4VebVvEQpZo6Qr5jSdZ6Z0t8C3aeP5l8J2','undefined/Users/valentinlamothecoulomme/Desktop/grupo_4_jump/src/controllers/usersController.js',NULL,NULL,NULL),(22,'nulo','nul@gmail.com','$2b$10$cVqqVXWeJ4JYGvMqp0I3j.7p6KZXsJ5BrgHk7bcSjGaT16GWtr..C','avatar-1628084573648.png',NULL,NULL,NULL),(23,'iaf','iva@hotmail.com','$2b$10$NYBOnpqeSy4HnN20UeiYZeFpJXiAJFJL7bBnzlZjEwCEIxBtpyLJi','avatar-1628088912744.png',NULL,NULL,NULL),(24,'giuli','giuliana@gmail.com','$2b$10$/hgZNZJ7asKgwbMxcb0JKuY8DgJUMAphzKTPDQin6hD5K19PlXSeW','avatar-1628088977759.png',1,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -321,4 +323,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-08-04 11:40:33
+-- Dump completed on 2021-08-05 11:02:34
