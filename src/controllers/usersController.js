@@ -43,23 +43,20 @@ const controller = {
   },
 
   profile: (req, res) => {
-    res.render("profile", {
-      user: req.session.userLogged,
-    });
+    db.User.findAll().then(function(user) {
+      return res.render('profile',{user})
+    })
   },
 
   loginProcess: (req, res) => {
-    // let userToLogin = User.findByField("email", req.body.email);
     let userToLogin = db.User.findOne({
       where: {
         email: req.body.email
       }
     })
-.then(function () {
-
-
+    
     if (userToLogin) {
-      let isOkPassword = bcryptjs.compareSync(
+      let isOkPassword =  bcryptjs.compare(
         req.body.password,
         userToLogin.password
       );
@@ -83,7 +80,7 @@ const controller = {
         },
       },
     });
-  })
+
   },
   logout: (req, res) => {
     req.session.destroy();

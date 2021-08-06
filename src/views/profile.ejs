@@ -5,16 +5,22 @@
     <!-- Acá sumamos la vista automatizada header -->
     <%- include ('./partials/header') %>
 
-      <h1 style="margin-left: 10%;">Hi <%= user.usuario %>
-      </h1>
 
-      <img src="/img/usersAvatars/<%= user.image %>" alt="perfil" width="30%" height="50%"
+      <% for( let i = 0; i < user.length; i++ ) { %>
+      
+        
+        <h1 style="margin-left: 10%;">Hi <%= user[i].name %>
+        </h1>
+        
+        <img src="/img/usersAvatars/<%= user[i].avatar_image %>" alt="perfil" width="30%" height="50%"
         style="margin-left: 10%; border-radius: 50%;">
-
-      <h2 style="margin-left: 15%;margin-top: 2%;margin-bottom: 5%;">
-        <%= user.email %>
-      </h2>
-
+        
+        <h2 style="margin-left: 15%;margin-top: 2%;margin-bottom: 5%;">
+          <%= user[i].email %>
+        </h2>
+        
+        
+        <% } %>
 
       <%- include ('./partials/footer') %>
   </body>

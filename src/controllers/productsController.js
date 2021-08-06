@@ -29,13 +29,12 @@ const productsController = {
       price: req.body.price,
       id_size: req.body.size,
       id_brands: req.body.brand,
-      image: req.file.filename
-    });
-    res.redirect("/products");
-    /*.then(()=> {
-	console.log(req.body)
-	return res.redirect('/products')})            
-.catch(error => res.send(error))*/
+      image: req.file.filenamej
+    })
+    // res.redirect("/products");
+    .then( ()=> {
+      return res.redirect('/products')
+    })
   },
   delete: (req, res) => {
     db.Product.destroy({
