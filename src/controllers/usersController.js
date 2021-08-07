@@ -44,7 +44,7 @@ const controller = {
 
   profile: (req, res) => {
     db.User.findAll().then(function(user) {
-      return res.render('profile',{user})
+      return res.render('profile',{user: req.session.userLogged})
     })
   },
 
