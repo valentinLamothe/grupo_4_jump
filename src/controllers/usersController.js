@@ -3,7 +3,7 @@ const bcryptjs = require("bcrypt");
 const { validationResult } = require("express-validator");
 //const User = require(path.join(__dirname, "../../models/User"));
 // base de datos -- llamado
-const db = require("../../database/models");
+const db = require("../database/models");
 const { receiveMessageOnPort } = require("worker_threads");
 const sequelize = db.sequelize;
 // fin de llamado
@@ -43,19 +43,22 @@ const controller = {
   },
 
   profile: (req, res) => {
-    db.User.findAll().then(function(user) {
-      return res.render('profile',{user: req.session.userLogged})
-    })
+    // db.User.findOne().then(function(user) {
+    //   return res.render('profile',{user})
+    // })
+    console.log(req.session.userLogged)
+    return res.render('profile',{user: req.session.userLogged})
   },
 
   loginProcess: (req, res) => {
-    let userToLogin = db.User.findOne({
+      db.User.findOne({
       where: {
         email: req.body.email
       }
     })
-    
-    if (userToLogin) {
+    .then((userToLogin) => {
+
+    // if (userToLogin) {
       let isOkPassword =  bcryptjs.compare(
         req.body.password,
         userToLogin.password
@@ -72,7 +75,7 @@ const controller = {
           },
         },
       });
-    }
+    // }
     return res.render("login", {
       errors: {
         email: {
@@ -80,7 +83,7 @@ const controller = {
         },
       },
     });
-
+  })
   },
   logout: (req, res) => {
     req.session.destroy();
