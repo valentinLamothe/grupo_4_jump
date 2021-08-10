@@ -39,15 +39,6 @@ const controller = {
 	login: (req, res) => {
 		res.render('login');
 	},
-
-	profile: (req, res) => {
-		// db.User.findOne().then(function(user) {
-		//   return res.render('profile',{user})
-		// })
-		console.log(req.session.userLogged);
-		return res.render('profile', { user: req.session.userLogged });
-	},
-
 	loginProcess: (req, res) => {
 		db.User.findOne({
 			where: {
@@ -75,6 +66,13 @@ const controller = {
 			// 	}
 			// });
 		});
+	},
+	profile: (req, res) => {
+		// db.User.findOne().then(function(user) {
+		//   return res.render('profile',{user})
+		// })
+		console.log(req.session.userLogged);
+		return res.render('profile', { user: req.session.userLogged });
 	},
 	logout: (req, res) => {
 		req.session.destroy();
