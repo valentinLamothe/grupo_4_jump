@@ -32,7 +32,7 @@
                                         <input type="text" name="name" id="name" placeholder="Nombre de usuario"
                                             value="<%= locals.oldData ? oldData.name : null %>"
                                             class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
-                                        <% if (locals.name && errors.name) { %>
+                                        <% if (locals.errors && errors.name) { %>
                                             <div class="text-danger validations-msg">
                                                 <%= errors.name.msg %>
                                             </div>
