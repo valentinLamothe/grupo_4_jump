@@ -11,7 +11,12 @@
                     <form id="newProduct" action="/products" method="POST" enctype="multipart/form-data">
                         <div class="item">
                             <label for="product-name">Nombre del producto</label>
-                            <input type="text" name="name" id="" required>
+                            <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
+                            <% if (locals.errors && errors.name) { %>
+                            <div class="text-danger validations-msg">
+                                <%= errors.name.msg %>
+                            </div>
+                            <% } %>
                         </div>
                         <div class="item">
                             <label for="product-description">Descripción del producto</label>
