@@ -63,6 +63,15 @@ const productsController = {
 		//})
 	},
 	update: (req, res) => {
+		const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length > 0) {
+			return res.render('editProduct', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
+		
 		db.Product.update(
 			{
 				name: req.body.name,
@@ -81,6 +90,5 @@ const productsController = {
 		res.redirect('/products');
 	}
 };
-//console.log('newproduct'+ newProduct.id);
-//console.log('generator'+ generateId);
+
 module.exports = productsController;
