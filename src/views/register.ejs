@@ -16,62 +16,82 @@
                         <section class="formulario">
                             <form id="registerUserForm" action="/user/register" method="POST" enctype="multipart/form-data">
                                 <div class="barras">
-                                    <div class="mail">
+                                    
+                                    <div class="form-field mail">
+                                        
                                         <label for="Email"></label>
                                         <input type="text" name="email" id="Email" placeholder="Email"
                                             value="<%= locals.oldData ? oldData.email : null %>"
                                             class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> input-modified">
+                                        
+                                        <small class="err">Error</small>
+                                        
                                         <% if (locals.errors && errors.email) { %>
-                                            <div class="text-danger validations-msg">
-                                                <%= errors.email.msg %>
-                                            </div>
-                                            <% } %>
+                                        <div class="text-danger validations-msg">
+                                            <%= errors.email.msg %>
+                                        </div>
+                                        <% } %>
                                     </div>
-                                    <div class="usuario-regis">
+
+                                    <div class="form-field usuario-regis">
                                         <label for="usuario"></label>
                                         <input type="text" name="name" id="name" placeholder="Nombre de usuario"
                                             value="<%= locals.oldData ? oldData.name : null %>"
                                             class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
+                                        
+                                        <small class="err">Error</small>
+
                                         <% if (locals.errors && errors.name) { %>
-                                            <div class="text-danger validations-msg">
-                                                <%= errors.name.msg %>
-                                            </div>
-                                            <% } %>
+                                        <div class="text-danger validations-msg">
+                                            <%= errors.name.msg %>
+                                        </div>
+                                        <% } %>
                                     </div>
-                                    <div>
+
+                                    <div class="form-field">
                                         <label for="avatar"></label>
                                         <input type="file" name="avatar_image" id="avatar"
                                             style="display: flex;padding-top: 1%;">
+                                        
+                                        <small class="err">Error</small>
+                                    
                                         <% if (locals.errors && errors.avatar_image) { %>
-                                            <div class="text-danger validations-msg">
-                                                <%= errors.avatar_image.msg %>
-                                            </div>
-                                            <% } %>
+                                        <div class="text-danger validations-msg">
+                                            <%= errors.avatar_image.msg %>
+                                        </div>
+                                        <% } %>
                                     </div>
+
                                     <div class="contrasenias">
-                                        <div class="contra">
+                                        <div class="form-field contra">
                                             <label for="password"></label>
                                             <input type="password" name="password" id="password"
                                                 placeholder="Contraseña" value=""
                                                 class="form-control <%=  locals.errors && errors.password ? 'is-invalid' : null %> input-modified">
+                                            
+                                            <small class="err">Error</small>
+                                            
                                             <% if (locals.errors && errors.password) { %>
-                                                <div class="text-danger validations-msg">
-                                                    <%= errors.password.msg %>
-                                                </div>
-                                                <% } %>
+                                            <div class="text-danger validations-msg">
+                                                <%= errors.password.msg %>
+                                            </div>
+                                            <% } %>
                                         </div>
-                                        <!-- <div class="confirmar-contra">
-                                    <label for="contrasenia"></label>
-                                    <input type="password" name="confirmar-contra" id="confirmar-contra"
-                                        placeholder="Confirmar Contraseña">
-                                </div> -->
+                                        <!-- 
+                                        <div class="confirmar-contra">
+                                            <label for="contrasenia"></label>
+                                            <input type="password" name="confirmar-contra" id="confirmar-contra" placeholder="Confirmar Contraseña">
+                                        </div> 
+                                        -->
                                     </div>
                                 </div>
+
                                 <div class="boton">
                                     <div class="boton-registrar">
                                         <button type="submit">REGISTRAR</button>
                                     </div>
                                 </div>
+
                             </form>
                         </section>
                     </div>
