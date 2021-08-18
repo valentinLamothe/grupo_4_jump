@@ -1,4 +1,4 @@
-<!-- Acá sumamos las vistas automatizadas head--> 
+<!-- Acá sumamos las vistas automatizadas head-->
 <%- include ('./partials/head') %>
 
     <body>
@@ -11,56 +11,69 @@
                     <form id="newProduct" action="/products" method="POST" enctype="multipart/form-data">
                         <div class="item">
                             <label for="product-name">Nombre del producto</label>
-                            <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
+                            <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>"
+                                class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
                             <% if (locals.errors && errors.name) { %>
-                            <div class="text-danger validations-msg">
-                                <%= errors.name.msg %>
-                            </div>
-                            <% } %>
+                                <div class="text-danger validations-msg">
+                                    <%= errors.name.msg %>
+                                </div>
+                                <% } %>
                         </div>
                         <div class="item">
                             <label for="product-description">Descripción del producto</label>
-                            <textarea name="description"  cols="30" rows="10"> </textarea>
+                            <textarea name="description" cols="30" rows="10"
+                                value="<%= locals.oldData ? oldData.description : null %>"
+                                class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> input-modified">
+                            </textarea>
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="text-danger validations-msg">
+                                    <%= errors.description.msg %>
+                                </div>
+                                <% } %>
                         </div>
-                       <div class="item">
+                        <div class=" item">
                             <label for="product-image">Imagen del producto (JPG/PNG):</label>
-                            <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple>
-                        </div>
-                        <div class="item">
-                            <label for="product-category">Categoría del producto</label>
-                            <select name="category" id="">
-                                <option value="1">Accesorios</option>
-                                <option value="2">Zapatillas</option>
-                                <option value="3">Remeras</option>
-                                <option value="4">Tops</option>
-                                <option value="5">Pantalones</option>
-                                <option value="6">Buzos</option>
-                            </select>
-                        </div>
+                            <input type="file" name="image" id="image" accept="image/png, image/jpeg">
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="text-danger validations-msg">
+                                    <%= errors.image.msg %>
+                                </div>
+                                <% } %>
+                                    <div class="item">
+                                        <label for="product-category">Categoría del producto</label>
+                                        <select name="category" id="">
+                                            <option value="1">Accesorios</option>
+                                            <option value="2">Zapatillas</option>
+                                            <option value="3">Remeras</option>
+                                            <option value="4">Tops</option>
+                                            <option value="5">Pantalones</option>
+                                            <option value="6">Buzos</option>
+                                        </select>
+                                    </div>
 
-                        <div class="item">
-                            <label for="product-size">Talle del producto </label>
-                            <select name="size" id="">
-                                <option value="1">sin talle</option>
-                                <option value="2">8,5</option>
-                                <option value="3">S</option>
-                                <option value="4">M</option>
-                                <option value="5">XL</option>
-                                <option value="6">S</option>
-                            </select>
-                        </div>
-                        <div class="item">  
-                            <label for="product-brand">marca</label>
-                            <select name="brand" id="">
-                                <option value="1">Under Armour</option>
-                                <option value="2">Nike</option>
-                                <option value="3">Adidas</option>
-                                <option value="4">reebok</option>
-                                <option value="5">Puma</option>
-                                <option value="6">Adidas</option>
-                            </select>
-                        </div>
-                        <!-- <div class="item">
+                                    <div class="item">
+                                        <label for="product-size">Talle del producto </label>
+                                        <select name="size" id="">
+                                            <option value="1">sin talle</option>
+                                            <option value="2">8,5</option>
+                                            <option value="3">S</option>
+                                            <option value="4">M</option>
+                                            <option value="5">XL</option>
+                                            <option value="6">S</option>
+                                        </select>
+                                    </div>
+                                    <div class="item">
+                                        <label for="product-brand">marca</label>
+                                        <select name="brand" id="">
+                                            <option value="1">Under Armour</option>
+                                            <option value="2">Nike</option>
+                                            <option value="3">Adidas</option>
+                                            <option value="4">reebok</option>
+                                            <option value="5">Puma</option>
+                                            <option value="6">Adidas</option>
+                                        </select>
+                                    </div>
+                                    <!-- <div class="item">
                             <label for="product-category">Categoría del producto</label>
                             <select name="product-category" id="product-category">
                                 <option value="hombre">Hombre</option>
@@ -73,12 +86,12 @@
                             <input type="color" name="product-color" id="product-color">
                         </div>
                     -->
-                        <div class="item">
-                            <label for="product-price">Precio del producto ($)</label>
-                            <input type="number" name="price" id="">
-                        </div>
-                        <div class="item"></div>
-                        <button type="submit">Crear producto</button>
+                                    <div class="item">
+                                        <label for="product-price">Precio del producto ($)</label>
+                                        <input type="number" name="price" id="">
+                                    </div>
+                                    <div class="item"></div>
+                                    <button type="submit">Crear producto</button>
                         </div>
                     </form>
 
