@@ -18,7 +18,9 @@ let isEmpty = (field) => {
 registerUserForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	if (isEmpty(emailField) != '' || isEmpty(userField) != '' || isEmpty(avatarField) != '' || isEmpty(pwdField) != '') {
+	if (isEmpty(emailField) != '' || isEmpty(userField) != '' || isEmpty(pwdField) != '') {
 		alert('Los campos no pueden estar vacíos');
+	} else {
+		registerUserForm.submit();
 	}
 });
