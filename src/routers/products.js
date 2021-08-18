@@ -8,6 +8,7 @@ const productsController = require('../controllers/productsController');
 
 //Middleware
 const productValidator = require('../middlewares/validateProductMiddleware');
+const productEditValidator = require('../middlewares/validateProductEditMiddleware');
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
@@ -29,6 +30,6 @@ router.delete('/:id', productsController.delete); //borra producto especifico
 
 router.post('/', uploadFile.single('image'), productValidator, productsController.store); // direccion de creacion(donde apunta el formulario)
 
-router.put('/:id', productsController.update); //accion de edicion (donde apunta el formulario)
+router.put('/:id', productEditValidator  ,productsController.update); //accion de edicion (donde apunta el formulario)
 
 module.exports = router;

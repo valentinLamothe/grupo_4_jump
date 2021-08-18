@@ -1,7 +1,7 @@
 const { body } = require("express-validator");
 const path = require("path");
 
-const productValidator = [
+const validateProductEditMiddleware = [
   body("name")
     .notEmpty()
     .withMessage("Tienes que escribir un nombre de producto")
@@ -32,4 +32,4 @@ const productValidator = [
   }),
 ];
 
-module.exports = productValidator;
+module.exports = validateProductEditMiddleware;
