@@ -4,8 +4,10 @@
 
 // Validación del formulario de registro de usuario
 
-// Capturamos los inputs del formulario
+// Capturamos el formulario
 const registerUserForm = document.querySelector('form#registerUserForm');
+
+// Capturamos los inputs del formulario
 const emailField = registerUserForm.email;
 const userField = registerUserForm.name;
 const avatarField = registerUserForm.avatar_image;
