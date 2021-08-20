@@ -68,7 +68,7 @@ const productsController = {
 		if (resultValidation.errors.length > 0) {
 			return res.render('editProduct', {
 				errors: resultValidation.mapped(),
-				oldData: req.body
+				productEdit: req.body
 			});
 		}
 		

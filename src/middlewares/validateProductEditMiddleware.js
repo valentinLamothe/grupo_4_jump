@@ -28,6 +28,7 @@ const validateProductEditMiddleware = [
       }
     }
 
+    console.log(validateProductEditMiddleware);
     return true;
   }),
 ];
