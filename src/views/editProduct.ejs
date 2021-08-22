@@ -7,10 +7,17 @@
     <main class="container">
         <section class="formContainer">
             <h1>Editar producto</h1>
-            <form  id="newProduct" action="/products/<%= productEdit.id %>?_method=PUT" method="POST">        
+            <form  id="newProduct" action="/products/<%= productEdit.id %>?_method=PUT" method="POST">
+            <% console.log(productEdit.id + 'texto linea 11') %>        
                 <div class="item">
                     <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
-                    <input type="text" name="name" id="name" value="<%= productEdit.name %>">
+                    <input type="text" name="name" value="<%= productEdit.name %>"
+                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger validations-msg">
+                        <%= errors.name.msg %>
+                    </div>
+                    <% } %>
                 </div>
                 <div class="item">
                     <label for="product-description"><i class="fas fa-edit"></i> Descripción del producto</label>

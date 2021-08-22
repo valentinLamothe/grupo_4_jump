@@ -54,17 +54,15 @@ const productsController = {
 		return res.redirect('/products');
 	},
 	edit: (req, res) => {
-		//db.Product.findAll()
+
 		db.Product.findByPk(req.params.id).then(function (productEdit) {
 			return res.render('editProduct', { productEdit });
 		});
-		//.then(function(productEdit){
-		//	return res.render('editProduct',{productEdit})
-		//})
 	},
 	update: (req, res) => {
+		
 		const resultValidation = validationResult(req);
-
+		
 		if (resultValidation.errors.length > 0) {
 			return res.render('editProduct', {
 				errors: resultValidation.mapped(),
@@ -86,8 +84,10 @@ const productsController = {
 					id: req.params.id
 				}
 			}
-		);
-		res.redirect('/products');
+		)
+		.then(() => {
+			return res.redirect('/products');
+		});
 	}
 };
 
