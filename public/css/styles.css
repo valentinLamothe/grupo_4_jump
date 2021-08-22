@@ -248,7 +248,7 @@ h2.producto {
 	border: 0;
 	text-decoration: none;
 	min-width: 180px;
-	text-align: left;
+	text-align: center;
 	margin: 5px auto;
 }
 
@@ -742,7 +742,7 @@ section form div.barras .recor-contrasenia {
 }
 
 .validations-msg {
-	display: flex;
+	text-align: left;
 }
 
 section form div.barras .recor-contrasenia input {
@@ -768,6 +768,10 @@ p {
 }
 
 /* FORM VALIDATION */
+
+.form-group {
+	margin: 1rem 0;
+}
 
 .form-field.success input {
 	border-color: #2ecc71;
