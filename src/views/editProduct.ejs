@@ -7,7 +7,7 @@
     <main class="container">
         <section class="formContainer">
             <h1>Editar producto</h1>
-            <form  id="newProduct" action="/products/<%= productEdit.id %>?_method=PUT" method="POST">
+            <form  id="newProduct" action="/products/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <% console.log(productEdit.id + 'texto linea 11') %>        
                 <div class="item">
                     <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
@@ -24,11 +24,11 @@
                   
                 <textarea name="description" id="description" cols="30" rows="10"><%= productEdit.description %></textarea>
                 </div>
-               <!-- <div class="item">
+               <div class="item">
                     <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto (JPG/PNG):</label>
                     <input type="image" src="/img/productos/<%= productEdit.image %> " value="" alt="ZAPATILLAS X9000L2">
                     <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple>
-                </div>--> 
+                </div> 
                 <div class="item">
                     <label for="product-category">Categoría del producto</label>
                     <select name="category" id="">

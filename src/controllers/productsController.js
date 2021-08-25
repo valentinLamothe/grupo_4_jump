@@ -7,6 +7,7 @@ const db = require('../database/models');
 const { receiveMessageOnPort } = require('worker_threads');
 const sequelize = db.sequelize;
 const { validationResult } = require('express-validator');
+const { CLIENT_RENEG_LIMIT } = require('tls');
 
 const productsController = {
 	index: (req, res) => {
@@ -38,7 +39,7 @@ const productsController = {
 			price: req.body.price,
 			id_size: req.body.size,
 			id_brands: req.body.brand,
-			image: req.body.filename
+			image: req.file.filename
 		})
 			// res.redirect("/products");
 			.then(() => {
@@ -64,12 +65,20 @@ const productsController = {
 		const resultValidation = validationResult(req);
 		
 		if (resultValidation.errors.length > 0) {
-			return res.render('editProduct', {
-				errors: resultValidation.mapped(),
-				productEdit: req.body
+			console.log(resultValidation.errors)
+			db.Product.findByPk(req.params.id).then(function (productEdit) {
+				return res.render('editProduct', { productEdit, errors: resultValidation.mapped()});
 			});
 		}
-		
+		else{
+		let imagen ; 
+		db.Product.findByPk(req.params.id).then(function (productEdit) {
+			console.log(productEdit.dataValues);
+			imagen = productEdit.dataValues.image
+		});
+		if(req.file){
+			imagen = req.file.filename
+		}
 		db.Product.update(
 			{
 				name: req.body.name,
@@ -77,7 +86,8 @@ const productsController = {
 				id_category: req.body.category,
 				price: req.body.price,
 				id_size: req.body.size,
-				id_brands: req.body.brand
+				id_brands: req.body.brand,
+				image:imagen
 			},
 			{
 				where: {
@@ -86,8 +96,11 @@ const productsController = {
 			}
 		)
 		.then(() => {
+			console.log("chau bb ")
 			return res.redirect('/products');
-		});
+		})
+		.catch(e=>res.send(e))
+		}
 	}
 };
 

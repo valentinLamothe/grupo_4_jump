@@ -30,6 +30,6 @@ router.delete('/:id', productsController.delete); //borra producto especifico
 
 router.post('/', uploadFile.single('image'), productValidator, productsController.store); // direccion de creacion(donde apunta el formulario)
 
-router.put('/:id', productEditValidator  ,productsController.update); //accion de edicion (donde apunta el formulario)
+router.put('/:id',uploadFile.single('image'), productEditValidator ,productsController.update); //accion de edicion (donde apunta el formulario)
 
 module.exports = router;
