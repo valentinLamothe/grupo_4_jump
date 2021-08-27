@@ -75,7 +75,7 @@ function checkInputs() {
 		setErrorFor(password, 'La contraseña debe tener al menos 8 caracteres');
 		isFormValid = false;
 	} else if (!isValidPassword(passwordValue)) {
-		setErrorFor(password, 'La contraseña debe contener al menos un numero, una letra mayuscula y una letra minuscula');
+		setErrorFor(password, 'La contraseña debe contener al menos un numero, un símbolo, una letra mayuscula y una letra minuscula');
 		isFormValid = false;
 	} else {
 		setSuccessFor(password);

@@ -21,10 +21,7 @@
                         </div>
                         <div class="item">
                             <label for="product-description">Descripción del producto</label>
-                            <textarea name="description" cols="30" rows="10"
-                                value="<%= locals.oldData ? oldData.description : null %>"
-                                class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> input-modified">
-                            </textarea>
+                            <textarea name="description" cols="30" rows="10" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> input-modified"><%= locals.oldData ? oldData.description : null %></textarea>
                             <% if (locals.errors && errors.description) { %>
                                 <div class="text-danger validations-msg">
                                     <%= errors.description.msg %>

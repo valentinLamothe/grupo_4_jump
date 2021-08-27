@@ -26,8 +26,8 @@ const validations = [
 		.withMessage('La contraseña debe tener al menos 8 caracteres')
 		.bail()
 		.matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, 'i')
-		.withMessage('La contraseña debe contener al menos un numero, una letra mayuscula y una letra minuscula'),
-	body('password2').notEmpty().withMessage('La contraseña no puede estar vacía').bail().matches('password').withMessage('Las contraseñas no coinciden')
+		.withMessage('La contraseña debe contener al menos un numero, un símbolo, una letra mayuscula y una letra minuscula')
+	//body('password2').notEmpty().withMessage('La contraseña no puede estar vacía').bail().matches('password').withMessage('Las contraseñas no coinciden')
 ];
 
 module.exports = validations;
