@@ -1,46 +1,49 @@
 <header>
-    <div class="container">
-        <div class="logo">
-            <a href="/"><img src="/img/logo-white.jpg" alt="JUMP" /></a>
-        </div>
-        <nav>
-            <ul>
-                <% if (locals.isLogged) { %>
-                    <li>
-                        <a href="/user/logout" class="logout" title="Salir"><i class="fas fa-sign-in-alt"></i></a>
-                    </li>
-                    <% } else { %>
-                <li>
-                    <a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>    
-                </li>
-                <li>
-                    <a href="/user/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
-                </li>
+	<div class="container">
+		<div class="logo">
+			<a href="/"><img src="/img/logo-white.jpg" alt="JUMP" /></a>
+		</div>
+		<nav>
+			<ul>
+				<% if (locals.isLogged) { %>
+				<li>
+					<a href="/user/logout" class="logout" title="Salir"><i class="fas fa-sign-in-alt"></i></a>
+				</li>
+				<% } else { %>
+				<li>
+					<a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
+				</li>
+				<li>
+					<a href="/user/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
+				</li>
 
-                <li>
-                    <a href="/productCart" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
-                </li>
-                  
-                <li class="burguer-menu">
-                    <a href="#"><i class="fas fa-bars"></i></a>
-                </li>
-            </ul>
-            <% } %>  
-        </nav>
-        <div class="search-bar">
-            <form action="/search">
-                <input type="search" name="search" id="buscador" placeholder="¿Qué estás buscando?" />
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-    <div class="desktop-menu-container">
-        <ul class="desktop-menu container">
-            <li><a href="#">Hombre</a></li>
-            <li><a href="#">Mujer</a></li>
-            <li><a href="#">Niños</a></li>
-            <li><a href="#">Marcas</a></li>
-            <li><a href="#">Colecciones</a></li>
-        </ul>
-    </div>
+				<li>
+					<a href="/productCart" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
+				</li>
+
+				<li class="burguer-menu">
+					<a href="#"><i class="fas fa-bars"></i></a>
+				</li>
+			</ul>
+			<% } %>
+		</nav>
+		<div class="search-bar">
+			<form action="/search">
+				<input type="search" name="search" id="buscador" placeholder="¿Qué estás buscando?" />
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+	<div class="desktop-menu-container">
+		<ul class="desktop-menu container">
+			<li><a href="#">Remeras</a></li>
+			<li><a href="#">Buzos</a></li>
+			<li><a href="#">Zapatillas</a></li>
+			<li><a href="#">Tops</a></li>
+			<li><a href="#">Gorras</a></li>
+			<li><a href="#">Calzas</a></li>
+			<li><a href="#">Medias</a></li>
+			<li><a href="#">Accesorios</a></li>
+		</ul>
+	</div>
 </header>

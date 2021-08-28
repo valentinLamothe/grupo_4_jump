@@ -1,24 +1,26 @@
-// const loginUserForm = document.querySelector('form#loginUserForm');
-// const registerProductForm = document.querySelector('form#registerProductForm');
+// const loginForm = document.querySelector('form#loginUserForm');
+// const createProductForm = document.querySelector('form#registerProductForm');
 // const editProductForm = document.querySelector('form#editProductForm');
 
+// REGISTER FORM
+
 // Capturamos el formulario
-const registerUserForm = document.querySelector('form#registerUserForm');
+const registerForm = document.querySelector('form#registerUserForm');
 
 // Capturamos los inputs del formulario
-const user = registerUserForm.name;
-const email = registerUserForm.email;
-const avatar = registerUserForm.avatar_image;
-const password = registerUserForm.password;
-const password2 = registerUserForm.password2;
+const user = registerForm.name;
+const email = registerForm.email;
+const avatar = registerForm.avatar_image;
+const password = registerForm.password;
+const password2 = registerForm.password2;
 
 let isFormValid = false;
 
-registerUserForm.addEventListener('submit', (e) => {
+registerForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 	checkInputs();
 	if (isFormValid) {
-		registerUserForm.submit();
+		registerForm.submit();
 	}
 });
 

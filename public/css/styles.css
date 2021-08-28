@@ -93,6 +93,7 @@ header i::after {
 header ul,
 footer ul {
 	list-style: none;
+	padding-left: 0;
 }
 header .desktop-menu-container {
 	display: none;
@@ -392,12 +393,9 @@ section.banner div.container {
 
 .banner {
 	background-color: #c4c4c4;
-	background-image: url(/img/jump-index-5.jpeg);
+	background-image: url(/img/slide01.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 500px;
-	background-position-y: 80%;
-	background-attachment: fixed;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -413,6 +411,7 @@ section.banner div.container {
 	font-size: 2rem;
 	padding-left: 15px;
 	padding-right: 15px;
+	color: white;
 }
 
 .banner-descrip {
@@ -420,6 +419,7 @@ section.banner div.container {
 	padding-bottom: 35px;
 	padding-left: 15px;
 	padding-right: 15px;
+	color: white;
 }
 
 .banner-but {
@@ -430,6 +430,11 @@ section.banner div.container {
 	border-radius: 2px;
 	margin-bottom: 150px;
 	margin-left: 15px;
+}
+
+.banner-but:hover {
+	background-color: white;
+	color: black;
 }
 
 .vision-balls {
@@ -461,7 +466,7 @@ section.banner div.container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 461.5px;
+	/* height: 461.5px; */
 	/* transition: all 1s ease; */
 	/* transform: rotateY(180deg) */
 }
@@ -490,16 +495,22 @@ article.caja-producto-home div img {
 
 .icono-info {
 	border: 1px solid black;
-	padding: 5px 12px;
+	padding: 15px;
 	border-radius: 100%;
 	transition: all 0.3s ease;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	font-weight: bold;
 }
 
 .icono-info:hover {
-	cursor: pointer;
 	background-color: black;
 	color: white;
-	font-weight: bold;
 }
 
 .display-none {
@@ -1208,10 +1219,12 @@ section .label-carrito input {
 	}
 	header .desktop-menu-container {
 		display: block;
-		padding: 20px 0;
+		padding: 15px 0;
 		margin-top: 10px;
 		border-top: 1px solid #000;
+		border-bottom: 1px solid #000;
 	}
+
 	header .desktop-menu {
 		display: flex;
 		width: 100%;
@@ -1221,7 +1234,9 @@ section .label-carrito input {
 		font-weight: 300;
 	}
 	header .desktop-menu a:hover {
-		font-weight: 500;
+		background: black;
+		padding: 18px;
+		color: white;
 	}
 
 	/* DETALLE PRODUCTO */
