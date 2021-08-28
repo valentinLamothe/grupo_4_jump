@@ -21,7 +21,8 @@
                         </div>
                         <div class="item">
                             <label for="product-description">Descripción del producto</label>
-                            <textarea name="description" cols="30" rows="10" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> input-modified"><%= locals.oldData ? oldData.description : null %></textarea>
+                            <textarea name="description" cols="30" rows="10"
+                                class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> input-modified"><%= locals.oldData ? oldData.description : null %></textarea>
                             <% if (locals.errors && errors.description) { %>
                                 <div class="text-danger validations-msg">
                                     <%= errors.description.msg %>
@@ -86,6 +87,11 @@
                                     <div class="item">
                                         <label for="product-price">Precio del producto ($)</label>
                                         <input type="number" name="price" id="">
+                                        <% if (locals.errors && errors.price) { %>
+                                            <div class="text-danger validations-msg">
+                                                <%= errors.price.msg %>
+                                            </div>
+                                            <% } %>
                                     </div>
                                     <div class="item"></div>
                                     <button type="submit">Crear producto</button>

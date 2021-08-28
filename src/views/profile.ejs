@@ -7,19 +7,25 @@
 
 
 
-      
-        
-        <h1 style="margin-left: 10%;">Hi <%= user.name %>
-        </h1>
-        
-        <img src="/img/usersAvatars/<%= user.avatar_image || '../../public/img/userDefault/userDefault.jpg'%>" alt="perfil" width="30%" height="50%"
+
+
+      <h1 style="margin-left: 10%;">Hi <%= user.name %>
+      </h1>
+
+      <!-- test imagen-->
+
+
+
+
+      <img src="/img/usersAvatars/<%= user.avatar_image%>" alt="perfil" width="30%" height="50%"
         style="margin-left: 10%; border-radius: 50%;">
-        
-        <h2 style="margin-left: 15%;margin-top: 2%;margin-bottom: 5%;">
-          <%= user.email %>
-        </h2>
-        
-        
+
+
+      <h2 style="margin-left: 15%;margin-top: 2%;margin-bottom: 5%;">
+        <%= user.email %>
+      </h2>
+
+
 
 
       <%- include ('./partials/footer') %>
