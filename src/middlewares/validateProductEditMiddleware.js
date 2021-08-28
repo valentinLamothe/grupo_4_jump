@@ -31,6 +31,17 @@ const validateProductEditMiddleware = [
     console.log(validateProductEditMiddleware);
     return true;
   }),
+  body("price")
+    .isNumeric()
+    .withMessage("el precio debe ser un numero")
+    .bail()
+    .custom((value) => {
+      if (value < 1) {
+        throw new Error("Colocar un numero superior a 0");
+      } else {
+        return true;
+      }
+    }),
 ];
 
 module.exports = validateProductEditMiddleware;

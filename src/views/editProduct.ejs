@@ -1,63 +1,87 @@
 <!-- Acá sumamos las vistas automatizadas head -->
-<%- include ('./partials/head')  %> 
+<%- include ('./partials/head') %>
 
-<body>
+    <body>
         <!-- Acá sumamos la vista automatizada header -->
-		<%- include ('./partials/header')  %> 
-    <main class="container">
-        <section class="formContainer">
-            <h1>Editar producto</h1>
-            <form  id="newProduct" action="/products/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <% console.log(productEdit.id + 'texto linea 11') %>        
-                <div class="item">
-                    <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
-                    <input type="text" name="name" value="<%= productEdit.name %>"
-                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
-                <% if (locals.errors && errors.name) { %>
-                    <div class="text-danger validations-msg">
-                        <%= errors.name.msg %>
-                    </div>
-                    <% } %>
-                </div>
-                <div class="item">
-                    <label for="product-description"><i class="fas fa-edit"></i> Descripción del producto</label>
-                  
-                <textarea name="description" id="description" cols="30" rows="10"><%= productEdit.description %></textarea>
-                </div>
-               <div class="item">
-                    <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto (JPG/PNG):</label>
-                    <input type="image" src="/img/productos/<%= productEdit.image %> " value="" alt="ZAPATILLAS X9000L2">
-                    <input type="file" name="image" id="image" accept="image/png, image/jpeg" multiple>
-                </div> 
-                <div class="item">
-                    <label for="product-category">Categoría del producto</label>
-                    <select name="category" id="">
+        <%- include ('./partials/header') %>
+            <main class="container">
+                <section class="formContainer">
+                    <h1>Editar producto</h1>
+                    <form id="newProduct" action="/products/<%= productEdit.id %>?_method=PUT" method="POST"
+                        enctype="multipart/form-data">
+                        <% console.log(productEdit.id + 'texto linea 11' ) %>
+                            <div class="item">
+                                <label for="product-name"><i class="fas fa-edit"></i> Nombre del producto</label>
+                                <input type="text" name="name" value="<%= productEdit.name %>"
+                                    class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="text-danger validations-msg">
+                                        <%= errors.name.msg %>
+                                    </div>
+                                    <% } %>
+                            </div>
+                            <div class="item">
+                                <label for="product-description"><i class="fas fa-edit"></i> Descripción del
+                                    producto</label>
 
-                        <option value="1">Accesorios</option>
-                        <option value="2">Zapatillas</option>
-                        <option value="3">Remeras</option>
-                        <option value="4">Tops</option>
-                        <option value="5">Pantalones</option>
-                        <option value="6">Buzos</option>
-                    </select>
-                </div>
-                <!-- <div class="item">
+                                <textarea name="description" id="description" cols="30" rows="10"
+                                    class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> input-modified"><%= productEdit.description %></textarea>
+                                <% if (locals.errors && errors.description) { %>
+                                    <div class="text-danger validations-msg">
+                                        <%= errors.description.msg %>
+                                    </div>
+                                    <% } %>
+                            </div>
+                            <div class="item">
+                                <label for="product-image"><i class="fas fa-edit"></i> Imagen del producto
+                                    (JPG/PNG):</label>
+                                <input type="image" src="/img/productos/<%= productEdit.image %> " value=""
+                                    alt="ZAPATILLAS X9000L2"
+                                    class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %> input-modified">
+                                <% if (locals.errors && errors.image) { %>
+                                    <div class="text-danger validations-msg">
+                                        <%= errors.image.msg %>
+                                    </div>
+                                    <% } %>
+                                        <input type="file" name="image" id="image" accept="image/png, image/jpeg"
+                                            multiple>
+                            </div>
+                            <div class="item">
+                                <label for="product-category">Categoría del producto</label>
+                                <select name="category" id="">
+
+                                    <option value="1">Accesorios</option>
+                                    <option value="2">Zapatillas</option>
+                                    <option value="3">Remeras</option>
+                                    <option value="4">Tops</option>
+                                    <option value="5">Pantalones</option>
+                                    <option value="6">Buzos</option>
+                                </select>
+                            </div>
+                            <!-- <div class="item">
                     <label for="product-color"><i class="fas fa-edit"></i> Color del producto</label>
                     <input type="color" name="product-color" id="product-color">
                 </div> -->
-                <div class="item">
-                    <label for="product-price"><i class="fas fa-edit"></i> Precio del producto ($)</label>
-                    <input type="text" name="price" id="price" value="<%= productEdit.price %>">
-                </div>
-                <div class="item"></div>
-                    <button type="submit">GUARDAR PRODUCTO</button>
-                </div>
-            </form>
+                            <div class="item">
+                                <label for="product-price"><i class="fas fa-edit"></i> Precio del producto ($)</label>
+                                <input type="text" name="price" id="price" value="<%= productEdit.price %>"
+                                    class="form-control <%= locals.errors && errors.price ? 'is-invalid' : null %> input-modified">
+                                <% if (locals.errors && errors.price) { %>
+                                    <div class="text-danger validations-msg">
+                                        <%= errors.price.msg %>
+                                    </div>
+                                    <% } %>
 
-        </section>
-    </main>
-      <!-- Acá sumamos la vista automatizada footer -->
-      <%- include ('./partials/footer')  %> 
-</body>
+                            </div>
+                            <div class="item"></div>
+                            <button type="submit">GUARDAR PRODUCTO</button>
+                            </div>
+                    </form>
 
-</html>
+                </section>
+            </main>
+            <!-- Acá sumamos la vista automatizada footer -->
+            <%- include ('./partials/footer') %>
+    </body>
+
+    </html>
