@@ -27,6 +27,7 @@ const controller = {
 			name: req.body.name,
 			email: req.body.email,
 			password: bcryptjs.hashSync(req.body.password, 10),
+			password2: req.body.password2,
 			avatar_image: req.file.filename,
 			country: req.body.country,
 			location: req.body.location
