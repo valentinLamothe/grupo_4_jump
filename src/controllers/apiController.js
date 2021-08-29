@@ -18,22 +18,10 @@ const apiController = {
     });
   },
   products: (req, res) => {
-    // pruebas
-   /*  db.Product.findAll().then(function (products)
-
- */
-
     db.Product.findAll().then(function (products) {
       return res.status(200).json({
         count: products.length,
-       /*  /* countByCategory:products.filter(
-          category =>
-          
-          ), // "numerito a colorar",
-        /* where: {
-        ,
-       } */  */
-
+        countByCategory:   
         products: products,
       });
     });
