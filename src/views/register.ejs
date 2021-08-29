@@ -1,7 +1,7 @@
 <!-- Acá sumamos las vistas automatizadas head -->
 <%- include ('./partials/head') %>
 
-    <body>
+    <body class="register">
         <!-- Acá sumamos la vista automatizada header -->
         <%- include ('./partials/header') %>
             <main>
@@ -14,7 +14,7 @@
                             <p>Complete los campos para poder creár su cuenta</p>
                         </div>
                         <section class="formulario">
-                            <form id="registerUserForm" action="/user/register" method="POST" enctype="multipart/form-data">
+                            <form id="registerForm" action="/user/register" method="POST" enctype="multipart/form-data">
                                 <!-- Usuario -->
                                 <div class="form-group">
                                     <input 
@@ -34,11 +34,12 @@
 
                                 <!-- Email -->
                                 <div class="form-group">
+                                    <!-- <label for="email">Correo electrónico</label> -->
                                     <input 
                                         type="text" 
                                         name="email" 
                                         id="Email" 
-                                        placeholder="Email"
+                                        placeholder=""
                                         value="<%= locals.oldData ? oldData.email : null %>"
                                         class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> input-modified"
                                     >
@@ -51,6 +52,7 @@
 
                                 <!-- Avatar -->
                                 <div class="form-group">
+                                    <!-- <label for="avatar_image">Imagen (JPG, JPEG, PNG, GIF)</label> -->
                                     <input 
                                         type="file" 
                                         name="avatar_image" 
@@ -96,9 +98,7 @@
                                     </span>
                                 </div> 
                                 
-                                <div class="boton-registrar">
-                                    <button class="button" type="submit">REGISTRAR</button>
-                                </div>
+                                <button class="button" type="submit">REGISTRAR</button>
                                 
                             </form>
                         </section>

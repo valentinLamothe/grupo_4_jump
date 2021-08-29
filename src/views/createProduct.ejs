@@ -1,7 +1,7 @@
 <!-- Acá sumamos las vistas automatizadas head-->
 <%- include ('./partials/head') %>
 
-    <body>
+    <body class="create">
         <!-- Acá sumamos la vista automatizada header -->
         <%- include ('./partials/header') %>
 
@@ -9,68 +9,107 @@
                 <section class="formContainer">
                     <h1>Nuevo producto</h1>
                     <form id="newProduct" action="/products" method="POST" enctype="multipart/form-data">
-                        <div class="item">
-                            <label for="product-name">Nombre del producto</label>
-                            <input type="text" name="name" value="<%= locals.oldData ? oldData.name : null %>"
-                                class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified">
+                        
+                        <div class="form-group">
+                            <label for="product-name">Nombre</label>
+                            <input 
+                                type="text" 
+                                name="name" 
+                                value="<%= locals.oldData ? oldData.name : null %>" 
+                                class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %> input-modified"
+                            > 
+                            <span class="invalid-feedback validations-msg">
                             <% if (locals.errors && errors.name) { %>
-                                <div class="text-danger validations-msg">
-                                    <%= errors.name.msg %>
-                                </div>
-                                <% } %>
+                                <%= errors.name.msg %>
+                            <% } %>
+                            </span>
                         </div>
-                        <div class="item">
-                            <label for="product-description">Descripción del producto</label>
-                            <textarea name="description" cols="30" rows="10" class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> input-modified"><%= locals.oldData ? oldData.description : null %></textarea>
-                            <% if (locals.errors && errors.description) { %>
-                                <div class="text-danger validations-msg">
-                                    <%= errors.description.msg %>
-                                </div>
-                                <% } %>
-                        </div>
-                        <div class=" item">
-                            <label for="product-image">Imagen del producto (JPG/PNG):</label>
-                            <input type="file" name="image" id="image" accept="image/png, image/jpeg">
-                            <% if (locals.errors && errors.image) { %>
-                                <div class="text-danger validations-msg">
-                                    <%= errors.image.msg %>
-                                </div>
-                                <% } %>
-                                    <div class="item">
-                                        <label for="product-category">Categoría del producto</label>
-                                        <select name="category" id="">
-                                            <option value="1">Accesorios</option>
-                                            <option value="2">Zapatillas</option>
-                                            <option value="3">Remeras</option>
-                                            <option value="4">Tops</option>
-                                            <option value="5">Pantalones</option>
-                                            <option value="6">Buzos</option>
-                                        </select>
-                                    </div>
 
-                                    <div class="item">
-                                        <label for="product-size">Talle del producto </label>
-                                        <select name="size" id="">
-                                            <option value="1">sin talle</option>
-                                            <option value="2">8,5</option>
-                                            <option value="3">S</option>
-                                            <option value="4">M</option>
-                                            <option value="5">XL</option>
-                                            <option value="6">S</option>
-                                        </select>
-                                    </div>
-                                    <div class="item">
-                                        <label for="product-brand">marca</label>
-                                        <select name="brand" id="">
-                                            <option value="1">Under Armour</option>
-                                            <option value="2">Nike</option>
-                                            <option value="3">Adidas</option>
-                                            <option value="4">reebok</option>
-                                            <option value="5">Puma</option>
-                                            <option value="6">Adidas</option>
-                                        </select>
-                                    </div>
-                                    <!-- <div class="item">
+                        <div class="form-group">
+                            <label for="product-description">Descripción</label>
+                            <textarea 
+                                name="description" 
+                                rows="5" 
+                                class="form-control <%= locals.errors && errors.description ? 'is-invalid' : null %> input-modified"><%= locals.oldData ? oldData.description : null %></textarea>
+                            <span class="invalid-feedback validations-msg">
+                            <% if (locals.errors && errors.description) { %>
+                                <%= errors.description.msg %>
+                            <% } %>
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-image">Imagen (JPG, JPEG, PNG, GIF)</label>
+                            <input 
+                                type="file"
+                                class="form-control"  
+                                name="image" 
+                                id="image" 
+                                accept="image/png, image/jpeg"
+                            >
+                            <span class="invalid-feedback validations-msg">
+                            <% if (locals.errors && errors.image) { %>
+                                <%= errors.image.msg %>
+                            <% } %>
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-price">Precio ($)</label>
+                            <input 
+                                type="number" 
+                                class="form-control  <%= locals.errors && errors.price ? 'is-invalid' : null %> input-modified" 
+                                name="price" 
+                                id="price"
+                            >
+                            <span class="invalid-feedback validations-msg">
+                            <% if (locals.errors && errors.price) { %>
+                                <%= errors.price.msg %>
+                            <% } %>
+                            </span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-category">Categoría</label>
+                            <select class="form-control" name="category" id="category">
+                                <option>-- Seleccionar categoría --</option>
+                                <option value="1">Accesorios</option>
+                                <option value="2">Zapatillas</option>
+                                <option value="3">Remeras</option>
+                                <option value="4">Tops</option>
+                                <option value="5">Pantalones</option>
+                                <option value="6">Buzos</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-size">Talle</label>
+                            <select class="form-control" name="size" id="size">
+                                <option>-- Seleccionar talle --</option>
+                                <option value="1">Sin talle</option>
+                                <option value="2">8,5</option>
+                                <option value="3">S</option>
+                                <option value="4">M</option>
+                                <option value="5">XL</option>
+                                <option value="6">S</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-brand">Marca</label>
+                            <select class="form-control" name="brand" id="brand">
+                                <option>-- Seleccionar marca --</option>
+                                <option value="1">Under Armour</option>
+                                <option value="2">Nike</option>
+                                <option value="3">Adidas</option>
+                                <option value="4">reebok</option>
+                                <option value="5">Puma</option>
+                                <option value="6">Adidas</option>
+                            </select>
+                        </div>
+                        
+                        <!-- 
+                        <div class="item">
                             <label for="product-category">Categoría del producto</label>
                             <select name="product-category" id="product-category">
                                 <option value="hombre">Hombre</option>
@@ -82,14 +121,10 @@
                             <label for="product-color">Color del producto</label>
                             <input type="color" name="product-color" id="product-color">
                         </div>
-                    -->
-                                    <div class="item">
-                                        <label for="product-price">Precio del producto ($)</label>
-                                        <input type="number" name="price" id="">
-                                    </div>
-                                    <div class="item"></div>
-                                    <button type="submit">Crear producto</button>
-                        </div>
+                        -->
+                                   
+                        <button class="button" type="submit">CREAR PRODUCTO</button>
+                        
                     </form>
 
                 </section>

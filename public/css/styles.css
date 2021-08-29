@@ -65,6 +65,7 @@ header nav ul {
 	flex-wrap: nowrap;
 	align-content: center;
 	align-items: center;
+	margin-bottom: 0;
 }
 header nav ul li.burguer-menu {
 	text-align: right;
@@ -84,9 +85,6 @@ header a {
 	color: #000;
 	font-size: 0.95rem;
 }
-header i {
-	font-size: 1.3rem;
-}
 header i::after {
 	display: none;
 }
@@ -104,10 +102,11 @@ header .search-bar form {
 }
 header .search-bar form input {
 	width: 100%;
-	padding: 5px;
+	padding: 0.375rem 0.75rem;
 	font-size: 1rem;
 	border: 1px solid #000;
 	box-shadow: none;
+	font-weight: 300;
 }
 header .search-bar form button {
 	width: 50px;
@@ -581,11 +580,6 @@ select {
 	font-size: 16px;
 }
 
-select:hover {
-	height: 6vh;
-	transition: 1s;
-}
-
 /* Boletin-email */
 #cta {
 	background-image: url(/img/cta.jpg);
@@ -959,39 +953,29 @@ section .label-carrito input {
 	margin: 50px auto;
 }
 
-#newProduct label {
+.form-control {
+	font-weight: 300;
+}
+
+label {
 	display: inline-block;
 	margin-bottom: 10px;
+	text-align: left;
 }
 
-#newProduct .item {
-	margin: 20px 0;
-}
-
-#newProduct input,
-#newProduct textarea {
+input,
+textarea {
 	width: 100%;
-	padding: 15px;
 }
 
-#newProduct input[type='file'] {
-	padding-left: 0 !important;
-}
-
-#newProduct input[type='color'] {
+input[type='color'] {
 	width: 50px;
 	padding: 0;
 	display: block;
 }
 
-#newProduct select {
+select {
 	width: 100%;
-}
-
-#newProduct button {
-	background-color: #332d2d;
-	color: white;
-	padding: 15px 20px;
 }
 
 /* MEDIA QUERIES GLOBALES */
@@ -1006,9 +990,9 @@ section .label-carrito input {
 		font-size: 0.95rem;
 		margin-left: 8px;
 	}
-	header i:hover::after {
+	/* header i:hover::after {
 		font-weight: 700;
-	}
+	} */
 	header .login i::after {
 		content: 'Ingresar';
 	}
@@ -1228,14 +1212,14 @@ section .label-carrito input {
 	header .desktop-menu {
 		display: flex;
 		width: 100%;
-		justify-content: space-evenly;
+		justify-content: space-between;
 	}
 	header .desktop-menu a {
 		font-weight: 300;
+		padding: 18px;
 	}
 	header .desktop-menu a:hover {
 		background: black;
-		padding: 18px;
 		color: white;
 	}
 

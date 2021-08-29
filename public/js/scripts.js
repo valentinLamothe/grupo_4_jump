@@ -168,9 +168,15 @@ function stopColor() {
 
 // Newsletter
 
-const newsHome = document.querySelector('#newsHome');
-
-newsHome.addEventListener('submit', (e) => {
+const newsletter = document.getElementById('newsForm');
+newsletter.addEventListener('submit', (e) => {
 	e.preventDefault();
-	alert('Te suscribiste al newsletter');
+	Swal.fire({
+		position: 'center',
+		icon: 'success',
+		title: '¡Gracias por suscribirte!',
+		text: 'Te mantendremos informado sobre nuestras promociones.',
+		showConfirmButton: false,
+		timer: 3000
+	});
 });
