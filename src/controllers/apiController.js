@@ -18,10 +18,22 @@ const apiController = {
     });
   },
   products: (req, res) => {
+    let lalala = db.Category.findAll().then((category) => {
+      // esto recorre todo
+      const dato = category.map((category) => ({
+        id: category.id,
+        name: category.name,
+      }));
+      // esto devuevle la info
+      return res.status(200).json({
+        categories: dato,
+      });
+    });
+
     db.Product.findAll().then(function (products) {
       return res.status(200).json({
         count: products.length,
-        countByCategory:   
+        countByCategory: lalala,
         products: products,
       });
     });
