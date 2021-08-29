@@ -27,6 +27,10 @@ if (document.body.classList.contains('register')) {
 		e.preventDefault();
 		checkInputs();
 		if (isFormValid) {
+			Swal.fire({
+				title: 'Validación exitosa',
+				confirmButtonColor: '#000'
+			});
 			registerForm.submit();
 		}
 	});
@@ -64,7 +68,7 @@ if (document.body.classList.contains('register')) {
 		}
 
 		// validación de la imagen de usuario
-		if (avatarValue === '') {
+		if (avatarValue === null) {
 			setErrorFor(avatar, 'Debe subir una imagen');
 			isFormValid = false;
 		} else if (!allowedExtensions.exec(avatarValue)) {
@@ -103,7 +107,7 @@ if (document.body.classList.contains('register')) {
 	}
 }
 
-// LOGIN REGISTER
+// USER LOGIN
 if (document.body.classList.contains('login')) {
 	// Swal.fire({
 	// 	title: 'Estamos en la página de login',
@@ -124,6 +128,10 @@ if (document.body.classList.contains('login')) {
 		e.preventDefault();
 		checkInputs();
 		if (isFormValid) {
+			Swal.fire({
+				title: 'Validación exitosa',
+				confirmButtonColor: '#000'
+			});
 			loginForm.submit();
 		}
 	});
@@ -191,6 +199,10 @@ if (document.body.classList.contains('create')) {
 		e.preventDefault();
 		checkInputs();
 		if (isFormValid) {
+			Swal.fire({
+				title: 'Validación exitosa',
+				confirmButtonColor: '#000'
+			});
 			createForm.submit();
 		}
 	});
@@ -246,7 +258,7 @@ if (document.body.classList.contains('create')) {
 		if (priceValue === '') {
 			setErrorFor(price, 'Debe ingresar un precio para el producto');
 			isFormValid = false;
-		} else if (priceValue == 0) {
+		} else if (priceValue === 0) {
 			setErrorFor(price, 'El precio del producto no puede ser $0');
 			isFormValid = false;
 		} else {
@@ -285,6 +297,10 @@ if (document.body.classList.contains('edit')) {
 		e.preventDefault();
 		checkInputs();
 		if (isFormValid) {
+			Swal.fire({
+				title: 'Validación exitosa',
+				confirmButtonColor: '#000'
+			});
 			editForm.submit();
 		}
 	});
