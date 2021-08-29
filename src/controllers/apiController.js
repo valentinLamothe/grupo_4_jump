@@ -18,26 +18,26 @@ const apiController = {
     });
   },
   products: (req, res) => {
-    let lalala = db.Category.findAll().then((category) => {
+    db.Category.findAll({ include: { all: true } }).then((category) => {
       // esto recorre todo
-      const dato = category.map((category) => ({
-        id: category.id,
-        name: category.name,
-      }));
-      // esto devuevle la info
-      return res.status(200).json({
-        categories: dato,
+      const dato = category.map((category) => {
+        return {
+          /* id: category.id, */
+          [category.name]: category.dataValues.category_product.length,
+        };
       });
+      // empieza
+      db.Product.findAll().then(function (products) {
+        return res.status(200).json({
+          count: products.length,
+          countByCategory: dato,
+          products: products,
+        });
+      });
+      //termina
     });
+  }, // fin de products
 
-    db.Product.findAll().then(function (products) {
-      return res.status(200).json({
-        count: products.length,
-        countByCategory: lalala,
-        products: products,
-      });
-    });
-  },
   productId: (req, res) => {
     db.Product.findByPk(req.params.id).then(function (products) {
       return res.status(200).json(products);
