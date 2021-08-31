@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Aug 31, 2021 at 06:19 PM
+-- Generation Time: Aug 31, 2021 at 09:35 PM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -114,7 +114,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `id_category`, `price`, `id
 (6, 'Adidas Combo', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 6, 11300, 6, 6, 'combo.jpg'),
 (18, 'Backpacking', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 9000, NULL, NULL, 'product-1630431157708.jpg'),
 (19, 'Running Socks', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 1500, NULL, NULL, 'product-1630431306371.jpg'),
-(20, 'Nike Womens Odyssey React 2 ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 2, 9250, NULL, NULL, 'product-1630431468568.jpg'),
+(20, 'Nike Womens Odyssey React 2 ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 2, 9250, NULL, NULL, 'product-1630441821404.jpg'),
 (21, 'Under Armour Boys\' Prototype Logo Shorts ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 5, 4000, NULL, NULL, 'product-1630431879356.jpg'),
 (24, ' NIKE Sportswear Girls\' Full-Zip Hoodie ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 6, 12000, NULL, NULL, 'product-1630432300365.jpg'),
 (25, 'Nike Women\'s Dri-Fit Classic Sports', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 4, 5000, NULL, NULL, 'product-1630432475357.jpg');
@@ -223,6 +223,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `avatar_image`, `id_rol_fk`, `country`, `location`) VALUES
+(2, 'Valentin', 'valentinlamothecoulomme@hotmail.com', '$2b$10$Z/cwRJwPB1herndOe0mvA.Q0UfYR1cxTAELV41/56k9LonZkcjKaK', 'avatar-1630442417714.jpg', 2, NULL, NULL),
+(3, 'Ivan', 'ivanfrancoarg@gmail.com', '$2b$10$4.kUx.AJ0V2trjzlsTXQtepOIp5H0pQ4g8fR85YqRp4x6uFd/F76y', 'avatar-1630445040050.jpg', 1, NULL, NULL);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -311,7 +319,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -341,7 +349,7 @@ ALTER TABLE `rols`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
