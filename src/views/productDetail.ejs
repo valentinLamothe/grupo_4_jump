@@ -8,7 +8,7 @@
 
             <main>
                 <div class="container">
-
+                    <h3 class="h3-products">TIENDA ONLINE</h3>
                     <h2 class="producto">
                         <%= productDetail.name %>
                     </h2>
@@ -52,20 +52,41 @@
                             </div>
                             <!-- Carrusel de productos -->
 
-                            <% } else { %>
-                                <img src="/img/productos/<%= productDetail.image %>" class="d-block w-100"
-                                    alt="<%= productDetail.name %>">
-                                <% } %>
+                        <% } else { %>
+                        <img src="/img/productos/<%= productDetail.image %>" class="d-block w-100" alt="<%= productDetail.name %>">
+                        <% } %>
 
-                                    <section class="detalletexto">
-                                        <article class="opcionestalles">
-                                            <h3>Descripción</h3>
-                                            <p>
-                                                <%= productDetail.description %>
-                                            </p>
-                                        </article>
+                        <section class="detalletexto">
+                            <article class="opcionestalles">
+                                <p class="stock">EN STOCK</p>
+                                <h3>Descripción</h3>
+                                <p>
+                                    <%= productDetail.description %>
+                                </p>
+                            </article>
 
-                                        <!--
+                            <article class="opcionestalles">
+                                <h3>Categoría</h3>
+                                <p>
+                                    <%= productDetail.category %>
+                                </p>
+                            </article>
+
+                            <article class="opcionestalles">
+                                <h3>Precio</h3>
+                                <p class="price">$<%= productDetail.price %></p>
+                            </article>
+                                
+                            <div class="condicionesproductos">
+                                <div class="condicionesproductos2">
+                                    <i class="far fa-credit-card"></i> 3 cuotas sin interés con Mercado Pago
+                                </div>
+                                <div class="condicionesproductos2">
+                                    <i class="fas fa-truck"></i> Envío gratis a partir de $5.000
+                                </div>
+                            </div>
+                            
+                            <!--
                             <article class="opcionestalles">
                                 <p class="talle">Eleigí tu Talle</p>
                                 <label>
@@ -103,101 +124,68 @@
                             </article>
                             -->
 
-                                        <form action="/products/<%= productDetail.id %>?_method=delete" method="POST">
-                                            <a class="button"
-                                                href="/products/<%= productDetail.id %>/edit"><i
-                                                    class="fas fa-pencil-alt"></i> Editar Producto</a>
-                                            <button class="button" type="submit"><i class="far fa-trash-alt"></i>
-                                                Eliminar</button>
-                                        </form>
+                            <form action="" method="POST">
+                                <button class="button" type="submit"><i class="fas fa-cart-plus"></i> Añadir al Carrito</button>
+                            </form>
 
-                                        <div class="condicionesproductos">
-                                            <div class="condicionesproductos2">
-                                                <i class="far fa-credit-card"></i> 6 cuotas sin interés
-                                            </div>
-                                            <div class="condicionesproductos2">
-                                                <i class="fas fa-check"></i> Devoluciones Gratis
-                                            </div>
-                                            <div class="condicionesproductos2">
-                                                <i class="fas fa-truck"></i> Envio Gratis a partir de $7.999
-                                            </div>
-                                        </div>
-
-                                    </section>
-
+                            <form action="/products/<%= productDetail.id %>?_method=delete" method="POST">
+                                <a class="button" href="/products/create"><i class="fas fa-plus-circle"></i> Crear Producto</a>
+                                <a class="button" href="/products/<%= productDetail.id %>/edit"><i class="fas fa-pencil-alt"></i> Editar Producto</a>
+                                <button class="button" type="submit"><i class="far fa-trash-alt"></i> Eliminar</button>
+                            </form>
+                        </section>
                     </section>
 
                     <!--
-            <section class="productosrelacionados">
-                <h3 class="prod-relacionados-h3">Productos relacionados</h3>
-                <article class="otrosproductos">
-
-                    <div><i class="fas fa-chevron-left"></i></div>
-                    <div>
-                        <div class="holis">
-                        <img class="fotopequena" src="/img/imgDetalleProducto/product1.jpg" alt="">
-                        <p class="nomeproducto">Producto1</p>
-                        <p class="precio">$10.000</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="holis">
-                        <img class="fotopequena" src="/img/imgDetalleProducto/product2.jpg" alt="">
-                        <p class="nomeproducto">Producto2</p>
-                        <p class="precio">$10.000</p>
-                    </div>
-                </div>
-
-                    <div>
-                        <div class="holis">
-                        <img class="fotopequena" src="/img/imgDetalleProducto/product3.jpg" alt="">
-                        <p class="nomeproducto">Producto3</p>
-                        <p class="precio">$10.000</p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <img class="fotopequena" src="/img/imgDetalleProducto/product4.jpg" alt="">
-                        <p class="nomeproducto">Producto4</p>
-                        <p class="precio">$10.000</p>
-
-                    </div>
-
-                    <div>
-                        <img class="fotopequena" src="/img/imgDetalleProducto/product5.jpg" alt="">
-                        <p class="nomeproducto">Producto5</p>
-                        <p class="precio">$10.000</p>
-                    </div>
-
-                    <div>
-                        <img class="fotopequena" src="/img/imgDetalleProducto/product6.jpg" alt="">
-                        <p class="nomeproducto">Producto6</p>
-                        <p class="precio">$10.000</p>
-
-                    </div>
-
-                    <div><i class="fas fa-chevron-right"></i></div>
-
-
-
-                </article>
-            </section>
-            -->
+                    <section class="productosrelacionados">
+                        <h3 class="prod-relacionados-h3">Productos relacionados</h3>
+                        <article class="otrosproductos">
+                            <div><i class="fas fa-chevron-left"></i></div>
+                            <div>
+                                <div class="holis">
+                                <img class="fotopequena" src="/img/imgDetalleProducto/product1.jpg" alt="">
+                                <p class="nomeproducto">Producto1</p>
+                                <p class="precio">$10.000</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="holis">
+                                <img class="fotopequena" src="/img/imgDetalleProducto/product2.jpg" alt="">
+                                <p class="nomeproducto">Producto2</p>
+                                <p class="precio">$10.000</p>
+                            </div>
+                            <div>
+                                <div class="holis">
+                                <img class="fotopequena" src="/img/imgDetalleProducto/product3.jpg" alt="">
+                                <p class="nomeproducto">Producto3</p>
+                                <p class="precio">$10.000</p>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="fotopequena" src="/img/imgDetalleProducto/product4.jpg" alt="">
+                                <p class="nomeproducto">Producto4</p>
+                                <p class="precio">$10.000</p>
+                            </div>
+                            <div>
+                                <img class="fotopequena" src="/img/imgDetalleProducto/product5.jpg" alt="">
+                                <p class="nomeproducto">Producto5</p>
+                                <p class="precio">$10.000</p>
+                            </div>
+                            <div>
+                                <img class="fotopequena" src="/img/imgDetalleProducto/product6.jpg" alt="">
+                                <p class="nomeproducto">Producto6</p>
+                                <p class="precio">$10.000</p>
+                            </div>
+                            <div><i class="fas fa-chevron-right"></i></div>
+                        </article>
+                    </section>
+                    -->
 
                 </div>
-
             </main>
-
-
-
-
 
             <!-- Acá sumamos la vista automatizada footer -->
             <%- include ('./partials/footer') %>
+    
     </body>
-
-    </html>
-    </body>
-
-    </html>
+</html>

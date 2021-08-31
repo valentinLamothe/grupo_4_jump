@@ -11,7 +11,7 @@
                             <h1>Creá tu Cuenta</h1>
                         </div>
                         <div class="subtitulo">
-                            <p>Complete los campos para poder creár su cuenta</p>
+                            <p>Completá tus datos para crear tu cuenta</p>
                         </div>
                         <section class="formulario">
                             <form id="registerForm" action="/user/register" method="POST" enctype="multipart/form-data">
@@ -39,7 +39,7 @@
                                         type="text" 
                                         name="email" 
                                         id="Email" 
-                                        placeholder=""
+                                        placeholder="Correo electrónico"
                                         value="<%= locals.oldData ? oldData.email : null %>"
                                         class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %> input-modified"
                                     >
@@ -53,6 +53,7 @@
                                 <!-- Avatar -->
                                 <div class="form-group">
                                     <!-- <label for="avatar_image">Imagen (JPG, JPEG, PNG, GIF)</label> -->
+                                    <input type="image" class="form-control" src="/img/user.png" value="" alt="">
                                     <input 
                                         type="file" 
                                         name="avatar_image" 

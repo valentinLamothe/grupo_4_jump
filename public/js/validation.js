@@ -185,8 +185,8 @@ if (document.body.classList.contains('create')) {
 	let description = createForm.description;
 	let image = createForm.image;
 	let category = createForm.category;
-	let size = createForm.size;
-	let brand = createForm.brand;
+	// let size = createForm.size;
+	// let brand = createForm.brand;
 	let price = createForm.price;
 
 	// extensiones permitidas para las imágenes
@@ -215,8 +215,8 @@ if (document.body.classList.contains('create')) {
 		let priceValue = price.value.trim();
 
 		let categoryValue = category.value.trim();
-		let sizeValue = size.value.trim();
-		let brandValue = brand.value.trim();
+		// let sizeValue = size.value.trim();
+		// let brandValue = brand.value.trim();
 
 		// validación del nombre del producto
 		if (nameValue === '') {
@@ -284,8 +284,8 @@ if (document.body.classList.contains('edit')) {
 	let image = editForm.image;
 	let price = editForm.price;
 	let category = editForm.category;
-	let size = editForm.size;
-	let brand = editForm.brand;
+	// let size = editForm.size;
+	// let brand = editForm.brand;
 
 	// extensiones permitidas para las imágenes
 	let allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
@@ -313,8 +313,8 @@ if (document.body.classList.contains('edit')) {
 		let priceValue = price.value.trim();
 
 		let categoryValue = category.value.trim();
-		let sizeValue = size.value.trim();
-		let brandValue = brand.value.trim();
+		// let sizeValue = size.value.trim();
+		// let brandValue = brand.value.trim();
 
 		// validación del nombre del producto
 		if (nameValue === '') {

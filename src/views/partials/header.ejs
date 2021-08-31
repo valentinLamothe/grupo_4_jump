@@ -1,24 +1,24 @@
 <header>
 	<div class="container">
 		<div class="logo">
-			<a href="/"><img src="/img/logo-white.jpg" alt="JUMP" /></a>
+			<a href="/"><img src="/img/logo-white.png" alt="JUMP" /></a>
 		</div>
 		<nav>
 			<ul>
 				<% if (locals.isLogged) { %>
 				<li>
-					<a href="/user/logout" class="logout" title="Salir"><i class="fas fa-sign-in-alt"></i></a>
+					<a href="/user/logout" class="logout" title="Salir"><i class="fas fa-sign-in-alt"></i> CERRAR SESIÓN</a>
 				</li>
 				<% } else { %>
 				<li>
-					<a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i></a>
+					<a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i> INGRESAR</a>
 				</li>
 				<li>
-					<a href="/user/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i></a>
+					<a href="/user/register" class="registro" title="Creá tu cuenta"><i class="fa fa-user-plus"></i> REGISTRARSE</a>
 				</li>
 
 				<li>
-					<a href="/productCart" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i></a>
+					<a href="#" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i> IR AL CARRITO</a>
 				</li>
 				<% } %>
 
@@ -36,12 +36,12 @@
 	</div>
 	<div class="desktop-menu-container">
 		<ul class="desktop-menu container">
-			<li><a href="/products">Remeras</a></li>
-			<li><a href="/products">Pantalones</a></li>
-			<li><a href="/products">Zapatillas</a></li>
-			<li><a href="/products">Buzos</a></li>
-			<li><a href="/products">Tops</a></li>
-			<li><a href="/products">Accesorios</a></li>
+			<li><a href="/">INICIO</a></li>
+			<li><a href="/products">TIENDA ONLINE</a></li>
+			<li><a href="#">PROMOCIONES</a></li>
+			<li><a href="#">COLECCIONES</a></li>
+			<li><a href="#">LOCALES</a></li>
+			<li><a href="#">PREGUNTAS FRECUENTES</a></li>
 		</ul>
 	</div>
 </header>

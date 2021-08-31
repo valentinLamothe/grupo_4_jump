@@ -2,4 +2,4 @@ node_modules
 */.DS_STORE
 src/database/config/config.js
 .env
-
+src/dashboard/node_modules
