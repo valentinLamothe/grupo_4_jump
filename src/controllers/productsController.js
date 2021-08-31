@@ -17,16 +17,15 @@ const productsController = {
 	},
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id).then((productDetail) => {
-			return res.render('productDetail', { productDetail });
+			db.Category.findByPk(req.params.id).then((productCategory) => {
+				return res.render('productDetail', { productCategory, productDetail });
+			});
 		});
 	},
-	// category: (req, res) => {
-	// 	db.Category.findByPk(req.params.id).then((productCategory) => {
-	// 		return res.render('productDetail', { productCategory });
-	// 	});
-	// },
 	create: (req, res) => {
-		res.render('createProduct');
+		db.Category.findAll().then((productCategory) => {
+			return res.render('createProduct', { productCategory });
+		});
 	},
 	store: (req, res) => {
 		const resultValidation = validationResult(req);
@@ -61,7 +60,10 @@ const productsController = {
 	},
 	edit: (req, res) => {
 		db.Product.findByPk(req.params.id).then(function (productEdit) {
-			return res.render('editProduct', { productEdit });
+			db.Category.findAll().then((productCategory) => {
+				return res.render('editProduct', { productEdit, productCategory });
+			});
+			//return res.render('editProduct', { productEdit });
 		});
 	},
 	update: (req, res) => {

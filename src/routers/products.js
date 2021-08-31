@@ -26,7 +26,6 @@ router.get('/', productsController.index); //listado productos
 router.get('/create/', productsController.create); //creacion y validación de productos
 
 router.get('/:id/', productsController.detail); // detalle individual producto
-// router.get('/:id/', productsController.category);
 router.get('/:id/edit', /*clasifMiddleware,*/ productsController.edit); // formulario edicion producto
 router.delete('/:id', productsController.delete); //borra producto especifico
 

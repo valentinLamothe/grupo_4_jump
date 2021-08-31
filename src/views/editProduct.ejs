@@ -66,40 +66,17 @@
                     <label for="category">Categoría</label>
                     <select class="form-control" name="category" id="category">
                         <option>-- Seleccionar categoría --</option>
-                        <option value="1">Accesorios</option>
-                        <option value="2">Zapatillas</option>
-                        <option value="3">Remeras</option>
-                        <option value="4">Tops</option>
-                        <option value="5">Pantalones</option>
-                        <option value="6">Buzos</option>
+                        <!-- Obtenemos las categorías -->
+                        <% for( i=0; i<productCategory.length; i++){ %>
+                            <% if (productCategory[i].id == productEdit.id_category) { %>
+                                <option value="<%= productCategory[i].id %>" selected><%= productCategory[i].name %></option>
+                            <% } else { %>
+                                <option value="<%= productCategory[i].id %>"><%= productCategory[i].name %></option>
+                            <% } %>
+                        <% }%>
+                        <!-- -->
                     </select>
                 </div>
-
-                <!-- <div class="form-group">
-                    <label for="product-size">Talle</label>
-                    <select class="form-control" name="size" id="size">
-                        <option>-- Seleccionar talle --</option>
-                        <option value="1">Sin talle</option>
-                        <option value="2">8,5</option>
-                        <option value="3">S</option>
-                        <option value="4">M</option>
-                        <option value="5">XL</option>
-                        <option value="6">S</option>
-                    </select>
-                </div> -->
-
-                <!-- <div class="form-group">
-                    <label for="product-brand">Marca</label>
-                    <select class="form-control" name="brand" id="brand">
-                        <option>-- Seleccionar marca --</option>
-                        <option value="1">Under Armour</option>
-                        <option value="2">Nike</option>
-                        <option value="3">Adidas</option>
-                        <option value="4">reebok</option>
-                        <option value="5">Puma</option>
-                        <option value="6">Adidas</option>
-                    </select>
-                </div> -->
                 
                 <button class="button" type="submit">GUARDAR PRODUCTO</button>
                 
