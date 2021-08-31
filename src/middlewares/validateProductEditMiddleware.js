@@ -17,7 +17,7 @@ const validateProductEditMiddleware = [
   body("image").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".jpg", ".png", ".jpeg", ".gif"];
-    if (!file) {
+    /* if (!file) {
       throw new Error("Tienes que subir una imagen");
     } else {
       let fileExtension = path.extname(file.originalname);
@@ -27,7 +27,7 @@ const validateProductEditMiddleware = [
         );
       }
     }
-
+    */
     console.log(validateProductEditMiddleware);
     return true;
   }),

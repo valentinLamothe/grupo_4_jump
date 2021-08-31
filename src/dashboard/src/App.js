@@ -10,6 +10,8 @@ import UserList from './Components/UserList';
 import CategoryList from './Components/CategoryList';
 import logoImg from './assets/logo.jpg';
 import userImg from './assets/user.png';
+import LastProduct from './Components/LastProduct';
+import LastUser from './Components/LastUser';
 
 function App() {
 	return (
@@ -75,8 +77,12 @@ function App() {
 						</List>
 					</div>
 					<div className="main-cards last-created">
-						<List title="Último Producto"></List>
-						<List title="Último Usuario"></List>
+						<List title="Último Producto">
+							< LastProduct />
+						</List>
+						<List title="Último Usuario">
+							<LastUser />
+						</List>
 					</div>
 				</main>
 				<footer className="footer">

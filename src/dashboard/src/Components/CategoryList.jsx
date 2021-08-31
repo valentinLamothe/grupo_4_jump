@@ -6,8 +6,10 @@ function CategoryList(props) {
 
 	const getData = async () => {
 		const data = await fetch('http://localhost:3000/api/products');
+		console.log( data);
 		const api = await data.json();
-		setCategories(api.products);
+		setCategories(api.countByCategory);
+		console.log(api.countByCategory);
 	};
 
 	useEffect(() => {
@@ -16,11 +18,13 @@ function CategoryList(props) {
 
 	return (
 		<ul>
-			{categories.map((item) => (
-				<li key="item.id">{item.id_category}</li>
+			{categories.map(category => (
+				<li key="item.id">
+					{Object.keys(category)}
+				</li>
 			))}
 		</ul>
-	);
+	)
 }
 
 export default CategoryList;
