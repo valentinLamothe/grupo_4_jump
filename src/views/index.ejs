@@ -8,7 +8,7 @@
 		<!-- Acá sumamos la vista automatizada header -->
 		<%- include ('./partials/header') %>
 
-			<section id="slider" class="container mt-3">
+			<section id="slider" class="mt-3">
 				<div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
 					<div class="carousel-indicators">
 						<button type="button" data-bs-target="#carouselHome" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -17,25 +17,25 @@
 					</div>
 					<div class="carousel-inner">
 						<div class="carousel-item active">
-						<img src="/img/slide01.jpg" class="d-block w-100" alt="">
-						<div class="carousel-caption d-none d-md-block">
+						<img src="/img/slider/01.jpg" class="d-block w-100" alt="">
+						<!-- <div class="carousel-caption d-none d-md-block">
 							<h5>First slide label</h5>
 							<p>Some representative placeholder content for the first slide.</p>
-						</div>
+						</div> -->
 						</div>
 						<div class="carousel-item">
-						<img src="/img/slide01.jpg" class="d-block w-100" alt="">
-						<div class="carousel-caption d-none d-md-block">
+						<img src="/img/slider/04.jpg" class="d-block w-100" alt="">
+						<!-- <div class="carousel-caption d-none d-md-block">
 							<h5>Second slide label</h5>
 							<p>Some representative placeholder content for the second slide.</p>
-						</div>
+						</div> -->
 						</div>
 						<div class="carousel-item">
-						<img src="/img/slide01.jpg" class="d-block w-100" alt="">
-						<div class="carousel-caption d-none d-md-block">
+						<img src="/img/slider/03.jpg" class="d-block w-100" alt="">
+						<!-- <div class="carousel-caption d-none d-md-block">
 							<h5>Third slide label</h5>
 							<p>Some representative placeholder content for the third slide.</p>
-						</div>
+						</div> -->
 						</div>
 					</div>
 					<button class="carousel-control-prev" type="button" data-bs-target="#carouselHome" data-bs-slide="prev">
@@ -68,133 +68,46 @@
 			
 			<main class="container">
 				<div class="row">
-					<div class="col-4">
-						<img src="/img/slide01.jpg" class="img-fluid" alt="">
-					</div>
-					<div class="col-4">
-						<img src="/img/slide01.jpg" class="img-fluid" alt="">
-					</div>
-					<div class="col-4">
-						<img src="/img/slide01.jpg" class="img-fluid" alt="">
+					<div class="col-12 mt-5 titulo text-center">
+						<h1>Colecciones</h1>
 					</div>
 					<div class="col-6 mt-3">
-						<img src="/img/slide01.jpg" class="img-fluid" alt="">
+						<img src="/img/banner-nike1.jpg" class="img-fluid" alt="">
 					</div>
 					<div class="col-6 mt-3">
-						<img src="/img/slide01.jpg" class="img-fluid" alt="">
+						<img src="/img/banner-nike1.jpg" class="img-fluid" alt="">
 					</div>
 				</div>
-		
-				<!-- <h3 class="h3-products">Ofertas</h3>
-				<section>
-					<section>
-						<div class="category">
-							<h3 class="h3-category">FILTRAR POR CATEGORÍA</h3>
-							<form action="" method="get">
-								<select name="categoria" id="select">
-									<option value="remeras">Remeras</option>
-									<option value="buzos">Buzos</option>
-									<option value="zapatillas">Zapatillas</option>
-									<option value="tops">Tops</option>
-									<option value="gorras">Gorras</option>
-									<option value="calsas">Calzas</option>
-									<option value="medias">Medias</option>
-									<option value="accesorios">Accesorios</option>
-								</select>
-								<button type="submit" class="fil-butt">FILTRAR</button>
-							</form>
-						</div>
-					</section>
-					<div class="prod-box">
-						<article class="caja-producto-home" id="cajaProductoHome2">
-							<div class="icono-info-container">
-								<div class="icono-info" id="iconoInfo2">i</div>
-							</div>
-							<div class="card-info-container" id="cardInfoContainer2">
-								<a href="#"><img src="img/productos/bolso.jpg" alt="Adidas Combo" class="product-img"
-										id="productImg2" /></a>
-								<p class="display-none" id="description2">STOCK</p>
-							</div>
-							<p class="product-descrip" id="productDescrip2">Under Armour Bag</p>
-							<p id="precio2">$8.000</p>
-						</article>
-						<article class="caja-producto-home" id="cajaProductoHome3">
-							<div class="icono-info-container">
-								<div class="icono-info" id="iconoInfo3">i</div>
-							</div>
-							<div class="card-info-container" id="cardInfoContainer3">
-								<a href="#"><img src="img/productos/zapas.jpg" alt="Adidas Combo" class="product-img"
-										id="productImg3" /></a>
-								<p class="display-none" id="description3">OUT OF STOCK</p>
-							</div>
-							<p class="product-descrip" id="productDescrip3">Nike Shoes</p>
-							<p id="precio3">$10.000</p>
-						</article>
-						<article class="caja-producto-home" id="cajaProductHome4">
-							<div class="icono-info-container">
-								<div class="icono-info" id="iconoInfo4">i</div>
-							</div>
-							<div class="card-info-container" id="cardInfoContainer4">
-								<a href="#"><img src="img/productos/ropa.jpg" alt="Adidas Combo" class="product-img"
-										id="productImg4" /></a>
-								<p class="display-none" id="description4">STOCK</p>
-							</div>
-							<p class="product-descrip" id="productDescrip4">Adidas T-shirt</p>
-							<p id="precio4">$7.500</p>
-						</article>
-						<article class="caja-producto-home" id="cajaProductoHome5">
-							<div class="icono-info-container">
-								<div class="icono-info" id="iconoInfo5">i</div>
-							</div>
-							<div class="card-info-container" id="cardInfoContainer5">
-								<a href="#"><img src="img/productos/top.jpg" alt="Adidas Combo" class="product-img"
-										id="productImg5" /></a>
-								<p class="display-none" id="description5">OUT OF STOCK</p>
-							</div>
-							<p class="product-descrip" id="productDescrip5">Reebok Top</p>
-							<p id="precio5">$4.000</p>
-						</article>
-						<article class="caja-producto-home" id="cajaProductoHome">
-							<div class="icono-info-container">
-								<div class="icono-info" id="iconoInfo">i</div>
-							</div>
-							<div class="card-info-container" id="cardInfoContainer">
-								<a href="#"><img src="img/productos/short.jpg" alt="Adidas Combo" class="product-img"
-										id="productImg" /></a>
-								<p class="display-none" id="description">STOCK</p>
-							</div>
-							<p class="product-descrip" id="productDescrip">Puma Short</p>
-							<p id="precio">$6.800</p>
-						</article>
-						<article class="caja-producto-home" id="cajaProductoHome6">
-							<div class="icono-info-container">
-								<div class="icono-info" id="iconoInfo6">i</div>
-							</div>
-							<div class="card-info-container" id="cardInfoContainer6">
-								<a href="#"><img src="img/productos/combo.jpg" alt="Adidas Combo" class="product-img"
-										id="productImg6" /></a>
-								<p class="display-none" id="description6">OUT OF STOCK</p>
-							</div>
-							<p class="product-descrip" id="productDescrip6">Adidas Combo</p>
-							<p id="precio6">$11.300</p>
-						</article>
+				<div class="row">
+					<div class="col-12 mt-5 titulo text-center">
+						<h1>Categorías</h1>
 					</div>
-				</section> -->
+					<div class="col-4 mt-3">
+						<img src="/img/banner-nike1.jpg" class="img-fluid" alt="">
+					</div>
+					<div class="col-4 mt-3">
+						<img src="/img/banner-nike1.jpg" class="img-fluid" alt="">
+					</div>
+					<div class="col-4 mt-3">
+						<img src="/img/banner-nike1.jpg" class="img-fluid" alt="">
+					</div>
+					<div class="col-4 mt-3">
+						<img src="/img/banner-nike1.jpg" class="img-fluid" alt="">
+					</div>
+					<div class="col-4 mt-3">
+						<img src="/img/banner-nike1.jpg" class="img-fluid" alt="">
+					</div>
+					<div class="col-4 mt-3">
+						<img src="/img/banner-nike1.jpg" class="img-fluid" alt="">
+					</div>
+				</div>
 			</main>
 
-			<section id="cta">
+			<!-- <section id="cta">
 				<div class="container">
 					<h3 class="info-boletin">COLECCIÓN PRIMAVERA-VERANO</h3>
-					<div class="caja-boletin">
-						<!-- <form id="newsHome" action="/" method="GET">
-							<input type="email" name="email" placeholder="Email" class="caja-email" />
-							<button type="submit" class="flecha-boletin">
-								<i class="fa fa-arrow-right" aria-hidden="true"></i>
-							</button>
-						</form> -->
-					</div>
 				</div>
-			</section>
+			</section> -->
 
 			<!-- Acá sumamos la vista automatizada footer -->
 			<%- include ('./partials/footer') %>

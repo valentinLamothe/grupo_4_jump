@@ -166,6 +166,21 @@
 // 	clearInterval(myBar);
 // }
 
+// Carrito
+
+// const cart = document.querySelector('header nav a.cart');
+// cart.addEventListener('click', (e) => {
+// 	e.preventDefault();
+// 	Swal.fire({
+// 		position: 'center',
+// 		icon: 'success',
+// 		title: 'Producto agregado',
+// 		text: 'Seguí comprando en la tienda',
+// 		showConfirmButton: false,
+// 		timer: 3000
+// 	});
+// });
+
 // Newsletter
 
 const newsletter = document.getElementById('newsForm');
