@@ -53,11 +53,11 @@ function App() {
 						</div>
 					</div>
 					<div className="main-overview">
-						<Card title="USUARIOS">
-							<User />
-						</Card>
 						<Card title="PRODUCTOS">
 							<Product />
+						</Card>
+						<Card title="USUARIOS">
+							<User />
 						</Card>
 						<Card title="CATEGORÍAS">
 							<Category />
