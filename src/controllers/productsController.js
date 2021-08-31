@@ -72,11 +72,9 @@ const productsController = {
 		if (resultValidation.errors.length > 0) {
 			console.log(resultValidation.errors);
 			db.Product.findByPk(req.params.id).then(function (productEdit) {
-				return res.render('editProduct', {
-					productEdit,
-					errors: resultValidation.mapped()
-				});
-			});
+				db.Category.findAll().then((productCategory) => {
+				return res.render('editProduct', {productEdit,productCategory,errors: resultValidation.mapped()});
+			})});
 		} else {
 			let imagen;
 			db.Product.findByPk(req.params.id).then(function (productEdit) {
