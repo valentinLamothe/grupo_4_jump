@@ -9,7 +9,7 @@ const productsController = require('../controllers/productsController');
 //Middleware
 const productValidator = require('../middlewares/validateProductMiddleware');
 const productEditValidator = require('../middlewares/validateProductEditMiddleware');
-const clasifMiddleware = require('../middlewares/clasifMiddleware'); //agregado fabi
+
 
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
