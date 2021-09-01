@@ -1489,3 +1489,17 @@ select {
 		width: 300px;
 	}
 }
+
+/* Error 404 css */
+
+.color-404 {
+	background-color: rgb(17, 17, 17);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1000px;
+}
+
+.background-404 {
+	width: 500px;
+}

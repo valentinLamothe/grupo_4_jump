@@ -42,6 +42,14 @@ app.use("/products", products); //sin ruta creada, rompe el sitio
 app.use("/user", user);
 app.use("/api", api);
 
+// Error 404
+
+app.use((req, res, next)=>{
+  res.status(404).render('404');
+});
+
+//Llamado del puerto
+
 app.listen(process.env.PORT || 3000, () => {
   console.log("Servidor corriendo en el puerto 3000");
 });
