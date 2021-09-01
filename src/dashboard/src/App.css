@@ -164,6 +164,7 @@ i {
 	box-sizing: border-box;
 	border: 1px solid #000;
 	color: #000;
+	min-height: 400px;
 }
 
 .card h3 {

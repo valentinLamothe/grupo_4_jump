@@ -77,10 +77,10 @@ function App() {
 						</List>
 					</div>
 					<div className="main-cards last-created">
-						<List title="Último Producto">
-							< LastProduct />
+						<List title="Últimos Productos">
+							<LastProduct />
 						</List>
-						<List title="Último Usuario">
+						<List title="Últimos Usuarios">
 							<LastUser />
 						</List>
 					</div>
