@@ -41,9 +41,10 @@ const controller = {
       password2: req.body.password2,
       avatar_image: req.file.filename, //este es el correcto, asi funciona sin img default
       //avatar_image: imagen,
+
       country: req.body.country,
       location: req.body.location,
-      // id_rol_fk: req.body.id_rol_fk
+       id_rol_fk: 1
     });
 
     res.redirect("/user/login");
@@ -84,9 +85,6 @@ const controller = {
     });
   },
   profile: (req, res) => {
-    // db.User.findOne().then(function(user) {
-    //   return res.render('profile',{user})
-    // })
     console.log(req.session.userLogged);
     return res.render("profile", { user: req.session.userLogged });
   },

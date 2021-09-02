@@ -89,13 +89,13 @@
                             <form action="" method="POST">
                                 <button class="button" type="submit"><i class="fas fa-cart-plus"></i> Añadir al Carrito</button>
                             </form>
-
+                            <% if (locals.userLogged && locals.userLogged.id_rol_fk== 2) { %>
                             <form action="/products/<%= productDetail.id %>?_method=delete" method="POST">
                                 <a class="button" href="/products/create"><i class="fas fa-plus-circle"></i> Crear Producto</a>
                                 <a class="button" href="/products/<%= productDetail.id %>/edit"><i class="fas fa-pencil-alt"></i> Editar Producto</a>
                                 <button class="button" type="submit"><i class="far fa-trash-alt"></i> Eliminar</button>
                             </form>
-
+                            <% } %>
                         </section>
                     </section>
 

@@ -7,6 +7,7 @@ const cookies = require("cookie-parser");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const session = require("express-session");
 const cors = require("cors");
+const adminMiddleware = require('./middlewares/adminMiddleware')
 
 // Rutas
 const main = require("./routers/main");
@@ -32,6 +33,7 @@ app.use(
 );
 
 app.use(userLoggedMiddleware);
+app.use(adminMiddleware);
 
 // Configuramos el motor de vistas
 app.set("view engine", "ejs"); //le indicamos express cual es nuestro temple engine

@@ -2,12 +2,22 @@ const db = require("../database/models");
 
 function adminMiddleware(req, res, next) {
     
-    console.log(req.session.userLogged.id_rol_fk)
-    if (req.session.userLogged && req.session.userLogged.id_rol_fk === 2) {
-        next();
-    }else{
-        return res.redirect('/')
-    }   
+    res.locals.id_rol_fk = false;
+    if (req.session.userLogged) {
+	    
+            if(req.session.userLogged.email == "valentinlamothecoulomme@hotmail.com"){
+                
+                res.locals.id_rol_fk = true;
+                
+            }
+        
+
+        
+       
+        
+    
+}
+	next();
 }
 
 module.exports = adminMiddleware;
