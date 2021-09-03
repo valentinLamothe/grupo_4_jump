@@ -5,7 +5,7 @@ function adminMiddleware(req, res, next) {
     res.locals.id_rol_fk = false;
     if (req.session.userLogged) {
 	    
-            if(req.session.userLogged.email == "valentinlamothecoulomme@hotmail.com"){
+            if(req.session.userLogged.id_rol_fk === 2   ){
                 
                 res.locals.id_rol_fk = true;
                 
