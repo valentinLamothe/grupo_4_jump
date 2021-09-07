@@ -1088,9 +1088,6 @@ select {
 		flex-wrap: nowrap;
 	}
 
-	.logout {
-		padding-left: 20%;
-	}
 	
 	footer .container {
 		flex-direction: row;

@@ -68,7 +68,7 @@
                             <article class="opcionestalles">
                                 <h3>Categoría</h3>
                                 <p>
-                                    <%= productCategory.name %>
+                                    <%= console.log(productCategory.name) %>
                                 </p>
                             </article>
 
@@ -86,9 +86,9 @@
                                 </div>
                             </div>
 
-                            <form action="" method="POST">
-                                <button class="button" type="submit"><i class="fas fa-cart-plus"></i> Añadir al Carrito</button>
-                            </form>
+                            <a id="addToCart" href="#">
+                                <button class="button" type="submit"><i class="fas fa-cart-plus "></i> Añadir al Carrito</button>
+                            </a>
                             <% if (locals.userLogged && locals.userLogged.id_rol_fk== 2) { %>
                             <form action="/products/<%= productDetail.id %>?_method=delete" method="POST">
                                 <a class="button" href="/products/create"><i class="fas fa-plus-circle"></i> Crear Producto</a>

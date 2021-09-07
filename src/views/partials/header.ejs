@@ -6,13 +6,18 @@
 		<nav>
 			<ul>
 				<% if (locals.isLogged) { %>
-				<li>
+				
+					<li>
 					<div class="logout-container">
-					<img src="/img/usersAvatars/<%= locals.userLogged.avatar_image %> " style="border-radius: 50%;width: 18%;padding-left: 5%;" alt="Foto de Perfil">
-					 Hola <%= locals.userLogged.name %> 
+					<img src="/img/usersAvatars/<%= locals.userLogged.avatar_image %> " style="border-radius: 50%;width: 18%;" alt="Foto de Perfil">
+					  <%= locals.userLogged.name %> 
 					<a  href="/user/logout" class="logout" title="Salir"><i class="fas fa-sign-in-alt"></i> CERRAR SESIÓN</a>
 					</div>
+					<li>
+						<a href="#" class="carrito" title="Carrito"><i class="fa fa-shopping-cart"></i> CARRITO</a>
+					</li>
 				</li>
+				
 				<% } else { %>
 				<li>
 					<a href="/user/login" class="login" title="Ingresar"><i class="fas fa-sign-in-alt"></i> INGRESAR</a>
