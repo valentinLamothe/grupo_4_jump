@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Sep 06, 2021 at 11:25 PM
+-- Generation Time: Sep 07, 2021 at 12:35 AM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -60,16 +60,7 @@ INSERT INTO `category` (`id`, `name`) VALUES
 (3, 'Remeras'),
 (4, 'Tops'),
 (5, 'Pantalones'),
-(6, 'Buzos'),
-(7, 'Accesorios'),
-(8, 'Accesorios'),
-(9, 'Zapatillas'),
-(10, 'Pantalones'),
-(11, 'Buzos'),
-(12, 'Tops'),
-(13, 'Pantalones'),
-(14, 'Remeras'),
-(15, 'Accesorios');
+(6, 'Buzos');
 
 -- --------------------------------------------------------
 
@@ -100,7 +91,7 @@ CREATE TABLE `orders` (
 --
 
 CREATE TABLE `products` (
-  `id` int(11) NOT NULL,Ω
+  `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` text,
   `id_category` int(11) DEFAULT NULL,
@@ -344,7 +335,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `products_colors`
