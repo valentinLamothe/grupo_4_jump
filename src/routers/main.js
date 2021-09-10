@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.get("/", mainController.index);
 router.get("/productCart", mainController.productCart);
-router.get('/search', mainController.search);
+router.get('/results', mainController.search);
 
 module.exports = router;
