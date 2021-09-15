@@ -10,7 +10,6 @@ const productsController = require('../controllers/productsController');
 const productValidator = require('../middlewares/validateProductMiddleware');
 const productEditValidator = require('../middlewares/validateProductEditMiddleware');
 
-
 const storage = multer.diskStorage({
 	destination: (req, file, cb) => {
 		cb(null, path.join(__dirname, '../../public/img/productos'));
@@ -33,4 +32,5 @@ router.post('/', uploadFile.single('image'), productValidator, productsControlle
 
 router.put('/:id', uploadFile.single('image'), productEditValidator, productsController.update); //accion de edicion (donde apunta el formulario)
 
+router.get('/filtro', productsController.filtro); //filtro por marca
 module.exports = router;

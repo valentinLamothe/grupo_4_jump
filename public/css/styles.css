@@ -306,6 +306,14 @@ p.stock {
 	margin-right: 5px;
 }
 
+.filter {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+}
+
 .condicionesproductos2 {
 	margin: 0 0 5px 0 !important;
 	/* border-bottom: dotted black; */
@@ -1088,7 +1096,6 @@ select {
 		flex-wrap: nowrap;
 	}
 
-	
 	footer .container {
 		flex-direction: row;
 	}

@@ -5,7 +5,8 @@ const fs = require('fs'); /* Requerimos el módulo FS para leer distintos tipos 
 const { json } = require("express"); */
 const db = require('../database/models');
 const { receiveMessageOnPort } = require('worker_threads');
-const sequelize = db.sequelize;
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 const { validationResult } = require('express-validator');
 const { CLIENT_RENEG_LIMIT } = require('tls');
 
@@ -18,7 +19,9 @@ const productsController = {
 	detail: (req, res) => {
 		db.Product.findByPk(req.params.id).then((productDetail) => {
 			db.Category.findByPk(req.params.id).then((productCategory) => {
-				return res.render('productDetail', { productCategory, productDetail });
+				db.Brand.findByPk(req.params.id).then((productBrand) => {
+					return res.render('productDetail', { productBrand, productCategory, productDetail });
+				});
 			});
 		});
 	},
@@ -73,8 +76,9 @@ const productsController = {
 			console.log(resultValidation.errors);
 			db.Product.findByPk(req.params.id).then(function (productEdit) {
 				db.Category.findAll().then((productCategory) => {
-				return res.render('editProduct', {productEdit,productCategory,errors: resultValidation.mapped()});
-			})});
+					return res.render('editProduct', { productEdit, productCategory, errors: resultValidation.mapped() });
+				});
+			});
 		} else {
 			let imagen;
 			db.Product.findByPk(req.params.id).then(function (productEdit) {
@@ -101,11 +105,17 @@ const productsController = {
 				}
 			)
 				.then(() => {
-					console.log('chau bb ');
 					return res.redirect('/products');
 				})
 				.catch((e) => res.send(e));
 		}
+	},
+	filtro: (req, res) => {
+		db.Product.findAll({
+			where: {
+				name: { [Op.like]: '%' + req.query.filtro + '%' }
+			}
+		}).then((products) => res.render('productsIndex', { products }));
 	}
 };
 

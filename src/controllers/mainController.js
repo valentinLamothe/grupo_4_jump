@@ -6,8 +6,6 @@ const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 const db = require('../database/models');
 
-
-
 const mainController = {
 	index: (req, res) => {
 		res.render('index');
@@ -18,21 +16,17 @@ const mainController = {
 	productCart: (req, res) => {
 		res.render('productCart');
 	},
-	
+
 	register: (req, res) => {
 		res.render('register');
 	},
 	search: (req, res) => {
-		// const { name } = req.query
-		
 		db.Product.findAll({
 			where: {
-				name: {[Op.like]: '%' + req.query.search + '%'}
+				name: { [Op.like]: '%' + req.query.search + '%' }
 			}
-		}).then(products => res.render('productsIndex', {products}))
+		}).then((products) => res.render('productsIndex', { products }));
 	}
-
-
 };
 
 module.exports = mainController;

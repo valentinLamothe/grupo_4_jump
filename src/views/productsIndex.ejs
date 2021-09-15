@@ -7,6 +7,45 @@
         <%- include ('./partials/header') %>
             <main class="container">
                 <h3 class="h3-products">TIENDA ONLINE</h3>
+                
+                <div id="filters" class="row">
+                    <div class="col">
+                        <form class="py-5" action="/products">
+                            <p>FILTRAR POR MARCA</p>
+                            <div class="filter">
+                                <select class="form-select me-3">
+                                    <option selected>Seleccionar marca</option>
+                                    <option value="1">Under Armour</option>
+                                    <option value="2">Nike</option>
+                                    <option value="3">Adidas</option>
+                                    <option value="4">Reebok</option>
+                                    <option value="5">Puma</option>
+                                </select>
+                                <!-- <input type="search" class="form-control" name="filtro" id="filtro"> -->
+                                <button type="submit" class="button">FILTRAR</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form class="py-5" action="/products">
+                            <p>FILTRAR POR CATEGORÍA</p>
+                            <div class="filter">
+                                <select class="form-select me-3">
+                                    <option selected>Seleccionar categoría</option>
+                                    <option value="1">Accesorios</option>
+                                    <option value="2">Zapatillas</option>
+                                    <option value="3">Remeras</option>
+                                    <option value="4">Tops</option>
+                                    <option value="5">Pantalones</option>
+                                    <option value="6">Buzos</option>
+                                </select>
+                                <!-- <input type="search" class="form-control" name="filtro" id="filtro"> -->
+                                <button type="submit" class="button">FILTRAR</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="prod-box">
                     <% for(let i=0 ;i<products.length ; i++ ){ %>
                         <article class="caja-producto-home" id="cajaProductoHome2">
