@@ -110,10 +110,11 @@ const productsController = {
 				.catch((e) => res.send(e));
 		}
 	},
-	filtro: (req, res) => {
-		db.Product.findAll({
+	brand: (req, res) => {
+		db.Brand.findAll({
 			where: {
-				name: { [Op.like]: '%' + req.query.filtro + '%' }
+				name: req.query.search
+				//id: req.query.brand
 			}
 		}).then((products) => res.render('productsIndex', { products }));
 	}

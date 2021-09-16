@@ -24,6 +24,8 @@ const uploadFile = multer({ storage });
 router.get('/', productsController.index); //listado productos
 router.get('/create/', productsController.create); //creacion y validación de productos
 
+router.get('/brand', productsController.brand); //filtro por marca
+
 router.get('/:id/', productsController.detail); // detalle individual producto
 router.get('/:id/edit', /*clasifMiddleware,*/ productsController.edit); // formulario edicion producto
 router.delete('/:id', productsController.delete); //borra producto especifico
@@ -32,5 +34,4 @@ router.post('/', uploadFile.single('image'), productValidator, productsControlle
 
 router.put('/:id', uploadFile.single('image'), productEditValidator, productsController.update); //accion de edicion (donde apunta el formulario)
 
-router.get('/filtro', productsController.filtro); //filtro por marca
 module.exports = router;
