@@ -22,11 +22,11 @@ const storage = multer.diskStorage({
 const uploadFile = multer({ storage });
 
 router.get('/', productsController.index); //listado productos
-router.get('/create/', productsController.create); //creacion y validación de productos
+router.get('/create', productsController.create); //creacion y validación de productos
 
-router.get('/brand', productsController.brand); //filtro por marca
+router.get('/brand/:id', productsController.brand); //filtro por marca
 
-router.get('/:id/', productsController.detail); // detalle individual producto
+router.get('/:id', productsController.detail); // detalle individual producto
 router.get('/:id/edit', /*clasifMiddleware,*/ productsController.edit); // formulario edicion producto
 router.delete('/:id', productsController.delete); //borra producto especifico
 

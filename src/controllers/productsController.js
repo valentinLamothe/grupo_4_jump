@@ -109,12 +109,14 @@ const productsController = {
 		}
 	},
 	brand: (req, res) => {
-		db.Brand.findAll({
+		//res.render('brand');
+		db.Product.findAll({
 			where: {
-				name: req.query.search
-				//id: req.query.brand
+				id: req.params.id
 			}
-		}).then((products) => res.render('productsIndex', { products }));
+		})
+			.then((products) => res.render('brand', { products }))
+			.catch((e) => res.send(e));
 	}
 };
 

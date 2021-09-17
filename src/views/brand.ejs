@@ -1,0 +1,69 @@
+<!-- Acá sumamos las vistas automatizadas head -->
+<%- include ('./partials/head') %>
+
+<body>
+	<!-- Acá sumamos la vista automatizada header -->
+	<%- include ('./partials/header') %>
+	<main class="container">
+		<h3 class="h3-products">TIENDA ONLINE</h3>
+
+		<div id="filters" class="row">
+			<div class="col">
+				<form class="py-5" action="/products">
+					<p>FILTRAR POR MARCA</p>
+					<div class="filter">
+						<select name="brand" class="form-select me-3">
+							<option selected>Seleccionar marca</option>
+							<option value="Under Armour">Under Armour</option>
+							<option value="Nike">Nike</option>
+							<option value="Adidas">Adidas</option>
+							<option value="Reebok">Reebok</option>
+							<option value="Puma">Puma</option>
+						</select>
+						<button type="submit" class="button">FILTRAR</button>
+					</div>
+				</form>
+			</div>
+			<div class="col">
+				<form class="py-5" action="/products">
+					<p>FILTRAR POR CATEGORÍA</p>
+					<div class="filter">
+						<select name="category" class="form-select me-3">
+							<option selected>Seleccionar categoría</option>
+							<option value="1">Accesorios</option>
+							<option value="2">Zapatillas</option>
+							<option value="3">Remeras</option>
+							<option value="4">Tops</option>
+							<option value="5">Pantalones</option>
+							<option value="6">Buzos</option>
+						</select>
+						<button type="submit" class="button">FILTRAR</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<p>Resultados</p>
+        <div class="prod-box">
+            <% for(let i=0 ;i<products.length ; i++ ){ %>
+                <article class="caja-producto-home" id="cajaProductoHome2">
+                    <div class="icono-info-container">
+                        <div class="icono-info" id="iconoInfo2" title="Más información"><a href="/products/<%= products[i].id %>">+</a></div>
+                    </div>
+                    <div class="card-info-container" id="cardInfoContainer2" style="height: 334.8;">
+                        <a href="/products/<%= products[i].id %>"><img style="max-height: 334.8px;min-height: 334.8px;" src="/img/productos/<%=products[i].image %> " alt="<%=products[i].name %>" class="product-img" id="productImg2" /></a>
+                        <p class="display-none" id="description2">STOCK</p>
+                    </div>
+                    <p class="product-descrip" id="productDescrip2">
+                        <%=products[i].name%>
+                    </p>
+                    <p id="precio2">$<%=products[i].price %></p>
+                    <p class="stock">EN STOCK</p>
+                </article>
+            <% } %>
+        </div>
+	</main>
+
+	<!-- Acá sumamos la vista automatizada footer -->
+	<%- include ('./partials/footer') %>
+</body>
