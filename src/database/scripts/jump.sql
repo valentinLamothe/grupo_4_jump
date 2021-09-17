@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Sep 07, 2021 at 12:35 AM
+-- Generation Time: Sep 17, 2021 at 01:16 PM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -37,7 +37,8 @@ INSERT INTO `brands` (`id`, `name`) VALUES
 (3, 'Adidas'),
 (4, 'Reebok'),
 (5, 'Puma'),
-(6, 'Adidas');
+(6, 'Adidas'),
+(7, 'Under Armour');
 
 -- --------------------------------------------------------
 
@@ -60,7 +61,8 @@ INSERT INTO `category` (`id`, `name`) VALUES
 (3, 'Remeras'),
 (4, 'Tops'),
 (5, 'Pantalones'),
-(6, 'Buzos');
+(6, 'Buzos'),
+(7, 'Accesorios');
 
 -- --------------------------------------------------------
 
@@ -107,20 +109,26 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `name`, `description`, `id_category`, `price`, `id_size`, `id_brands`, `image`) VALUES
 (1, 'Under Armour Bag', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 8000, 1, 1, 'bolso.jpg'),
-(2, 'NIke Shoes', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 10000, 2, 2, 'zapas.jpg'),
-(3, 'Adidas T-shirt', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 3, 7500, 3, 3, 'ropa.jpg'),
+(2, 'NIke Shoes', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 2, 10000, 2, 2, 'zapas.jpg'),
+(3, 'Adidas T-shirt', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 7500, 3, 3, 'ropa.jpg'),
 (4, 'Reebok Top', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 4, 4000, 4, 4, 'top.jpg'),
 (5, 'Puma Short', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 5, 6800, 5, 5, 'short.jpg'),
 (6, 'Adidas Combo', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 6, 11300, 6, 6, 'combo.jpg'),
-(7, 'Backpacking', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 9000, NULL, NULL, 'product-1630431157708.jpg'),
-(8, 'Running Socks', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 1500, NULL, NULL, 'product-1630431306371.jpg'),
+(7, 'Backpacking', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 9000, 1, 1, 'product-1630431157708.jpg'),
+(8, 'Running Socks', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 1, 1500, 1, 2, 'product-1630431306371.jpg'),
 (9, 'Nike Shoes Womens Odyssey React 2 ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 2, 9250, NULL, NULL, 'product-1630441821404.jpg'),
 (10, 'Under Armour Boys Shorts', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 5, 4000, NULL, NULL, 'product-1630431879356.jpg'),
 (11, ' Nike Sportswear Hoddie', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 6, 12000, NULL, NULL, 'product-1630432300365.jpg'),
 (12, 'Nike Women\'s Dri-Fit Classic Sports', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 4, 5000, NULL, NULL, 'product-1630432475357.jpg'),
 (13, 'Under Armour Women\'s Shorts', ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt ', 5, 6400, NULL, NULL, 'product-1630455366635.jpg'),
 (14, 'Nike Men\'s Legend Long Sleeve Tee ', ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt ', 3, 7800, NULL, NULL, 'product-1630456133859.jpg'),
-(15, 'Champion Men\'s Manuscript Backpack', ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt ', 1, 18000, NULL, NULL, 'product-1630456894084.jpg');
+(15, 'Champion Men\'s Manuscript Backpack', ' Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt ', 1, 18000, NULL, NULL, 'product-1630456894084.jpg'),
+(16, 'Adidas Women\'s Pacer 3-Stripes Woven Shorts ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt ', 5, 4100, NULL, NULL, 'product-1631882778629.jpg'),
+(18, ' Nike Women\'s Swoosh Top', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt ', 4, 5000, NULL, NULL, 'product-1631883139347.jpg'),
+(19, 'Nike Brasilia Medium Training Backpack', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt ', 1, 7000, NULL, NULL, 'product-1631883533601.jpg'),
+(20, ' Nike Men\'s Flex Experience Run 8 Shoes ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 2, 8000, NULL, NULL, 'product-1631883726086.jpg'),
+(22, 'Adidas Women\'s Tiro Track Jacket ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 6, 12000, NULL, NULL, 'product-1631884009600.jpg'),
+(23, ' Nike Dri-FIT Short ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sit minima obcaecati inventore id, sapiente molestiae eveniet nostrum ad similique cupiditate error quisquam modi illo expedita exercitationem saepe nisi nesciunt', 5, 3000, NULL, NULL, 'product-1631884243056.jpg');
 
 -- --------------------------------------------------------
 
@@ -323,7 +331,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -335,7 +343,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `products_colors`
