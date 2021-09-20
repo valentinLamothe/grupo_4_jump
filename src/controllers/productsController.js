@@ -108,6 +108,9 @@ const productsController = {
 				.catch((e) => res.send(e));
 		}
 	},
+	brandIndex: (req, res) => {
+		return res.render('brandIndex');
+	},
 	brand: (req, res) => {
 		db.Product.findAll({
 			where: {
