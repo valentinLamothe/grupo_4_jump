@@ -109,10 +109,9 @@ const productsController = {
 		}
 	},
 	brand: (req, res) => {
-		//res.render('brand');
 		db.Product.findAll({
 			where: {
-				id: req.params.id
+				id_brands: req.params.id
 			}
 		})
 			.then((products) => res.render('brand', { products }))
