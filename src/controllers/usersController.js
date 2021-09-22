@@ -85,7 +85,6 @@ const controller = {
     });
   },
   profile: (req, res) => {
-    console.log(req.session.userLogged);
     return res.render("profile", { user: req.session.userLogged });
   },
   logout: (req, res) => {

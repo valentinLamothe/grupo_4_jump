@@ -28,10 +28,15 @@ if (document.body.classList.contains('register')) {
 		checkInputs();
 		if (isFormValid) {
 			Swal.fire({
-				title: 'Validación exitosa',
-				confirmButtonColor: '#000'
-			});
-			registerForm.submit();
+				title: 'Register Success',
+				text: 'Redirecting...',
+				icon: 'success',
+				timer: 5000,
+				buttons: false,
+			})
+			.then(() => {
+				registerForm.submit();
+			})
 		}
 	});
 
@@ -128,13 +133,22 @@ if (document.body.classList.contains('login')) {
 		e.preventDefault();
 		checkInputs();
 		if (isFormValid) {
+			
 			Swal.fire({
-				title: 'Validación exitosa',
+				title: 'Login Success',
+				text: 'Redirecting...',
+				icon: 'success',
+				timer: 1500,
+				showConfirmationButton: false,
 				confirmButtonColor: '#000'
-			});
-			loginForm.submit();
+			})
+			.then(() => {
+				loginForm.submit();
+			})
+			
 		}
 	});
+
 
 	function checkInputs() {
 		// trim para remover los espacios vacíos
@@ -200,10 +214,16 @@ if (document.body.classList.contains('create')) {
 		checkInputs();
 		if (isFormValid) {
 			Swal.fire({
-				title: 'Validación exitosa',
+				title: 'Producto creado ',
+				text: 'Redirecting...',
+				icon: 'success',
+				timer: 3000,
+				showConfirmationButton: false,
 				confirmButtonColor: '#000'
-			});
-			createForm.submit();
+			})
+			.then(() => {
+				createForm.submit();
+			})
 		}
 	});
 
@@ -298,10 +318,17 @@ if (document.body.classList.contains('edit')) {
 		checkInputs();
 		if (isFormValid) {
 			Swal.fire({
-				title: 'Validación exitosa',
+				title: 'Producto editado',
+				text: 'Redirecting...',
+				icon: 'success',
+				timer: 3000,
+				color: '#000',
+				showConfirmationButton: false,
 				confirmButtonColor: '#000'
-			});
-			editForm.submit();
+			})
+			.then(() => {
+				editForm.submit();
+			})
 		}
 	});
 
