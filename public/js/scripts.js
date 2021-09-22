@@ -16,7 +16,7 @@
 // FILTROS
 
 if (document.body.classList.contains('products')) {
-	// Capturamos el formulario
+	// Redirección del filtro de marcas
 	const brandFilter = document.querySelector('form#brandFilter');
 	let brandSelected = 0;
 
@@ -31,6 +31,24 @@ if (document.body.classList.contains('products')) {
 
 		if (brandSelected > 0) {
 			window.location.href = '/products/brand/' + brandSelected;
+		}
+	}
+
+	// Redirección del filtro de categorías
+	const categoryFilter = document.querySelector('form#categoryFilter');
+	let categorySelected = 0;
+
+	categoryFilter.addEventListener('submit', (e) => {
+		e.preventDefault();
+		selectCategory();
+	});
+
+	function selectCategory() {
+		let categoryOptions = document.getElementById('category');
+		categorySelected = categoryOptions.options[categoryOptions.selectedIndex].value;
+
+		if (categorySelected > 0) {
+			window.location.href = '/products/category/' + categorySelected;
 		}
 	}
 }

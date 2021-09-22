@@ -13,29 +13,28 @@
 					<p>FILTRAR POR MARCA</p>
 					<div class="filter">
 						<select id="brand" name="brand" class="form-select me-3">
-							<option selected>Seleccionar marca</option>
-							<option value="1">Under Armour</option>
-							<option value="2">Nike</option>
-							<option value="3">Adidas</option>
-							<option value="4">Reebok</option>
-							<option value="5">Puma</option>
+							<option selected disabled>Seleccionar marca</option>
+							<% for( i=0; i<productBrand.length; i++){ %>
+								<option value="<%= productBrand[i].id %>">
+									<%= productBrand[i].name %>
+								</option>
+							<% }%>
 						</select>
 						<button type="submit" class="button">FILTRAR</button>
 					</div>
 				</form>
 			</div>
 			<div class="col">
-				<form class="py-5" action="/products">
-					<p>FILTRAR POR CATEGORÍA</p>
+				<form id="categoryFilter" class="py-5" action="">
+					<p>FILTRAR POR CATEGORIA</p>
 					<div class="filter">
-						<select name="category" class="form-select me-3">
-							<option selected>Seleccionar categoría</option>
-							<option value="1">Accesorios</option>
-							<option value="2">Zapatillas</option>
-							<option value="3">Remeras</option>
-							<option value="4">Tops</option>
-							<option value="5">Pantalones</option>
-							<option value="6">Buzos</option>
+						<select id="category" name="category" class="form-select me-3">
+							<option selected disabled>Seleccionar categoría</option>
+							<% for( i=0; i<productCategory.length; i++){ %>
+								<option value="<%= productCategory[i].id %>">
+									<%= productCategory[i].name %>
+								</option>
+							<% } %>
 						</select>
 						<button type="submit" class="button">FILTRAR</button>
 					</div>

@@ -10,45 +10,36 @@
 
                 <div id="filters" class="row">
                     <div class="col">
-                        <form class="py-5" action="products/category/">
+                        <form id="brandFilter" class="py-5" action="">
                             <p>FILTRAR POR MARCA</p>
                             <div class="filter">
-                                <select name="brand" class="form-select me-3">
-                                    <option selected>Seleccionar marca</option>
-                                    <!-- comienza el for-->
-                                    <% for( i=0; i<products.length && productCategory.length; i++){ %>
-                                        <option value="<%= products[i].id_category %>">
-                                            <%= productCategory[i].name %>
+                                <select id="brand" name="brand" class="form-select me-3">
+                                    <option selected disabled>Seleccionar marca</option>
+                                    <% for( i=0; i<productBrand.length; i++){ %>
+                                        <option value="<%= productBrand[i].id %>">
+                                            <%= productBrand[i].name %>
                                         </option>
-
-                                        <% }%>
-                                            <!-- fin del for-->
+                                    <% }%>
                                 </select>
                                 <button type="submit" class="button">FILTRAR</button>
-
                             </div>
                         </form>
                     </div>
                     <div class="col">
-                        <!-- ejemplo para automatizar-->
-                        <form class="py-5" action="products/category/">
+                        <form id="categoryFilter" class="py-5" action="">
                             <p>FILTRAR POR CATEGORIA</p>
                             <div class="filter">
-                                <select name="category" class="form-select me-3">
-                                    <option selected>Seleccionar marca</option>
-                                    <!-- comienza el for-->
-                                    <% for( i=0; i<products.length && productCategory.length; i++){ %>
-                                        <option value="<%= products[i].id_category %>">
+                                <select id="category" name="category" class="form-select me-3">
+                                    <option selected disabled>Seleccionar categoría</option>
+                                    <% for( i=0; i<productCategory.length; i++){ %>
+                                        <option value="<%= productCategory[i].id %>">
                                             <%= productCategory[i].name %>
                                         </option>
-
-                                        <% }%>
+                                    <% } %>
                                 </select>
                                 <button type="submit" class="button">FILTRAR</button>
-
                             </div>
                         </form>
-
                     </div>
                 </div>
 
