@@ -81,6 +81,29 @@
                                 <!--  -->
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="product-category">marcas</label>
+                            <select class="form-control" name="brand" id="brand">
+                                <option>-- Seleccionar categoría --</option>
+                                <!-- Obtenemos las categorías -->
+                                <% for( i=0; i<productBrand.length; i++){ %>
+                                    <option value="<%= productBrand[i].id %>"><%= productBrand[i].name %></option>
+                                <% }%>
+                                <!--  -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="product-category">talles</label>
+                            <select class="form-control" name="size" id="size">
+                                <option>-- Seleccionar categoría --</option>
+                                <!-- Obtenemos las categorías -->
+                                <% for( i=0; i<productSize.length; i++){ %>
+                                    <option value="<%= productSize[i].id %>"><%= productSize[i].name %></option>
+                                <% }%>
+                                <!--  -->
+                            </select>
+                        </div>
+                        
                                    
                         <button class="button" type="submit">CREAR PRODUCTO</button>
                         

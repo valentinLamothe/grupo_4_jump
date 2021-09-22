@@ -29,7 +29,15 @@ const productsController = {
   },
   create: (req, res) => {
     db.Category.findAll().then((productCategory) => {
-      return res.render("createProduct", { productCategory });
+      db.Brand.findAll().then((productBrand) => {
+        db.Size.findAll().then((productSize) => {
+          return res.render("createProduct", {
+            productCategory,
+            productBrand,
+            productSize,
+          });
+        });
+      });
     });
   },
   store: (req, res) => {
