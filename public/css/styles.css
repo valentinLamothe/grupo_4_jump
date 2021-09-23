@@ -345,6 +345,18 @@ p.stock {
 	width: 90%;
 }
 
+#whatsapp {
+	position: fixed;
+	bottom: 30px;
+	right: 15px;
+	z-index: 10;
+}
+
+#whatsapp img {
+	width: 70px;
+	height: auto;
+}
+
 .holis {
 	display: flex;
 	flex-direction: column;
