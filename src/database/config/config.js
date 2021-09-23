@@ -1,5 +1,5 @@
 module.exports = {
-	"development": {
+	development: {
 		"username": "root",
 		"password": "root",
 		"database": "jump",

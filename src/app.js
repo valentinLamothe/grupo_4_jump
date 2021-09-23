@@ -42,7 +42,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use("/", main);
 app.use("/products", products); //sin ruta creada, rompe el sitio
 app.use("/user", user);
-// app.use("/api", api);
+app.use("/api", api);
 
 // Error 404
 

@@ -59,6 +59,18 @@ if (document.body.classList.contains('register')) {
 			setSuccessFor(user);
 			isFormValid = true;
 		}
+		fetch("http://localhost:3000/api/users")
+			.then(res=>res.json())
+			.then(data=>isRegistered(data))
+			.catch(error =>console.log(error))
+			function isRegistered(data){
+		for (i= 0;i<data.users.length;i++){
+		 if (data.users[i].email == emailValue) {
+			setErrorFor(email, 'Este email ya esta en uso');
+			isFormValid = false;
+		}
+		}
+	}
 
 		// validación del email
 		if (emailValue === '') {
