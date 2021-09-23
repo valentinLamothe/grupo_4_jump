@@ -1,3 +1,4 @@
 node_modules
 */.DS_STORE
 src/dashboard/node_modules
+.env
