@@ -3,9 +3,7 @@
 	"version": "1.0.0",
 	"description": "JUMP es un e-commerce de indumentaria y artículos deportivos.",
 	"main": "./src/app.js",
-	"scripts": {
-		"start": "./src/app.js"
-	},
+	
 	"author": "grupo_4",
 	"license": "ISC",
 	"dependencies": {
