@@ -25,7 +25,13 @@ const mainController = {
 			where: {
 				name: { [Op.like]: '%' + req.query.search + '%' }
 			}
-		}).then((products) => res.render('productsIndex', { products }));
+		}).then((products) => {
+			db.Brand.findAll().then((productBrand) => {
+				db.Category.findAll().then((productCategory) => {
+					return res.render('productsIndex', {products, productBrand, productCategory})
+				})
+			})
+		});
 	}
 };
 

@@ -52,3 +52,29 @@ if (document.body.classList.contains('products')) {
 		}
 	}
 }
+
+
+let button = document.querySelector('#addToCart');
+
+button.addEventListener('click', (e) => {
+	 e.preventDefault()
+	Swal.fire({
+		title: 'Añadido al carrito',
+		width: 600,
+		padding: '3em',
+		icon: 'success',
+		color: 'black',
+		timer: 2000,
+		background: '#fff url(/images/trees.png)',
+		showConfirmButton: false,
+		backdrop: `
+		  rgba(0, 0, 0, 0.5)
+		  url(https://images.squarespace-cdn.com/content/v1/581499b8e58c627afce6221c/1581466535600-K13XTW44G4XOOC0RFPN5/winky.gif?format=500w)
+		  left bottom
+		  no-repeat
+		`
+	 });
+})
+
+
+
